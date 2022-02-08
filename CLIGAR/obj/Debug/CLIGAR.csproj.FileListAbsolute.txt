@@ -1,0 +1,8 @@
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\bin\Debug\CLIGAR.exe.config
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\bin\Debug\CLIGAR.exe
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\bin\Debug\CLIGAR.pdb
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\obj\Debug\CLIGAR.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\obj\Debug\CLIGAR.Properties.Resources.resources
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\obj\Debug\CLIGAR.csproj.GenerateResource.Cache
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\obj\Debug\CLIGAR.exe
+C:\Users\Gabriel\Documents\DS2\Gestion de Clinica\CLIGAR\obj\Debug\CLIGAR.pdb
