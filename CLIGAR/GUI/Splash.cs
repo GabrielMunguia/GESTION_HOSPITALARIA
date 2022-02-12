@@ -16,5 +16,19 @@ namespace CLIGAR.GUI
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel1.Width += 4;
+            if (panel1.Width >= panel2.Width)
+            {
+                timer1.Stop();
+                Login formLog = new Login();
+                this.Hide();
+                formLog.ShowDialog();
+                this.Close();
+                
+            } 
+        }
     }
 }
