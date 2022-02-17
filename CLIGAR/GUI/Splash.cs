@@ -27,8 +27,13 @@ namespace CLIGAR.GUI
                 this.Hide();
                 formLog.ShowDialog();
                 this.Close();
-                
+
             } 
+        }
+
+        private void Splash_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

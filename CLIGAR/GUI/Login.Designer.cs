@@ -74,6 +74,7 @@
             // 
             resources.ApplyResources(this.inputCorreo, "inputCorreo");
             this.inputCorreo.Name = "inputCorreo";
+            this.inputCorreo.TextChanged += new System.EventHandler(this.inputCorreo_TextChanged);
             // 
             // inputPassword
             // 

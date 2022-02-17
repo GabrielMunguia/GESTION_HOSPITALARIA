@@ -47,6 +47,17 @@ namespace CLIGAR.GUI
            
         {
             this.btnLogin.Text = "Cargando..";
+            
+            Dashboard dash = new Dashboard();
+            this.Hide();
+            dash.ShowDialog();
+            this.Close();
+
+
+        }
+
+        private void inputCorreo_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
