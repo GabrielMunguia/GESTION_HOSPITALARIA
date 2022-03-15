@@ -43,9 +43,10 @@
             this.button9 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.contenedor = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contenedor = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panelBtn1SubMenu.SuspendLayout();
             this.panelDashboard.SuspendLayout();
             this.panelBtn2SubMenu.SuspendLayout();
@@ -62,7 +63,7 @@
             this.btn1.Location = new System.Drawing.Point(0, 189);
             this.btn1.Name = "btn1";
             this.btn1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn1.Size = new System.Drawing.Size(267, 45);
+            this.btn1.Size = new System.Drawing.Size(250, 45);
             this.btn1.TabIndex = 1;
             this.btn1.Text = "button1";
             this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,7 +82,7 @@
             this.panelBtn1SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBtn1SubMenu.Location = new System.Drawing.Point(0, 234);
             this.panelBtn1SubMenu.Name = "panelBtn1SubMenu";
-            this.panelBtn1SubMenu.Size = new System.Drawing.Size(267, 169);
+            this.panelBtn1SubMenu.Size = new System.Drawing.Size(250, 169);
             this.panelBtn1SubMenu.TabIndex = 2;
             // 
             // button5
@@ -93,7 +94,7 @@
             this.button5.Location = new System.Drawing.Point(0, 120);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(267, 40);
+            this.button5.Size = new System.Drawing.Size(250, 40);
             this.button5.TabIndex = 3;
             this.button5.Text = "button5";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,7 +109,7 @@
             this.button4.Location = new System.Drawing.Point(0, 80);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(267, 40);
+            this.button4.Size = new System.Drawing.Size(250, 40);
             this.button4.TabIndex = 2;
             this.button4.Text = "button4";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,7 +124,7 @@
             this.button3.Location = new System.Drawing.Point(0, 40);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(267, 40);
+            this.button3.Size = new System.Drawing.Size(250, 40);
             this.button3.TabIndex = 1;
             this.button3.Text = "button3";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,7 +139,7 @@
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(267, 40);
+            this.button2.Size = new System.Drawing.Size(250, 40);
             this.button2.TabIndex = 0;
             this.button2.Text = "button2";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,6 +150,7 @@
             // 
             this.panelDashboard.AutoScroll = true;
             this.panelDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.panelDashboard.Controls.Add(this.btnSalir);
             this.panelDashboard.Controls.Add(this.panelBtn2SubMenu);
             this.panelDashboard.Controls.Add(this.btn2);
             this.panelDashboard.Controls.Add(this.panelBtn1SubMenu);
@@ -157,7 +159,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(267, 638);
+            this.panelDashboard.Size = new System.Drawing.Size(267, 620);
             this.panelDashboard.TabIndex = 0;
             this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
@@ -171,7 +173,7 @@
             this.panelBtn2SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBtn2SubMenu.Location = new System.Drawing.Point(0, 448);
             this.panelBtn2SubMenu.Name = "panelBtn2SubMenu";
-            this.panelBtn2SubMenu.Size = new System.Drawing.Size(267, 169);
+            this.panelBtn2SubMenu.Size = new System.Drawing.Size(250, 169);
             this.panelBtn2SubMenu.TabIndex = 4;
             // 
             // button6
@@ -183,7 +185,7 @@
             this.button6.Location = new System.Drawing.Point(0, 120);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(267, 40);
+            this.button6.Size = new System.Drawing.Size(250, 40);
             this.button6.TabIndex = 3;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +200,7 @@
             this.button7.Location = new System.Drawing.Point(0, 80);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(267, 40);
+            this.button7.Size = new System.Drawing.Size(250, 40);
             this.button7.TabIndex = 2;
             this.button7.Text = "button7";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +215,7 @@
             this.button8.Location = new System.Drawing.Point(0, 40);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(267, 40);
+            this.button8.Size = new System.Drawing.Size(250, 40);
             this.button8.TabIndex = 1;
             this.button8.Text = "button8";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +230,7 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(267, 40);
+            this.button9.Size = new System.Drawing.Size(250, 40);
             this.button9.TabIndex = 0;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +246,7 @@
             this.btn2.Location = new System.Drawing.Point(0, 403);
             this.btn2.Name = "btn2";
             this.btn2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn2.Size = new System.Drawing.Size(267, 45);
+            this.btn2.Size = new System.Drawing.Size(250, 45);
             this.btn2.TabIndex = 3;
             this.btn2.Text = "btn2";
             this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,28 +263,8 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(267, 189);
+            this.panelLogo.Size = new System.Drawing.Size(250, 189);
             this.panelLogo.TabIndex = 0;
-            // 
-            // contenedor
-            // 
-            this.contenedor.BackColor = System.Drawing.Color.Transparent;
-            this.contenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("contenedor.BackgroundImage")));
-            this.contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(267, 0);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(913, 638);
-            this.contenedor.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(34, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(182, 109);
-            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
@@ -295,11 +277,48 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CLIGAR";
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(34, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(182, 109);
+            this.panel1.TabIndex = 0;
+            // 
+            // contenedor
+            // 
+            this.contenedor.BackColor = System.Drawing.Color.Transparent;
+            this.contenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("contenedor.BackgroundImage")));
+            this.contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(267, 0);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(913, 620);
+            this.contenedor.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSalir.Location = new System.Drawing.Point(0, 617);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalir.Size = new System.Drawing.Size(250, 45);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Cerrar Sesion ";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 638);
+            this.ClientSize = new System.Drawing.Size(1180, 620);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panelDashboard);
             this.Name = "Dashboard";
@@ -333,5 +352,6 @@
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

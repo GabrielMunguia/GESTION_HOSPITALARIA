@@ -93,10 +93,22 @@ namespace CLIGAR.GUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+            
             contenedor.Controls.Add(childForm);
             contenedor.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+         
+           
         }
     }
 }
