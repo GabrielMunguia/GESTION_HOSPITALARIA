@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLIGAR", "CLIGAR\CLIGAR.csproj", "{60EE1F2C-A820-40D1-9936-57144AB94C15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager", "DataManager\DataManager.csproj", "{302941B1-2732-4659-B981-38F8FB1B6265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource", "DataSource\DataSource.csproj", "{200ADF30-6FE3-4ADD-A26A-1512962FFA21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{60EE1F2C-A820-40D1-9936-57144AB94C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60EE1F2C-A820-40D1-9936-57144AB94C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60EE1F2C-A820-40D1-9936-57144AB94C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302941B1-2732-4659-B981-38F8FB1B6265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302941B1-2732-4659-B981-38F8FB1B6265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302941B1-2732-4659-B981-38F8FB1B6265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302941B1-2732-4659-B981-38F8FB1B6265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200ADF30-6FE3-4ADD-A26A-1512962FFA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200ADF30-6FE3-4ADD-A26A-1512962FFA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200ADF30-6FE3-4ADD-A26A-1512962FFA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200ADF30-6FE3-4ADD-A26A-1512962FFA21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

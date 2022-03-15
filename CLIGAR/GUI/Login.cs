@@ -46,12 +46,17 @@ namespace CLIGAR.GUI
         private void btnLogin_Click(object sender, EventArgs e)
            
         {
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            string sentencia = "select * from usuarios where idUsuario=1;";
+            DataTable tabla = operacion.Consultar(sentencia);
+            inputCorreo.Text = tabla.Rows[0][1].ToString();
+
             this.btnLogin.Text = "Cargando..";
             
-            Dashboard dash = new Dashboard();
-            this.Hide();
-            dash.ShowDialog();
-            this.Close();
+            //Dashboard dash = new Dashboard();
+            //this.Hide();
+            //dash.ShowDialog();
+            //this.Close();
 
 
         }
