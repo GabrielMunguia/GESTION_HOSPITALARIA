@@ -9,21 +9,11 @@ namespace DataSource
 {
     public static class Consultas
     {
-        public static DataTable INICIO_SESION(String pUsuario, String pClave)
+        public static DataTable INICIO_SESION(String usuario, String password)
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"SELECT 
-            a.IDUsuario, a.Usuario, a.Clave, a.IDEmpleado, 
-            b.Nombres,b.Apellidos, 
-            CONCAT(b.Nombres,' ',b.Apellidos) Empleado,
-            b.Genero ,a.IDRol, c.Rol  
-            FROM usuarios a, empleados b, roles c 
-            WHERE a.IDEmpleado=b.IDEmpleado 
-            AND c.IDRol=a.IDRol 
-            AND a.Usuario='"+pUsuario+@"' 
-            AND a.Clave=MD5(SHA1('"+pClave+"'));";
-            //TENEMOS LISTA LA CONSULTA
-            //SOLO FALTA EL COMPONENTE PARA EJECUTARLA
+            String Consulta = @"select *   from usuarios as u,empleados as e where u.Usuario = '" + usuario + "' and u.contrasena=MD5(SHA1('" + password + "')) and u.idEmpleado=e.idEmpleado;";
+           
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
@@ -35,6 +25,8 @@ namespace DataSource
             }
             return Resultado;
         }
+
+
         public static DataTable PERMISOS(String pIDRol)
         {
             DataTable Resultado = new DataTable();

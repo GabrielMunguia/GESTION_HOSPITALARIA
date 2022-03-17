@@ -29,61 +29,76 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.btn1 = new System.Windows.Forms.Button();
-            this.panelBtn1SubMenu = new System.Windows.Forms.Panel();
+            this.opcConsultaMedica = new System.Windows.Forms.Button();
+            this.panelOpcConsultaMedica = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNuevaConsultaView = new System.Windows.Forms.Button();
             this.panelDashboard = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.panelBtn2SubMenu = new System.Windows.Forms.Panel();
+            this.panelOpcGestionDeUsuarios = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.opcGestionDeUsuarios = new System.Windows.Forms.Button();
+            this.panelOpcGestionPacientes = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
+            this.opcGestionPaciente = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.contenedor = new System.Windows.Forms.Panel();
-            this.panelBtn1SubMenu.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUsuarioOnline = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelOpcConsultaMedica.SuspendLayout();
             this.panelDashboard.SuspendLayout();
-            this.panelBtn2SubMenu.SuspendLayout();
+            this.panelOpcGestionDeUsuarios.SuspendLayout();
+            this.panelOpcGestionPacientes.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            this.contenedor.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn1
+            // opcConsultaMedica
             // 
-            this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.btn1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn1.Location = new System.Drawing.Point(0, 189);
-            this.btn1.Name = "btn1";
-            this.btn1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn1.Size = new System.Drawing.Size(250, 45);
-            this.btn1.TabIndex = 1;
-            this.btn1.Text = "button1";
-            this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1.UseVisualStyleBackColor = false;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click);
-            this.btn1.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
-            this.btn1.MouseHover += new System.EventHandler(this.btn_MouseHover);
+            this.opcConsultaMedica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.opcConsultaMedica.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opcConsultaMedica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
+            this.opcConsultaMedica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opcConsultaMedica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcConsultaMedica.ForeColor = System.Drawing.Color.AliceBlue;
+            this.opcConsultaMedica.Image = ((System.Drawing.Image)(resources.GetObject("opcConsultaMedica.Image")));
+            this.opcConsultaMedica.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opcConsultaMedica.Location = new System.Drawing.Point(0, 189);
+            this.opcConsultaMedica.Name = "opcConsultaMedica";
+            this.opcConsultaMedica.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opcConsultaMedica.Size = new System.Drawing.Size(250, 45);
+            this.opcConsultaMedica.TabIndex = 1;
+            this.opcConsultaMedica.Text = "CONSULTA MEDICA";
+            this.opcConsultaMedica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opcConsultaMedica.UseVisualStyleBackColor = false;
+            this.opcConsultaMedica.Click += new System.EventHandler(this.opcConsultaMedica_Click);
+            this.opcConsultaMedica.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.opcConsultaMedica.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
-            // panelBtn1SubMenu
+            // panelOpcConsultaMedica
             // 
-            this.panelBtn1SubMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelBtn1SubMenu.Controls.Add(this.button5);
-            this.panelBtn1SubMenu.Controls.Add(this.button4);
-            this.panelBtn1SubMenu.Controls.Add(this.button3);
-            this.panelBtn1SubMenu.Controls.Add(this.button2);
-            this.panelBtn1SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn1SubMenu.Location = new System.Drawing.Point(0, 234);
-            this.panelBtn1SubMenu.Name = "panelBtn1SubMenu";
-            this.panelBtn1SubMenu.Size = new System.Drawing.Size(250, 169);
-            this.panelBtn1SubMenu.TabIndex = 2;
+            this.panelOpcConsultaMedica.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelOpcConsultaMedica.Controls.Add(this.button5);
+            this.panelOpcConsultaMedica.Controls.Add(this.button4);
+            this.panelOpcConsultaMedica.Controls.Add(this.button3);
+            this.panelOpcConsultaMedica.Controls.Add(this.btnNuevaConsultaView);
+            this.panelOpcConsultaMedica.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOpcConsultaMedica.Location = new System.Drawing.Point(0, 234);
+            this.panelOpcConsultaMedica.Name = "panelOpcConsultaMedica";
+            this.panelOpcConsultaMedica.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcConsultaMedica.TabIndex = 2;
             // 
             // button5
             // 
@@ -130,38 +145,40 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnNuevaConsultaView
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnNuevaConsultaView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaConsultaView.FlatAppearance.BorderSize = 0;
+            this.btnNuevaConsultaView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaConsultaView.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnNuevaConsultaView.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevaConsultaView.Name = "btnNuevaConsultaView";
+            this.btnNuevaConsultaView.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnNuevaConsultaView.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevaConsultaView.TabIndex = 0;
+            this.btnNuevaConsultaView.Text = "NUEVA CONSULTA";
+            this.btnNuevaConsultaView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaConsultaView.UseVisualStyleBackColor = true;
+            this.btnNuevaConsultaView.Click += new System.EventHandler(this.btnNuevaConsultaView_Click);
             // 
             // panelDashboard
             // 
             this.panelDashboard.AutoScroll = true;
+            this.panelDashboard.AutoScrollMargin = new System.Drawing.Size(20, 0);
             this.panelDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.panelDashboard.Controls.Add(this.btnSalir);
-            this.panelDashboard.Controls.Add(this.panelBtn2SubMenu);
-            this.panelDashboard.Controls.Add(this.btn2);
-            this.panelDashboard.Controls.Add(this.panelBtn1SubMenu);
-            this.panelDashboard.Controls.Add(this.btn1);
+            this.panelDashboard.Controls.Add(this.panelOpcGestionDeUsuarios);
+            this.panelDashboard.Controls.Add(this.opcGestionDeUsuarios);
+            this.panelDashboard.Controls.Add(this.panelOpcGestionPacientes);
+            this.panelDashboard.Controls.Add(this.opcGestionPaciente);
+            this.panelDashboard.Controls.Add(this.panelOpcConsultaMedica);
+            this.panelDashboard.Controls.Add(this.opcConsultaMedica);
             this.panelDashboard.Controls.Add(this.panelLogo);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(267, 620);
+            this.panelDashboard.Size = new System.Drawing.Size(267, 564);
             this.panelDashboard.TabIndex = 0;
-            this.panelDashboard.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDashboard_Paint);
             // 
             // btnSalir
             // 
@@ -169,29 +186,124 @@
             this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSalir.Location = new System.Drawing.Point(0, 617);
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.Location = new System.Drawing.Point(0, 831);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(250, 45);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Cerrar Sesion ";
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "CERRAR SESSION";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // panelBtn2SubMenu
+            // panelOpcGestionDeUsuarios
             // 
-            this.panelBtn2SubMenu.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelBtn2SubMenu.Controls.Add(this.button6);
-            this.panelBtn2SubMenu.Controls.Add(this.button7);
-            this.panelBtn2SubMenu.Controls.Add(this.button8);
-            this.panelBtn2SubMenu.Controls.Add(this.button9);
-            this.panelBtn2SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBtn2SubMenu.Location = new System.Drawing.Point(0, 448);
-            this.panelBtn2SubMenu.Name = "panelBtn2SubMenu";
-            this.panelBtn2SubMenu.Size = new System.Drawing.Size(250, 169);
-            this.panelBtn2SubMenu.TabIndex = 4;
+            this.panelOpcGestionDeUsuarios.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.button10);
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.button11);
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.button12);
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.button13);
+            this.panelOpcGestionDeUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOpcGestionDeUsuarios.Location = new System.Drawing.Point(0, 662);
+            this.panelOpcGestionDeUsuarios.Name = "panelOpcGestionDeUsuarios";
+            this.panelOpcGestionDeUsuarios.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcGestionDeUsuarios.TabIndex = 7;
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button10.Location = new System.Drawing.Point(0, 120);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(250, 40);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "button10";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button11.Location = new System.Drawing.Point(0, 80);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(250, 40);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "button11";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button12.Location = new System.Drawing.Point(0, 40);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(250, 40);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "button12";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button13.Location = new System.Drawing.Point(0, 0);
+            this.button13.Name = "button13";
+            this.button13.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button13.Size = new System.Drawing.Size(250, 40);
+            this.button13.TabIndex = 0;
+            this.button13.Text = "button13";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // opcGestionDeUsuarios
+            // 
+            this.opcGestionDeUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.opcGestionDeUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opcGestionDeUsuarios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
+            this.opcGestionDeUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opcGestionDeUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcGestionDeUsuarios.ForeColor = System.Drawing.Color.AliceBlue;
+            this.opcGestionDeUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("opcGestionDeUsuarios.Image")));
+            this.opcGestionDeUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opcGestionDeUsuarios.Location = new System.Drawing.Point(0, 617);
+            this.opcGestionDeUsuarios.Name = "opcGestionDeUsuarios";
+            this.opcGestionDeUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opcGestionDeUsuarios.Size = new System.Drawing.Size(250, 45);
+            this.opcGestionDeUsuarios.TabIndex = 6;
+            this.opcGestionDeUsuarios.Text = "GESTION DE USUARIOS";
+            this.opcGestionDeUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opcGestionDeUsuarios.UseVisualStyleBackColor = false;
+            this.opcGestionDeUsuarios.Click += new System.EventHandler(this.opcGestionDeUsuarios_Click);
+            // 
+            // panelOpcGestionPacientes
+            // 
+            this.panelOpcGestionPacientes.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelOpcGestionPacientes.Controls.Add(this.button6);
+            this.panelOpcGestionPacientes.Controls.Add(this.button7);
+            this.panelOpcGestionPacientes.Controls.Add(this.button8);
+            this.panelOpcGestionPacientes.Controls.Add(this.button9);
+            this.panelOpcGestionPacientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOpcGestionPacientes.Location = new System.Drawing.Point(0, 448);
+            this.panelOpcGestionPacientes.Name = "panelOpcGestionPacientes";
+            this.panelOpcGestionPacientes.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcGestionPacientes.TabIndex = 4;
             // 
             // button6
             // 
@@ -253,24 +365,27 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // btn2
+            // opcGestionPaciente
             // 
-            this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.btn2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btn2.Location = new System.Drawing.Point(0, 403);
-            this.btn2.Name = "btn2";
-            this.btn2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn2.Size = new System.Drawing.Size(250, 45);
-            this.btn2.TabIndex = 3;
-            this.btn2.Text = "btn2";
-            this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.UseVisualStyleBackColor = false;
-            this.btn2.Click += new System.EventHandler(this.btn2_Click);
-            this.btn2.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
-            this.btn2.MouseHover += new System.EventHandler(this.btn_MouseHover);
+            this.opcGestionPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.opcGestionPaciente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opcGestionPaciente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
+            this.opcGestionPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opcGestionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcGestionPaciente.ForeColor = System.Drawing.Color.AliceBlue;
+            this.opcGestionPaciente.Image = ((System.Drawing.Image)(resources.GetObject("opcGestionPaciente.Image")));
+            this.opcGestionPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opcGestionPaciente.Location = new System.Drawing.Point(0, 403);
+            this.opcGestionPaciente.Name = "opcGestionPaciente";
+            this.opcGestionPaciente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opcGestionPaciente.Size = new System.Drawing.Size(250, 45);
+            this.opcGestionPaciente.TabIndex = 3;
+            this.opcGestionPaciente.Text = "GESTION DE PACIENTES";
+            this.opcGestionPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opcGestionPaciente.UseVisualStyleBackColor = false;
+            this.opcGestionPaciente.Click += new System.EventHandler(this.opcGestionPaciente_Click);
+            this.opcGestionPaciente.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            this.opcGestionPaciente.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // panelLogo
             // 
@@ -308,50 +423,99 @@
             this.contenedor.BackColor = System.Drawing.Color.Transparent;
             this.contenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("contenedor.BackgroundImage")));
             this.contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.contenedor.Controls.Add(this.panel2);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(267, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(913, 620);
+            this.contenedor.Size = new System.Drawing.Size(913, 564);
             this.contenedor.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.panel2.Controls.Add(this.lblUsuarioOnline);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 544);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(913, 20);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblUsuarioOnline
+            // 
+            this.lblUsuarioOnline.AutoSize = true;
+            this.lblUsuarioOnline.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioOnline.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioOnline.Location = new System.Drawing.Point(152, 3);
+            this.lblUsuarioOnline.Name = "lblUsuarioOnline";
+            this.lblUsuarioOnline.Size = new System.Drawing.Size(129, 17);
+            this.lblUsuarioOnline.TabIndex = 1;
+            this.lblUsuarioOnline.Text = "Nombre de usuario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label2.Location = new System.Drawing.Point(20, 2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "USUARIO ONLINE : ";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 620);
+            this.ClientSize = new System.Drawing.Size(1180, 564);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.panelDashboard);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.panelBtn1SubMenu.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.panelOpcConsultaMedica.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);
-            this.panelBtn2SubMenu.ResumeLayout(false);
+            this.panelOpcGestionDeUsuarios.ResumeLayout(false);
+            this.panelOpcGestionPacientes.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            this.contenedor.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Panel panelBtn1SubMenu;
+        private System.Windows.Forms.Button opcConsultaMedica;
+        private System.Windows.Forms.Panel panelOpcConsultaMedica;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNuevaConsultaView;
         private System.Windows.Forms.Panel panelDashboard;
-        private System.Windows.Forms.Panel panelBtn2SubMenu;
+        private System.Windows.Forms.Panel panelOpcGestionPacientes;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button btn2;
+        private System.Windows.Forms.Button opcGestionPaciente;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panelOpcGestionDeUsuarios;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button opcGestionDeUsuarios;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblUsuarioOnline;
+        private System.Windows.Forms.Label label2;
     }
 }

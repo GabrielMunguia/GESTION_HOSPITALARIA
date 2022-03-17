@@ -12,58 +12,90 @@ namespace CLIGAR.GUI
 {
     public partial class Login : Form
     {
+        SessionManager.Sesion session = SessionManager.Sesion.Instance;
+
         public Login()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(33, 37, 41);
+   
             
-            btnLogin.BackColor = Color.FromArgb(13, 110, 253);
+        
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.FlatAppearance.BorderSize = 0;
+            this.labelErrorLogin.Visible = false;
         }
 
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void Login_Load_1(object sender, EventArgs e)
-        {
+            System.Environment.Exit(1);
 
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
-           
-        {
-            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            string sentencia = "select * from usuarios where idUsuario=1;";
-            DataTable tabla = operacion.Consultar(sentencia);
-            inputCorreo.Text = tabla.Rows[0][1].ToString();
 
-            this.btnLogin.Text = "Cargando..";
-            
-            //Dashboard dash = new Dashboard();
-            //this.Hide();
-            //dash.ShowDialog();
-            //this.Close();
+        {
+            try
+            {
+                this.labelErrorLogin.Visible = false;
+
+                this.btnLogin.Text = "Cargando..";
+
+                string password = inputPassword.Text;
+
+                string usuario = inputUsuario.Text;
+
+                //Se realiza la consulta a la base de datos
+                DataTable tabla = DataSource.Consultas.INICIO_SESION(usuario,password);
+
+                //Se comprueba que se encontro un usuario con esas credenciales 
+
+                if (tabla.Rows.Count > 0)
+                {
+                    //Si  hay un registro con esas credenciales se procede a cerrar el login
+                    // Y abrir el dashboard
+
+                    Dashboard dash = new Dashboard();
+
+                    //Almaceno los datos del usuario que ingreso 
+                    session.Nombres = tabla.Rows[0][5].ToString();
+                    session.Apellidos = tabla.Rows[0][6].ToString();
+                  
+                    session.Cargo = tabla.Rows[0][10].ToString();
+                    session.IDUsuario = tabla.Rows[0][0].ToString();
+                    session.IDEmpleado = tabla.Rows[0][4].ToString();
+                    this.Hide();
+
+                    dash.ShowDialog();
+
+                   this.Close();
+
+                }
+
+                //Si no se encuentra ninguno se hace visible el mensaje de error
+                //Y se coloca nuevamente el texto de iniciar session 
+
+                this.labelErrorLogin.Visible = true;
+
+                this.btnLogin.Text = "Iniciar session";
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con un administrador");
+                throw;
+            }
+
+
 
 
         }
 
-        private void inputCorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -12,62 +12,33 @@ namespace CLIGAR.GUI
 {
     public partial class Dashboard : Form
     {
+        SessionManager.Sesion session = SessionManager.Sesion.Instance;
 
         private Form formularioActivo = null;
 
         public Dashboard()
         {
             InitializeComponent();
-           this.estilos();
-          
-        }
+            this.ocultarMenus();
 
-        private void panelDashboard_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-             public void estilos()
-        {
-            panelBtn1SubMenu.Visible = false;
-            panelBtn2SubMenu.Visible = false;
-        }
-
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            this.panelBtn1SubMenu.Visible= !this.panelBtn1SubMenu.Visible;
         }
 
         private void ocultarMenus()
         {
-            this.panelBtn1SubMenu.Visible = false;
-            this.panelBtn2SubMenu.Visible = false;
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-            this.panelBtn2SubMenu.Visible = !this.panelBtn2SubMenu.Visible;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.ocultarMenus();
-            this.abrirFormulario(new ventana1());
+            this.panelOpcConsultaMedica.Visible = false;
+            this.panelOpcGestionPacientes.Visible = false;
+            panelOpcConsultaMedica.Visible = false;
+            panelOpcGestionPacientes.Visible = false;
+            panelOpcGestionDeUsuarios.Visible = false;
         }
 
 
 
         private void btn_MouseHover(object sender, EventArgs e)
         {
-            Button boton = sender as Button;
-            
-
-       
-                boton.BackColor = Color.FromArgb(47, 51, 56);
-            boton.ForeColor = Color.FromArgb(15, 151, 241);
-        
-
-
+            Button boton = sender as Button;                  
+            boton.BackColor = Color.FromArgb(47, 51, 56);
+            boton.ForeColor = Color.FromArgb(15, 151, 241);       
         }
 
         private void btn_MouseLeave(object sender,EventArgs e)
@@ -75,10 +46,6 @@ namespace CLIGAR.GUI
             Button boton = sender as Button;
             boton.ForeColor = Color.FromArgb(255, 255, 255);
             boton.BackColor = Color.FromArgb(33, 37, 41);
-
-
-
-        
         }
 
        
@@ -88,27 +55,92 @@ namespace CLIGAR.GUI
         private void abrirFormulario(Form childForm)
         {
             if (formularioActivo != null)
-                formularioActivo.Close();
-            formularioActivo = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            
-            contenedor.Controls.Add(childForm);
-            contenedor.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+                 formularioActivo.Close();
+                 formularioActivo = childForm;
+                 childForm.TopLevel = false;
+                 childForm.FormBorderStyle = FormBorderStyle.None;
+                 childForm.Dock = DockStyle.Fill;
+                 contenedor.Controls.Add(childForm);
+                 contenedor.Tag = childForm;
+                 childForm.BringToFront();
+                 childForm.Show();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+      
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
+          
+
+            //valido las opciones que tendra el menu segun el cargo
+            this.validarPermisos();
+            this.lblUsuarioOnline.Text = (session.Nombres + " " + session.Apellidos).ToUpper();
+
+        }
+
+    
+
+      
+
+
+        //Esta funcion habilita  las opciones del menu segun el cargo del usuario
+        public void validarPermisos() {
+            //Desabilito todos los menus  luego se activaran segun el cargo
+            opcGestionPaciente.Visible = false;
+            opcConsultaMedica.Visible = false;
+            opcGestionDeUsuarios.Visible = false;
+
+
+            //1-ADMIN
+            //2-DOCTOR
+
+            switch (Int32.Parse(session.Cargo))
+            {                
+                case 1:
+                    {
+                        opcGestionDeUsuarios.Visible = true;
+                    }
+                    break;
+
+                case 2:
+                    {
+                        opcGestionPaciente.Visible = true;
+                        opcConsultaMedica.Visible = true;
+                    }
+                    break;                
+            }
+        }
+
+       
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
             Login login = new Login();
             this.Hide();
             login.ShowDialog();
             this.Close();
-         
-           
+        }
+
+        private void opcConsultaMedica_Click(object sender, EventArgs e)
+        {
+            this.panelOpcConsultaMedica.Visible = !this.panelOpcConsultaMedica.Visible;
+        }
+
+        private void opcGestionDeUsuarios_Click(object sender, EventArgs e)
+        {
+            this.panelOpcGestionDeUsuarios.Visible = !this.panelOpcGestionDeUsuarios.Visible;
+        }
+
+        private void opcGestionPaciente_Click(object sender, EventArgs e)
+        {
+            this.panelOpcGestionPacientes.Visible = !this.panelOpcGestionPacientes.Visible;
+        }
+
+        private void btnNuevaConsultaView_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new ventana1());
         }
     }
 }

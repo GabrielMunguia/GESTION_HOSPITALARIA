@@ -34,12 +34,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.inputCorreo = new System.Windows.Forms.TextBox();
+            this.inputUsuario = new System.Windows.Forms.TextBox();
             this.inputPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelErrorLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -70,11 +71,10 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // inputCorreo
+            // inputUsuario
             // 
-            resources.ApplyResources(this.inputCorreo, "inputCorreo");
-            this.inputCorreo.Name = "inputCorreo";
-            this.inputCorreo.TextChanged += new System.EventHandler(this.inputCorreo_TextChanged);
+            resources.ApplyResources(this.inputUsuario, "inputUsuario");
+            this.inputUsuario.Name = "inputUsuario";
             // 
             // inputPassword
             // 
@@ -94,9 +94,10 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
             resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
@@ -104,24 +105,30 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // labelErrorLogin
+            // 
+            resources.ApplyResources(this.labelErrorLogin, "labelErrorLogin");
+            this.labelErrorLogin.ForeColor = System.Drawing.Color.Red;
+            this.labelErrorLogin.Name = "labelErrorLogin";
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.Controls.Add(this.labelErrorLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputPassword);
-            this.Controls.Add(this.inputCorreo);
+            this.Controls.Add(this.inputUsuario);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.ForeColor = System.Drawing.Color.Transparent;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
-            this.Load += new System.EventHandler(this.Login_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
@@ -136,11 +143,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox btnSalir;
-        private System.Windows.Forms.TextBox inputCorreo;
+        private System.Windows.Forms.TextBox inputUsuario;
         private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelErrorLogin;
     }
 }

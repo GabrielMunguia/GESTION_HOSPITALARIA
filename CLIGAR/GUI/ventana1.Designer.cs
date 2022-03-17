@@ -30,17 +30,18 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.salir = new System.Windows.Forms.Button();
+            this.process1 = new System.Diagnostics.Process();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(376, 243);
+            this.label2.Location = new System.Drawing.Point(318, 260);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 25);
+            this.label2.Size = new System.Drawing.Size(255, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "TEXTO DE PRUEBA";
+            this.label2.Text = "TEST NUEVA CONSULTA";
             // 
             // salir
             // 
@@ -51,6 +52,16 @@
             this.salir.Text = "X";
             this.salir.UseVisualStyleBackColor = true;
             this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
             // 
             // ventana1
             // 
@@ -70,5 +81,6 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button salir;
+        private System.Diagnostics.Process process1;
     }
 }
