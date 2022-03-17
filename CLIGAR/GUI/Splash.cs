@@ -15,6 +15,8 @@ namespace CLIGAR.GUI
         public Splash()
         {
             InitializeComponent();
+            
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -23,11 +25,19 @@ namespace CLIGAR.GUI
             if (panel1.Width >= panel2.Width)
             {
                 timer1.Stop();
-                Login formLog = new Login();
-                this.Hide();
-                formLog.ShowDialog();
-                this.Close();
-
+                DataManager.DBConexion con = new DataManager.DBConexion();
+                if (con.Conectar())
+                {
+                    Login formLog = new Login();
+                    this.Hide();
+                    formLog.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("No se pudo establecer conexion con la base de datos", "Error conexion", MessageBoxButtons.OK);
+                    System.Environment.Exit(1);
+                }
             } 
         }
 
