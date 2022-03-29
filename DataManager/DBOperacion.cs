@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
+
 namespace DataManager
 {
     public class DBOperacion:DBConexion
@@ -39,8 +41,10 @@ namespace DataManager
                     Desconectar();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
+
             {
+                MessageBox.Show(ex.Message);
                 FilasAfectadas = -1;
             }
             return FilasAfectadas;

@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\ADMIN\AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +87,13 @@
     <Compile Include="GUI\ventana1.Designer.cs">
       <DependentUpon>ventana1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Empleado.cs" />
+    <Compile Include="Modelos\Medico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ADMIN\AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,9 +129,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DataManager\DataManager.csproj">
       <Project>{302941b1-2732-4659-b981-38f8fb1b6265}</Project>

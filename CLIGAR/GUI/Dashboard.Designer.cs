@@ -36,6 +36,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnNuevaConsultaView = new System.Windows.Forms.Button();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.panelOpcGestionDeEmpleados = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.btnNuevaAgregarEmpleadoView = new System.Windows.Forms.Button();
+            this.opcGestionDeEmpleados = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelOpcGestionDeUsuarios = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -56,8 +62,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUsuarioOnline = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.panelOpcConsultaMedica.SuspendLayout();
             this.panelDashboard.SuspendLayout();
+            this.panelOpcGestionDeEmpleados.SuspendLayout();
             this.panelOpcGestionDeUsuarios.SuspendLayout();
             this.panelOpcGestionPacientes.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -78,7 +87,7 @@
             this.opcConsultaMedica.Location = new System.Drawing.Point(0, 189);
             this.opcConsultaMedica.Name = "opcConsultaMedica";
             this.opcConsultaMedica.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opcConsultaMedica.Size = new System.Drawing.Size(250, 45);
+            this.opcConsultaMedica.Size = new System.Drawing.Size(210, 45);
             this.opcConsultaMedica.TabIndex = 1;
             this.opcConsultaMedica.Text = "CONSULTA MEDICA";
             this.opcConsultaMedica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,7 +106,7 @@
             this.panelOpcConsultaMedica.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpcConsultaMedica.Location = new System.Drawing.Point(0, 234);
             this.panelOpcConsultaMedica.Name = "panelOpcConsultaMedica";
-            this.panelOpcConsultaMedica.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcConsultaMedica.Size = new System.Drawing.Size(210, 169);
             this.panelOpcConsultaMedica.TabIndex = 2;
             // 
             // button5
@@ -109,7 +118,7 @@
             this.button5.Location = new System.Drawing.Point(0, 120);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 40);
+            this.button5.Size = new System.Drawing.Size(210, 40);
             this.button5.TabIndex = 3;
             this.button5.Text = "button5";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +133,7 @@
             this.button4.Location = new System.Drawing.Point(0, 80);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 40);
+            this.button4.Size = new System.Drawing.Size(210, 40);
             this.button4.TabIndex = 2;
             this.button4.Text = "button4";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,7 +148,7 @@
             this.button3.Location = new System.Drawing.Point(0, 40);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 40);
+            this.button3.Size = new System.Drawing.Size(210, 40);
             this.button3.TabIndex = 1;
             this.button3.Text = "button3";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,7 +163,7 @@
             this.btnNuevaConsultaView.Location = new System.Drawing.Point(0, 0);
             this.btnNuevaConsultaView.Name = "btnNuevaConsultaView";
             this.btnNuevaConsultaView.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNuevaConsultaView.Size = new System.Drawing.Size(250, 40);
+            this.btnNuevaConsultaView.Size = new System.Drawing.Size(210, 40);
             this.btnNuevaConsultaView.TabIndex = 0;
             this.btnNuevaConsultaView.Text = "NUEVA CONSULTA";
             this.btnNuevaConsultaView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,6 +175,8 @@
             this.panelDashboard.AutoScroll = true;
             this.panelDashboard.AutoScrollMargin = new System.Drawing.Size(20, 0);
             this.panelDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.panelDashboard.Controls.Add(this.panelOpcGestionDeEmpleados);
+            this.panelDashboard.Controls.Add(this.opcGestionDeEmpleados);
             this.panelDashboard.Controls.Add(this.btnSalir);
             this.panelDashboard.Controls.Add(this.panelOpcGestionDeUsuarios);
             this.panelDashboard.Controls.Add(this.opcGestionDeUsuarios);
@@ -177,22 +188,116 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(267, 564);
+            this.panelDashboard.Size = new System.Drawing.Size(227, 564);
             this.panelDashboard.TabIndex = 0;
+            // 
+            // panelOpcGestionDeEmpleados
+            // 
+            this.panelOpcGestionDeEmpleados.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.button1);
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.button2);
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.button14);
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.btnNuevaAgregarEmpleadoView);
+            this.panelOpcGestionDeEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOpcGestionDeEmpleados.Location = new System.Drawing.Point(0, 876);
+            this.panelOpcGestionDeEmpleados.Name = "panelOpcGestionDeEmpleados";
+            this.panelOpcGestionDeEmpleados.Size = new System.Drawing.Size(210, 169);
+            this.panelOpcGestionDeEmpleados.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(0, 120);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(210, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(210, 40);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button14.Location = new System.Drawing.Point(0, 40);
+            this.button14.Name = "button14";
+            this.button14.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button14.Size = new System.Drawing.Size(210, 40);
+            this.button14.TabIndex = 1;
+            this.button14.Text = "button14";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevaAgregarEmpleadoView
+            // 
+            this.btnNuevaAgregarEmpleadoView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNuevaAgregarEmpleadoView.FlatAppearance.BorderSize = 0;
+            this.btnNuevaAgregarEmpleadoView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevaAgregarEmpleadoView.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnNuevaAgregarEmpleadoView.Location = new System.Drawing.Point(0, 0);
+            this.btnNuevaAgregarEmpleadoView.Name = "btnNuevaAgregarEmpleadoView";
+            this.btnNuevaAgregarEmpleadoView.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnNuevaAgregarEmpleadoView.Size = new System.Drawing.Size(210, 40);
+            this.btnNuevaAgregarEmpleadoView.TabIndex = 0;
+            this.btnNuevaAgregarEmpleadoView.Text = "AGREGAR EMPLEADO";
+            this.btnNuevaAgregarEmpleadoView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevaAgregarEmpleadoView.UseVisualStyleBackColor = true;
+            this.btnNuevaAgregarEmpleadoView.Click += new System.EventHandler(this.btnNuevaAgregarEmpleadoView_Click);
+            // 
+            // opcGestionDeEmpleados
+            // 
+            this.opcGestionDeEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.opcGestionDeEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.opcGestionDeEmpleados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
+            this.opcGestionDeEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opcGestionDeEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opcGestionDeEmpleados.ForeColor = System.Drawing.Color.AliceBlue;
+            this.opcGestionDeEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("opcGestionDeEmpleados.Image")));
+            this.opcGestionDeEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opcGestionDeEmpleados.Location = new System.Drawing.Point(0, 831);
+            this.opcGestionDeEmpleados.Name = "opcGestionDeEmpleados";
+            this.opcGestionDeEmpleados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.opcGestionDeEmpleados.Size = new System.Drawing.Size(210, 45);
+            this.opcGestionDeEmpleados.TabIndex = 9;
+            this.opcGestionDeEmpleados.Text = "GESTION DE EMPLEADOS";
+            this.opcGestionDeEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opcGestionDeEmpleados.UseVisualStyleBackColor = false;
+            this.opcGestionDeEmpleados.Click += new System.EventHandler(this.opcGestionDeEmpleados_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Red;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(61)))), ((int)(((byte)(64)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(0, 831);
+            this.btnSalir.Location = new System.Drawing.Point(0, 1045);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSalir.Size = new System.Drawing.Size(250, 45);
+            this.btnSalir.Size = new System.Drawing.Size(210, 45);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "CERRAR SESSION";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +314,7 @@
             this.panelOpcGestionDeUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpcGestionDeUsuarios.Location = new System.Drawing.Point(0, 662);
             this.panelOpcGestionDeUsuarios.Name = "panelOpcGestionDeUsuarios";
-            this.panelOpcGestionDeUsuarios.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcGestionDeUsuarios.Size = new System.Drawing.Size(210, 169);
             this.panelOpcGestionDeUsuarios.TabIndex = 7;
             // 
             // button10
@@ -221,7 +326,7 @@
             this.button10.Location = new System.Drawing.Point(0, 120);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(250, 40);
+            this.button10.Size = new System.Drawing.Size(210, 40);
             this.button10.TabIndex = 3;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,7 +341,7 @@
             this.button11.Location = new System.Drawing.Point(0, 80);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(250, 40);
+            this.button11.Size = new System.Drawing.Size(210, 40);
             this.button11.TabIndex = 2;
             this.button11.Text = "button11";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +356,7 @@
             this.button12.Location = new System.Drawing.Point(0, 40);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 40);
+            this.button12.Size = new System.Drawing.Size(210, 40);
             this.button12.TabIndex = 1;
             this.button12.Text = "button12";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,7 +371,7 @@
             this.button13.Location = new System.Drawing.Point(0, 0);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(250, 40);
+            this.button13.Size = new System.Drawing.Size(210, 40);
             this.button13.TabIndex = 0;
             this.button13.Text = "button13";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +390,7 @@
             this.opcGestionDeUsuarios.Location = new System.Drawing.Point(0, 617);
             this.opcGestionDeUsuarios.Name = "opcGestionDeUsuarios";
             this.opcGestionDeUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opcGestionDeUsuarios.Size = new System.Drawing.Size(250, 45);
+            this.opcGestionDeUsuarios.Size = new System.Drawing.Size(210, 45);
             this.opcGestionDeUsuarios.TabIndex = 6;
             this.opcGestionDeUsuarios.Text = "GESTION DE USUARIOS";
             this.opcGestionDeUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,7 +407,7 @@
             this.panelOpcGestionPacientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpcGestionPacientes.Location = new System.Drawing.Point(0, 448);
             this.panelOpcGestionPacientes.Name = "panelOpcGestionPacientes";
-            this.panelOpcGestionPacientes.Size = new System.Drawing.Size(250, 169);
+            this.panelOpcGestionPacientes.Size = new System.Drawing.Size(210, 169);
             this.panelOpcGestionPacientes.TabIndex = 4;
             // 
             // button6
@@ -314,7 +419,7 @@
             this.button6.Location = new System.Drawing.Point(0, 120);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(250, 40);
+            this.button6.Size = new System.Drawing.Size(210, 40);
             this.button6.TabIndex = 3;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,7 +434,7 @@
             this.button7.Location = new System.Drawing.Point(0, 80);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(250, 40);
+            this.button7.Size = new System.Drawing.Size(210, 40);
             this.button7.TabIndex = 2;
             this.button7.Text = "button7";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,7 +449,7 @@
             this.button8.Location = new System.Drawing.Point(0, 40);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(250, 40);
+            this.button8.Size = new System.Drawing.Size(210, 40);
             this.button8.TabIndex = 1;
             this.button8.Text = "button8";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,7 +464,7 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(250, 40);
+            this.button9.Size = new System.Drawing.Size(210, 40);
             this.button9.TabIndex = 0;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,7 +483,7 @@
             this.opcGestionPaciente.Location = new System.Drawing.Point(0, 403);
             this.opcGestionPaciente.Name = "opcGestionPaciente";
             this.opcGestionPaciente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opcGestionPaciente.Size = new System.Drawing.Size(250, 45);
+            this.opcGestionPaciente.Size = new System.Drawing.Size(210, 45);
             this.opcGestionPaciente.TabIndex = 3;
             this.opcGestionPaciente.Text = "GESTION DE PACIENTES";
             this.opcGestionPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -395,7 +500,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 189);
+            this.panelLogo.Size = new System.Drawing.Size(210, 189);
             this.panelLogo.TabIndex = 0;
             // 
             // label1
@@ -425,21 +530,23 @@
             this.contenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.contenedor.Controls.Add(this.panel2);
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(267, 0);
+            this.contenedor.Location = new System.Drawing.Point(227, 0);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(913, 564);
+            this.contenedor.Size = new System.Drawing.Size(953, 564);
             this.contenedor.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.panel2.Controls.Add(this.lblTipoUsuario);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblUsuarioOnline);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 544);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(913, 20);
+            this.panel2.Size = new System.Drawing.Size(953, 20);
             this.panel2.TabIndex = 0;
             // 
             // lblUsuarioOnline
@@ -464,6 +571,28 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "USUARIO ONLINE : ";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label3.Location = new System.Drawing.Point(484, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "TIPO DE USUARIO : ";
+            // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(631, 2);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(107, 17);
+            this.lblTipoUsuario.TabIndex = 3;
+            this.lblTipoUsuario.Text = "Tipo de usuario";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +606,7 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panelOpcConsultaMedica.ResumeLayout(false);
             this.panelDashboard.ResumeLayout(false);
+            this.panelOpcGestionDeEmpleados.ResumeLayout(false);
             this.panelOpcGestionDeUsuarios.ResumeLayout(false);
             this.panelOpcGestionPacientes.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -507,7 +637,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panelOpcGestionDeUsuarios;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
@@ -517,5 +646,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUsuarioOnline;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panelOpcGestionDeEmpleados;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnNuevaAgregarEmpleadoView;
+        private System.Windows.Forms.Button opcGestionDeEmpleados;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblTipoUsuario;
     }
 }

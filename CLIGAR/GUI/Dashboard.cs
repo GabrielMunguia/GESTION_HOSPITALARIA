@@ -30,6 +30,7 @@ namespace CLIGAR.GUI
             panelOpcConsultaMedica.Visible = false;
             panelOpcGestionPacientes.Visible = false;
             panelOpcGestionDeUsuarios.Visible = false;
+            panelOpcGestionDeEmpleados.Visible = false;
         }
 
 
@@ -76,6 +77,14 @@ namespace CLIGAR.GUI
             //valido las opciones que tendra el menu segun el cargo
             this.validarPermisos();
             this.lblUsuarioOnline.Text = (session.Nombres + " " + session.Apellidos).ToUpper();
+            switch (session.Cargo)
+            {
+                case "1": lblTipoUsuario.Text = "ADMINISTRADOR"; break;
+                case "2": lblTipoUsuario.Text = "DOCTOR"; break;
+                case "3": lblTipoUsuario.Text = "RECEPCIONISTA"; break;
+                default:
+                    break;
+            }
 
         }
 
@@ -90,6 +99,7 @@ namespace CLIGAR.GUI
             opcGestionPaciente.Visible = false;
             opcConsultaMedica.Visible = false;
             opcGestionDeUsuarios.Visible = false;
+            opcGestionDeEmpleados.Visible = false;
 
 
             //1-ADMIN
@@ -100,6 +110,7 @@ namespace CLIGAR.GUI
                 case 1:
                     {
                         opcGestionDeUsuarios.Visible = true;
+                        opcGestionDeEmpleados.Visible = true;
                     }
                     break;
 
@@ -107,6 +118,7 @@ namespace CLIGAR.GUI
                     {
                         opcGestionPaciente.Visible = true;
                         opcConsultaMedica.Visible = true;
+                      
                     }
                     break;                
             }
@@ -141,6 +153,17 @@ namespace CLIGAR.GUI
         {
             this.ocultarMenus();
             this.abrirFormulario(new ventana1());
+        }
+
+        private void btnNuevaAgregarEmpleadoView_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new AgregarEmpleado());
+        }
+
+        private void opcGestionDeEmpleados_Click(object sender, EventArgs e)
+        {
+            this.panelOpcGestionDeEmpleados.Visible = !this.panelOpcGestionDeEmpleados.Visible;
         }
     }
 }
