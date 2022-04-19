@@ -46,8 +46,8 @@
             this.panelOpcGestionDeUsuarios = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnAgregarUsuario = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.opcGestionDeUsuarios = new System.Windows.Forms.Button();
             this.panelOpcGestionPacientes = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -60,10 +60,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblUsuarioOnline = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.panelOpcConsultaMedica.SuspendLayout();
             this.panelDashboard.SuspendLayout();
             this.panelOpcGestionDeEmpleados.SuspendLayout();
@@ -309,8 +309,8 @@
             this.panelOpcGestionDeUsuarios.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panelOpcGestionDeUsuarios.Controls.Add(this.button10);
             this.panelOpcGestionDeUsuarios.Controls.Add(this.button11);
-            this.panelOpcGestionDeUsuarios.Controls.Add(this.button12);
-            this.panelOpcGestionDeUsuarios.Controls.Add(this.button13);
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.btnAgregarUsuario);
+            this.panelOpcGestionDeUsuarios.Controls.Add(this.btnUsuarios);
             this.panelOpcGestionDeUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpcGestionDeUsuarios.Location = new System.Drawing.Point(0, 662);
             this.panelOpcGestionDeUsuarios.Name = "panelOpcGestionDeUsuarios";
@@ -347,35 +347,37 @@
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnAgregarUsuario
             // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button12.Location = new System.Drawing.Point(0, 40);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(210, 40);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "button12";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(0, 40);
+            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
+            this.btnAgregarUsuario.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(210, 40);
+            this.btnAgregarUsuario.TabIndex = 1;
+            this.btnAgregarUsuario.Text = "AGREGAR USUARIO";
+            this.btnAgregarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarUsuario.UseVisualStyleBackColor = true;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button13
+            // btnUsuarios
             // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button13.Location = new System.Drawing.Point(0, 0);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(210, 40);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "button13";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(210, 40);
+            this.btnUsuarios.TabIndex = 0;
+            this.btnUsuarios.Text = "USUARIOS";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // opcGestionDeUsuarios
             // 
@@ -549,6 +551,28 @@
             this.panel2.Size = new System.Drawing.Size(953, 20);
             this.panel2.TabIndex = 0;
             // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(631, 2);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(107, 17);
+            this.lblTipoUsuario.TabIndex = 3;
+            this.lblTipoUsuario.Text = "Tipo de usuario";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label3.Location = new System.Drawing.Point(484, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "TIPO DE USUARIO : ";
+            // 
             // lblUsuarioOnline
             // 
             this.lblUsuarioOnline.AutoSize = true;
@@ -570,28 +594,6 @@
             this.label2.Size = new System.Drawing.Size(137, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "USUARIO ONLINE : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label3.Location = new System.Drawing.Point(484, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "TIPO DE USUARIO : ";
-            // 
-            // lblTipoUsuario
-            // 
-            this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(631, 2);
-            this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(107, 17);
-            this.lblTipoUsuario.TabIndex = 3;
-            this.lblTipoUsuario.Text = "Tipo de usuario";
             // 
             // Dashboard
             // 
@@ -640,8 +642,8 @@
         private System.Windows.Forms.Panel panelOpcGestionDeUsuarios;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnAgregarUsuario;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button opcGestionDeUsuarios;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUsuarioOnline;

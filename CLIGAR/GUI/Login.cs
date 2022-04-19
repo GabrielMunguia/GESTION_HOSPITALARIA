@@ -16,29 +16,19 @@ namespace CLIGAR.GUI
 
         public Login()
         {
-            InitializeComponent();
-   
-            
-        
+            InitializeComponent();     
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.FlatAppearance.BorderSize = 0;
             this.labelErrorLogin.Visible = false;
         }
-
-
-       
-
-      
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
 
         }
-
-
-        private void btnLogin_Click(object sender, EventArgs e)
-
+        
+        private void logeo()
         {
             try
             {
@@ -51,7 +41,7 @@ namespace CLIGAR.GUI
                 string usuario = inputUsuario.Text;
 
                 //Se realiza la consulta a la base de datos
-                DataTable tabla = DataSource.Consultas.INICIO_SESION(usuario,password);
+                DataTable tabla = DataSource.Consultas.INICIO_SESION(usuario, password);
 
                 //Se comprueba que se encontro un usuario con esas credenciales 
 
@@ -65,7 +55,7 @@ namespace CLIGAR.GUI
                     //Almaceno los datos del usuario que ingreso 
                     session.Nombres = tabla.Rows[0][5].ToString();
                     session.Apellidos = tabla.Rows[0][6].ToString();
-                  
+
                     session.Cargo = tabla.Rows[0][10].ToString();
                     session.IDUsuario = tabla.Rows[0][0].ToString();
                     session.IDEmpleado = tabla.Rows[0][4].ToString();
@@ -73,7 +63,7 @@ namespace CLIGAR.GUI
 
                     dash.ShowDialog();
 
-                   this.Close();
+                    this.Close();
 
                 }
 
@@ -90,12 +80,21 @@ namespace CLIGAR.GUI
                 MessageBox.Show("Ocurrio un error comuniquese con un administrador");
                 throw;
             }
-
-
-
-
         }
 
-       
+
+        private void btnLogin_Click(object sender, EventArgs e)
+
+        {
+            logeo();
+        }
+
+        private void inputPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                logeo();
+            }      
+        }
     }
 }

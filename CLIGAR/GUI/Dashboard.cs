@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLIGAR.GUI.ADMIN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace CLIGAR.GUI
 
         }
 
-        private void ocultarMenus()
+        public void ocultarMenus()
         {
             this.panelOpcConsultaMedica.Visible = false;
             this.panelOpcGestionPacientes.Visible = false;
@@ -53,7 +54,7 @@ namespace CLIGAR.GUI
 
 
        
-        private void abrirFormulario(Form childForm)
+        public void abrirFormulario(Form childForm)
         {
             if (formularioActivo != null)
                  formularioActivo.Close();
@@ -164,6 +165,18 @@ namespace CLIGAR.GUI
         private void opcGestionDeEmpleados_Click(object sender, EventArgs e)
         {
             this.panelOpcGestionDeEmpleados.Visible = !this.panelOpcGestionDeEmpleados.Visible;
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new GestionUsuario());
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new EdicionUsuario());
         }
     }
 }

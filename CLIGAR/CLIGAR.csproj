@@ -63,11 +63,23 @@
     <Compile Include="GUI\ADMIN\AgregarEmpleado.Designer.cs">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ADMIN\EdicionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\EdicionUsuario.Designer.cs">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ADMIN\EditarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ADMIN\EditarEmpleado.Designer.cs">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionUsuario.Designer.cs">
+      <DependentUpon>GestionUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dashboard.cs">
       <SubType>Form</SubType>
@@ -95,13 +107,20 @@
     </Compile>
     <Compile Include="Modelos\Empleado.cs" />
     <Compile Include="Modelos\Medico.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ADMIN\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\EdicionUsuario.resx">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ADMIN\EditarEmpleado.resx">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\GestionUsuario.resx">
+      <DependentUpon>GestionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

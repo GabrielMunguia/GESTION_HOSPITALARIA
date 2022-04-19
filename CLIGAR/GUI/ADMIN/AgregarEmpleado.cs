@@ -172,5 +172,10 @@ namespace CLIGAR.GUI
 
             return esValidoElFormulario;
         }
+
+        private void btnCerrar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -110,6 +110,7 @@
             this.btnCerrar.Size = new System.Drawing.Size(44, 35);
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Paint += new System.Windows.Forms.PaintEventHandler(this.btnCerrar_Paint);
             // 
             // panel2
             // 
