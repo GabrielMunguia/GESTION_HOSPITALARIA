@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CLIGAR.GUI.ADMIN
 {
-    public partial class verEmpleados : Form
+    public partial class test : Form
     {
-        public verEmpleados()
+        public test()
         {
             InitializeComponent();
         }

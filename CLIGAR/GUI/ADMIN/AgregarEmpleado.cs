@@ -13,9 +13,66 @@ namespace CLIGAR.GUI
 {
     public partial class AgregarEmpleado : Form
     {
+        SessionManager.Sesion session = SessionManager.Sesion.Instance;
+        public int id = -1;
         public AgregarEmpleado()
         {
             InitializeComponent();
+        }
+
+        public AgregarEmpleado(int id)
+        {
+            InitializeComponent();
+            Empleado empleado = new Empleado();
+            DataTable edEmpleado = empleado.obtenerEmpleado(id);
+
+            if (edEmpleado.Rows.Count > 0){
+                this.id = Int32.Parse(edEmpleado.Rows[0][0].ToString());
+                
+                this.txtNombres.Text = edEmpleado.Rows[0][1].ToString();
+                this.txtApellidos.Text = edEmpleado.Rows[0][2].ToString();
+                this.txtTelefono.Text = edEmpleado.Rows[0][3].ToString();
+                this.txtDireccion.Text = edEmpleado.Rows[0][4].ToString();
+
+                if (edEmpleado.Rows[0][5].ToString()=="M")
+                {
+                    empleado.Genero = "M";
+                    this.cbxGenero.SelectedIndex = 0;
+                }
+                else
+                {
+                    this.cbxGenero.SelectedIndex = 1;
+                }
+
+                switch (edEmpleado.Rows[0][6].ToString())
+                {
+                    case "1":
+                        {
+                            this.cbxCargo.SelectedIndex = 0;
+                        }break;
+                    case "2":
+                        {
+                            this.cbxCargo.SelectedIndex = 1;
+                        }
+                        break;
+                    case "3":
+                        {
+                            this.cbxCargo.SelectedIndex = 2;
+                        }
+                        break;
+                }
+
+                this.txtJVM.Text = edEmpleado.Rows[0][7].ToString();
+                this.txtDui.Text= edEmpleado.Rows[0][8].ToString();
+                this.txtNIT.Text = edEmpleado.Rows[0][9].ToString();
+
+            }
+         
+
+
+            this.id = id;
+
+         
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -25,7 +82,16 @@ namespace CLIGAR.GUI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.reinciarFormulario();
+           
+            if (this.id != -1)
+            {
+                Close();
+            }
+            else
+            {
+               
+                this.reinciarFormulario();
+            }
 
         }
 
@@ -67,9 +133,9 @@ namespace CLIGAR.GUI
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            Boolean esValidoElFormulario = this.validarCampos();
-
+          
+          Boolean esValidoElFormulario = this.validarCampos();
+            
             if (esValidoElFormulario)
             {
                 Empleado empleado = new Empleado();
@@ -79,6 +145,11 @@ namespace CLIGAR.GUI
                 empleado.Dui = this.txtDui.Text;
                 empleado.Nit = this.txtNIT.Text;
                 empleado.Telefono = this.txtTelefono.Text;
+
+                if (this.id > 0)
+                {
+                    empleado.IdEmpleado = this.id;
+                }
                 //Valido el genero
                 if (this.cbxGenero.SelectedIndex == 0)
                 {
@@ -99,8 +170,15 @@ namespace CLIGAR.GUI
                 }
                 empleado.IdCargo = this.cbxCargo.SelectedIndex + 1;
                 Boolean exito = false;
-                Boolean seGuardo = empleado.Guardar();
-
+                Boolean seGuardo = false;
+                if (id > 0)
+                {
+                    seGuardo = empleado.Actualizar();
+                }
+                else
+                {
+                    seGuardo = empleado.Guardar();
+                }
 
                 if (seGuardo && cbxCargo.SelectedIndex == 1)
                 {
@@ -118,12 +196,15 @@ namespace CLIGAR.GUI
 
 
                 }
+
+
                 if (seGuardo && cbxCargo.SelectedIndex != 1)
                 {
 
                     exito = true;
                     this.reinciarFormulario();
                 }
+
 
 
                 if (exito)
@@ -138,6 +219,11 @@ namespace CLIGAR.GUI
             else
             {
                 MessageBox.Show("Error! Todos los campos son obligatorios");
+            }
+
+            if (this.id > 0)
+            {
+                Close();
             }
             
 
@@ -171,6 +257,16 @@ namespace CLIGAR.GUI
 
 
             return esValidoElFormulario;
+        }
+
+        private void tableLayoutPanel16_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

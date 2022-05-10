@@ -21,6 +21,7 @@ namespace SessionManager
         String _Nombres;
         String _Apellidos;
         String _Estado;
+        Boolean subMenuAbierto = false;
         DataTable _Permisos = new DataTable();
 
         public string IDUsuario
@@ -146,6 +147,19 @@ namespace SessionManager
             set
             {
                 _IDEmpleado = value;
+            }
+        }
+
+        public bool SubMenuAbierto
+        {
+            get
+            {
+                return subMenuAbierto;
+            }
+
+            set
+            {
+                subMenuAbierto = value;
             }
         }
 

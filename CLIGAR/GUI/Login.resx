@@ -585,6 +585,9 @@
   <data name="inputUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="inputUsuario.Text" xml:space="preserve">
+    <value>admin</value>
+  </data>
   <data name="&gt;&gt;inputUsuario.Name" xml:space="preserve">
     <value>inputUsuario</value>
   </data>
@@ -608,6 +611,9 @@
   </data>
   <data name="inputPassword.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="inputPassword.Text" xml:space="preserve">
+    <value>admin</value>
   </data>
   <data name="&gt;&gt;inputPassword.Name" xml:space="preserve">
     <value>inputPassword</value>

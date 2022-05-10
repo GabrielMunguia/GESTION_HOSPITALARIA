@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLIGAR.GUI.ADMIN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,22 +50,34 @@ namespace CLIGAR.GUI
             boton.BackColor = Color.FromArgb(33, 37, 41);
         }
 
-       
 
 
-       
+
+
         private void abrirFormulario(Form childForm)
         {
-            if (formularioActivo != null)
-                 formularioActivo.Close();
-                 formularioActivo = childForm;
-                 childForm.TopLevel = false;
-                 childForm.FormBorderStyle = FormBorderStyle.None;
-                 childForm.Dock = DockStyle.Fill;
-                 contenedor.Controls.Add(childForm);
-                 contenedor.Tag = childForm;
-                 childForm.BringToFront();
-                 childForm.Show();
+         
+
+                if (formularioActivo != null)
+                    formularioActivo.Close();
+                formularioActivo = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(childForm);
+                contenedor.Tag = childForm;
+                childForm.BringToFront();
+
+               
+                
+                childForm.Show();
+             
+
+
+       
+
+          
+
         }
 
       
@@ -164,6 +177,22 @@ namespace CLIGAR.GUI
         private void opcGestionDeEmpleados_Click(object sender, EventArgs e)
         {
             this.panelOpcGestionDeEmpleados.Visible = !this.panelOpcGestionDeEmpleados.Visible;
+        }
+
+        private void btnVerEmpleadosView_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new ListaEmpleados());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new tx());
+        }
+
+        private void contenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -85,10 +85,10 @@ namespace CLIGAR.GUI
                 this.btnLogin.Text = "Iniciar session";
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Ocurrio un error comuniquese con un administrador");
-                throw;
+                MessageBox.Show(ex.Message);
             }
 
 

@@ -9,16 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CLIGAR.GUI.ADMIN
+namespace CLIGAR.GUI
 {
-    public partial class EditarEmpleado : Form
+    public partial class AgregarEmpleado : Form
     {
-
-
-        public int  idEmpleado;
-        public EditarEmpleado( int id)
+        public AgregarEmpleado()
         {
-           
             InitializeComponent();
         }
 
@@ -33,8 +29,7 @@ namespace CLIGAR.GUI.ADMIN
 
         }
 
-        private void reinciarFormulario()
-        {
+        private void reinciarFormulario() {
             this.txtNombres.Text = "";
             this.txtApellidos.Text = "";
             this.txtDui.Text = "";
@@ -144,7 +139,7 @@ namespace CLIGAR.GUI.ADMIN
             {
                 MessageBox.Show("Error! Todos los campos son obligatorios");
             }
-
+            
 
 
 
@@ -153,9 +148,9 @@ namespace CLIGAR.GUI.ADMIN
         private Boolean validarCampos()
         {
             Boolean esValidoElFormulario = false;
-            if (this.txtNombres.Text.Length > 0 && this.txtApellidos.Text.Length > 0 && this.txtDireccion.Text.Length > 0 &&
-                this.txtDui.Text.Length > 0 && this.txtNIT.Text.Length > 0 && this.txtTelefono.Text.Length > 0 && this.cbxCargo.SelectedIndex > -1
-                && this.cbxGenero.SelectedIndex > -1
+            if (this.txtNombres.Text.Length>0&& this.txtApellidos.Text.Length > 0 && this.txtDireccion.Text.Length > 0 &&
+                this.txtDui.Text.Length > 0 && this.txtNIT.Text.Length > 0 && this.txtTelefono.Text.Length > 0 && this.cbxCargo.SelectedIndex>-1
+                &&this.cbxGenero.SelectedIndex>-1
                )
             {
                 //valido si el cargo es doctor si es asi verifico si el campo jvm es valido
@@ -178,5 +173,4 @@ namespace CLIGAR.GUI.ADMIN
             return esValidoElFormulario;
         }
     }
-
 }

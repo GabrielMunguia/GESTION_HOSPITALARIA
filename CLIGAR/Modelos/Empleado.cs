@@ -198,6 +198,41 @@ namespace CLIGAR.Modelos
             return resultado;
         }
 
+        public Boolean Actualizar()
+        {
+            Boolean resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("UPDATE `cligar`.`empleados`SET");
+                Sentencia.Append("`Nombres` = '" + this.nombres + "',");
+                Sentencia.Append("`Apellidos`='" + this.apellidos + "',");
+                Sentencia.Append("`Telefono`='" + this.telefono + "',");
+                Sentencia.Append("`Direccion`='" + this.direccion + "',");
+                Sentencia.Append("`Genero` ='" + this.genero + "',");
+                Sentencia.Append("`idCargo` ='" + this.idCargo + "',");
+                Sentencia.Append("`CodigoRegistroMedico` ='" + this.codigoRegistroMedico + "',");
+                Sentencia.Append("`DUI` ='" + this.dui + "',");
+                Sentencia.Append("`NIT` ='" + this.nit + "' where idEmpleado="+idEmpleado+";");
+               
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    resultado = true;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+
 
         public int obtenerUltimoIDInsertador() {
             StringBuilder Sentencia = new StringBuilder();
@@ -226,9 +261,101 @@ namespace CLIGAR.Modelos
 
         }
 
+        public DataTable obtenerEmpleados() {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  idEmpleado as Codigo  , Nombres,Apellidos,Telefono ,Direccion,Genero,DUI,NIT	 FROM cligar.empleados where ESTADO=1;");
 
-    
-       
+                Resultado = operacion.Consultar(Sentencia.ToString());
+               
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+        public DataTable obtenerEmpleado(int id)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  *	 FROM cligar.empleados where ESTADO=1 and idEmpleado = "+id);
+             
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public Boolean eliminarEmpleado(int id)
+        {
+            Boolean resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("UPDATE `cligar`.`empleados`SET`Estado` = false  WHERE `idEmpleado` =  ");
+              
+                Sentencia.Append(id);
+           
+
+
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    resultado = true;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+        public DataTable busqueda(string q)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  idEmpleado as Codigo  , Nombres,Apellidos,Telefono ,Direccion,Genero,DUI,NIT	 FROM cligar.empleados where");
+                Sentencia.Append(" ( Nombres LIKE '%"+q+"%' or ");
+                Sentencia.Append("  Apellidos LIKE '%" + q + "%' or ");
+                Sentencia.Append("  idEmpleado LIKE '%" + q + "%' or ");
+                Sentencia.Append("  idEmpleado LIKE '%" + q + "%' or ");
+            
+                Sentencia.Append("  DUI LIKE '%" + q + "%' or ");
+                Sentencia.Append("  NIT LIKE '%" + q + "%') and estado=1; ");
+          
+         
+                Clipboard.SetText(Sentencia.ToString());
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error");
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
 
     }
 }

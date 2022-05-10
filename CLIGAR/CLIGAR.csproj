@@ -63,11 +63,35 @@
     <Compile Include="GUI\ADMIN\AgregarEmpleado.Designer.cs">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ADMIN\EditarEmpleado.cs">
+    <Compile Include="GUI\ADMIN\ListaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ADMIN\EditarEmpleado.Designer.cs">
-      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    <Compile Include="GUI\ADMIN\ListaEmpleados.Designer.cs">
+      <DependentUpon>ListaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\tx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\tx.Designer.cs">
+      <DependentUpon>tx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Modales\ModalInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Modales\ModalInformacion.Designer.cs">
+      <DependentUpon>ModalInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Modales\ModalConfirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Modales\ModalConfirmar.Designer.cs">
+      <DependentUpon>ModalConfirmar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Modales\PreguntaModal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Modales\PreguntaModal.Designer.cs">
+      <DependentUpon>PreguntaModal.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dashboard.cs">
       <SubType>Form</SubType>
@@ -94,14 +118,27 @@
       <DependentUpon>ventana1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Empleado.cs" />
+    <Compile Include="Modelos\Especialidades_Medico.cs" />
     <Compile Include="Modelos\Medico.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ADMIN\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ADMIN\EditarEmpleado.resx">
-      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ADMIN\ListaEmpleados.resx">
+      <DependentUpon>ListaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\tx.resx">
+      <DependentUpon>tx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Modales\ModalInformacion.resx">
+      <DependentUpon>ModalInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Modales\ModalConfirmar.resx">
+      <DependentUpon>ModalConfirmar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Modales\PreguntaModal.resx">
+      <DependentUpon>PreguntaModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

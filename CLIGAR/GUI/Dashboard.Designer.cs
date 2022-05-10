@@ -39,7 +39,7 @@
             this.panelOpcGestionDeEmpleados = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnVerEmpleadosView = new System.Windows.Forms.Button();
             this.btnNuevaAgregarEmpleadoView = new System.Windows.Forms.Button();
             this.opcGestionDeEmpleados = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -60,10 +60,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTipoUsuario = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblUsuarioOnline = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.panelOpcConsultaMedica.SuspendLayout();
             this.panelDashboard.SuspendLayout();
             this.panelOpcGestionDeEmpleados.SuspendLayout();
@@ -196,7 +196,7 @@
             this.panelOpcGestionDeEmpleados.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panelOpcGestionDeEmpleados.Controls.Add(this.button1);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.button2);
-            this.panelOpcGestionDeEmpleados.Controls.Add(this.button14);
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.btnVerEmpleadosView);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnNuevaAgregarEmpleadoView);
             this.panelOpcGestionDeEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelOpcGestionDeEmpleados.Location = new System.Drawing.Point(0, 876);
@@ -233,21 +233,23 @@
             this.button2.Text = "button2";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button14
+            // btnVerEmpleadosView
             // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button14.Location = new System.Drawing.Point(0, 40);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(210, 40);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "button14";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
+            this.btnVerEmpleadosView.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVerEmpleadosView.FlatAppearance.BorderSize = 0;
+            this.btnVerEmpleadosView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerEmpleadosView.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnVerEmpleadosView.Location = new System.Drawing.Point(0, 40);
+            this.btnVerEmpleadosView.Name = "btnVerEmpleadosView";
+            this.btnVerEmpleadosView.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnVerEmpleadosView.Size = new System.Drawing.Size(210, 40);
+            this.btnVerEmpleadosView.TabIndex = 1;
+            this.btnVerEmpleadosView.Text = "VER EMPLEADOS";
+            this.btnVerEmpleadosView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerEmpleadosView.UseVisualStyleBackColor = true;
+            this.btnVerEmpleadosView.Click += new System.EventHandler(this.btnVerEmpleadosView_Click);
             // 
             // btnNuevaAgregarEmpleadoView
             // 
@@ -534,6 +536,7 @@
             this.contenedor.Name = "contenedor";
             this.contenedor.Size = new System.Drawing.Size(953, 564);
             this.contenedor.TabIndex = 1;
+            this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
             // 
             // panel2
             // 
@@ -548,6 +551,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(953, 20);
             this.panel2.TabIndex = 0;
+            // 
+            // lblTipoUsuario
+            // 
+            this.lblTipoUsuario.AutoSize = true;
+            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblTipoUsuario.Location = new System.Drawing.Point(631, 2);
+            this.lblTipoUsuario.Name = "lblTipoUsuario";
+            this.lblTipoUsuario.Size = new System.Drawing.Size(107, 17);
+            this.lblTipoUsuario.TabIndex = 3;
+            this.lblTipoUsuario.Text = "Tipo de usuario";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
+            this.label3.Location = new System.Drawing.Point(484, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "TIPO DE USUARIO : ";
             // 
             // lblUsuarioOnline
             // 
@@ -570,28 +595,6 @@
             this.label2.Size = new System.Drawing.Size(137, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "USUARIO ONLINE : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label3.Location = new System.Drawing.Point(484, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "TIPO DE USUARIO : ";
-            // 
-            // lblTipoUsuario
-            // 
-            this.lblTipoUsuario.AutoSize = true;
-            this.lblTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblTipoUsuario.Location = new System.Drawing.Point(631, 2);
-            this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(107, 17);
-            this.lblTipoUsuario.TabIndex = 3;
-            this.lblTipoUsuario.Text = "Tipo de usuario";
             // 
             // Dashboard
             // 
@@ -650,7 +653,7 @@
         private System.Windows.Forms.Panel panelOpcGestionDeEmpleados;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnVerEmpleadosView;
         private System.Windows.Forms.Button btnNuevaAgregarEmpleadoView;
         private System.Windows.Forms.Button opcGestionDeEmpleados;
         private System.Windows.Forms.Label label3;
