@@ -178,5 +178,29 @@ namespace CLIGAR.GUI
             this.ocultarMenus();
             this.abrirFormulario(new EdicionUsuario());
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new GestionPaciente());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new AgregarPaciente());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new GestionEspecialidad());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new AgregarEspecialidad());
+        }
     }
 }
