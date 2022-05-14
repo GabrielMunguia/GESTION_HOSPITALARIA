@@ -16,6 +16,7 @@ namespace SessionManager
         String _IDUsuario;
         String _Usuario;
         String _IDEmpleado;
+        string _idMedico ;
         String _IDRol;
         String _Cargo;
         String _Nombres;
@@ -162,6 +163,8 @@ namespace SessionManager
                 subMenuAbierto = value;
             }
         }
+
+        public string IdMedico { get => _idMedico; set => _idMedico = value; }
 
         private Sesion()
         { }

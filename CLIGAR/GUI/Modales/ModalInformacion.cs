@@ -15,11 +15,28 @@ namespace CLIGAR.GUI.Modales
         public ModalInformacion()
         {
             InitializeComponent();
+            this.titulo.Left = (this.ClientSize.Width - this.titulo.Size.Width) / 2;
+        }
+
+        public ModalInformacion(bool error)
+        {
+            InitializeComponent();
+            if (error)
+            {
+                this.panelTitulo.BackColor = Color.Red;
+                this.button2.BackColor = Color.Red;
+            }
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void titulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

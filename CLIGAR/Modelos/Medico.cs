@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,83 @@ namespace CLIGAR.Modelos
             }
 
             return resultado;
+        }
+
+
+        public int obtenerUltimoIDInsertado()
+        {
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            int id = -1;
+            try
+            {
+                Sentencia.Append("SELECT Max(idMedico)FROM medicos;");
+
+                DataTable resultado = operacion.Consultar(Sentencia.ToString());
+                if (resultado.Rows.Count > 0)
+                {
+                    id = Int32.Parse(resultado.Rows[0][0].ToString());
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                id = -1;
+            }
+
+            return id;
+
+
+        }
+
+        public DataTable obtenerMedicoPorJVM(string jvm)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT * FROM medicos as m , empleados as e where m.idEmpleado=e.idEmpleado and e.CodigoRegistroMedico= " + jvm);
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public int obtenerIdMedicoPorIdEmpleado(int idEmpleado)
+        {
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            int id = -1;
+            try
+            {
+                Sentencia.Append("SELECT * FROM cligar.medicos where idEmpleado="+idEmpleado+";");
+
+                DataTable resultado = operacion.Consultar(Sentencia.ToString());
+                if (resultado.Rows.Count > 0)
+                {
+                    id = Int32.Parse(resultado.Rows[0][0].ToString());
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                id = -1;
+            }
+
+            return id;
         }
 
 

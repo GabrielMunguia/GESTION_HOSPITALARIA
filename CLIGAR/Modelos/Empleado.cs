@@ -267,7 +267,7 @@ namespace CLIGAR.Modelos
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("SELECT  idEmpleado as Codigo  , Nombres,Apellidos,Telefono ,Direccion,Genero,DUI,NIT	 FROM cligar.empleados where ESTADO=1;");
+                Sentencia.Append("SELECT  idEmpleado as Codigo, Nombres, Apellidos, Telefono, Direccion, Genero, DUI, NIT, c.Nombre as Cargo   FROM empleados as e, cargos as c  where ESTADO = 1 and e.idCargo = c.idCargo; ");
 
                 Resultado = operacion.Consultar(Sentencia.ToString());
                

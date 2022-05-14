@@ -186,7 +186,18 @@ namespace CLIGAR.GUI
                     medico.IdEmpleado = empleado.obtenerUltimoIDInsertador();
                     if (medico.Guardar())
                     {
-                        exito = true;
+
+                        int idMedico = medico.obtenerUltimoIDInsertado();
+                        Especialidades_Medico esp_m = new Especialidades_Medico();
+                        esp_m.IdMedico = idMedico;
+                        esp_m.IdEspecialidad = 1;
+                       bool seGuardoEspecialidad= esp_m.Guardar();
+                        if (seGuardoEspecialidad)
+                        {
+                            exito = true;
+                        }
+                       
+
                         this.reinciarFormulario();
                     }
                     else

@@ -1,4 +1,5 @@
 ﻿using CLIGAR.GUI.ADMIN;
+using CLIGAR.GUI.MEDICO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +58,7 @@ namespace CLIGAR.GUI
         private void abrirFormulario(Form childForm)
         {
          
-
+                      
                 if (formularioActivo != null)
                     formularioActivo.Close();
                 formularioActivo = childForm;
@@ -71,6 +72,8 @@ namespace CLIGAR.GUI
                
                 
                 childForm.Show();
+                
+                
              
 
 
@@ -165,7 +168,7 @@ namespace CLIGAR.GUI
         private void btnNuevaConsultaView_Click(object sender, EventArgs e)
         {
             this.ocultarMenus();
-            this.abrirFormulario(new ventana1());
+            this.abrirFormulario(new RegistrarConsultaView());
         }
 
         private void btnNuevaAgregarEmpleadoView_Click(object sender, EventArgs e)
@@ -185,14 +188,22 @@ namespace CLIGAR.GUI
             this.abrirFormulario(new ListaEmpleados());
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.abrirFormulario(new tx());
-        }
+     
 
         private void contenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAgregarEspecialidadMedico_Click(object sender, EventArgs e)
+        {
+            this.ocultarMenus();
+            this.abrirFormulario(new GestionEspecialidadesMedico());
+        }
+
+        private void btnRegistrarConsulta_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new RegistrarConsultaView());
         }
     }
 }

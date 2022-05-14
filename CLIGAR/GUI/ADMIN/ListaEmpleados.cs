@@ -31,7 +31,7 @@ namespace CLIGAR.GUI.ADMIN
             {
                 if (dgvEmpleados.Rows.Count != 0)
                 {
-                    Icon iconoEditar = new Icon(Environment.CurrentDirectory + @"\\editar.ico");
+                   
                     dgvEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvEmpleados.Columns[dgvEmpleados.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                      DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();

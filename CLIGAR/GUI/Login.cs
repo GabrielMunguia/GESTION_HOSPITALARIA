@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLIGAR.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,11 @@ namespace CLIGAR.GUI
                     session.Apellidos = tabla.Rows[0][6].ToString();
                   
                     session.Cargo = tabla.Rows[0][10].ToString();
+                    if (tabla.Rows[0][10].ToString() == "2")
+                    {
+                        Medico m = new Medico();
+                        session.IdMedico = m.obtenerIdMedicoPorIdEmpleado(Int32.Parse(tabla.Rows[0][4].ToString())).ToString();
+                    }
                     session.IDUsuario = tabla.Rows[0][0].ToString();
                     session.IDEmpleado = tabla.Rows[0][4].ToString();
                     this.Hide();
