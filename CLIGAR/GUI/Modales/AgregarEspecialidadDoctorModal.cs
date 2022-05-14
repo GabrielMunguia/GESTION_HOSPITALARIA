@@ -67,7 +67,7 @@ namespace CLIGAR.GUI.Modales
 
         private void AgregarEspecialidadDoctor_Load(object sender, EventArgs e)
         {
-            Especialidades ep = new Especialidades();
+            Especialidades_2 ep = new Especialidades_2();
             DataTable lst = ep.obtenerEspecialidadesDisponiblesMedico(this.idMedico);
             if (lst.Rows.Count < 1)
             {

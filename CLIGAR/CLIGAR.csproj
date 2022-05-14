@@ -66,11 +66,41 @@
     <Compile Include="GUI\ADMIN\AgregarEmpleado.Designer.cs">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ADMIN\AgregarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\AgregarEspecialidad.Designer.cs">
+      <DependentUpon>AgregarEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\AgregarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\AgregarPaciente.Designer.cs">
+      <DependentUpon>AgregarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\EdicionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\EdicionUsuario.Designer.cs">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionEspecialidad.Designer.cs">
+      <DependentUpon>GestionEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ADMIN\GestionEspecialidadesMedico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ADMIN\GestionEspecialidadesMedico.Designer.cs">
       <DependentUpon>GestionEspecialidadesMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionPaciente.Designer.cs">
+      <DependentUpon>GestionPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ADMIN\ListaEmpleados.cs">
       <SubType>Form</SubType>
@@ -128,6 +158,12 @@
     <Compile Include="GUI\Modales\PreguntaModal.Designer.cs">
       <DependentUpon>PreguntaModal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ADMIN\GestionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\GestionUsuario.Designer.cs">
+      <DependentUpon>GestionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,17 +190,34 @@
     </Compile>
     <Compile Include="Modelos\ConsultaMedica.cs" />
     <Compile Include="Modelos\Empleado.cs" />
-    <Compile Include="Modelos\Especialidades.cs" />
+    <Compile Include="Modelos\Especialidad.cs" />
+    <Compile Include="Modelos\Especialidades_2.cs" />
     <Compile Include="Modelos\Especialidades_Medico.cs" />
     <Compile Include="Modelos\Medico.cs" />
     <Compile Include="Modelos\Paciente.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ADMIN\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\AgregarEspecialidad.resx">
+      <DependentUpon>AgregarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\AgregarPaciente.resx">
+      <DependentUpon>AgregarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\EdicionUsuario.resx">
+      <DependentUpon>EdicionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\GestionEspecialidad.resx">
+      <DependentUpon>GestionEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ADMIN\GestionEspecialidadesMedico.resx">
       <DependentUpon>GestionEspecialidadesMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\GestionPaciente.resx">
+      <DependentUpon>GestionPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ADMIN\ListaEmpleados.resx">
       <DependentUpon>ListaEmpleados.cs</DependentUpon>
@@ -192,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Modales\PreguntaModal.resx">
       <DependentUpon>PreguntaModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\GestionUsuario.resx">
+      <DependentUpon>GestionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

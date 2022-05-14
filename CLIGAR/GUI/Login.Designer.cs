@@ -81,6 +81,7 @@
             resources.ApplyResources(this.inputPassword, "inputPassword");
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.UseSystemPasswordChar = true;
+            this.inputPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputPassword_KeyPress);
             // 
             // label1
             // 

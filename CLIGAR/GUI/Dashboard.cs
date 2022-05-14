@@ -25,7 +25,7 @@ namespace CLIGAR.GUI
 
         }
 
-        private void ocultarMenus()
+        public void ocultarMenus()
         {
             this.panelOpcConsultaMedica.Visible = false;
             this.panelOpcGestionPacientes.Visible = false;
@@ -204,6 +204,36 @@ namespace CLIGAR.GUI
         private void btnRegistrarConsulta_Click(object sender, EventArgs e)
         {
             this.abrirFormulario(new RegistrarConsultaView());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new GestionUsuario());
+        }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new EdicionUsuario());
+        }
+
+        private void btnAggPaciente_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new AgregarPaciente());
+        }
+
+        private void AgregarEspecialidad_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new AgregarEspecialidad());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new GestionEspecialidad());
+        }
+
+        private void btnVerPacientes_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new GestionPaciente());
         }
     }
 }

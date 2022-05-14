@@ -8,13 +8,13 @@ using System.Windows;
 
 namespace CLIGAR.Modelos
 {
-   public  class Especialidades
+   public  class Especialidades_2
     {
 
         int id;
         string Nombre;
 
-        public Especialidades()
+        public Especialidades_2()
         {
         }
 
