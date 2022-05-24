@@ -1,5 +1,6 @@
 ﻿using CLIGAR.GUI.ADMIN;
 using CLIGAR.GUI.MEDICO;
+using CLIGAR.GUI.Recepcion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,8 @@ namespace CLIGAR.GUI
         {
             InitializeComponent();
             this.ocultarMenus();
-
+           
+          
         }
 
         public void ocultarMenus()
@@ -33,6 +35,7 @@ namespace CLIGAR.GUI
             panelOpcGestionPacientes.Visible = false;
             panelOpcGestionDeUsuarios.Visible = false;
             panelOpcGestionDeEmpleados.Visible = false;
+            panelGestionCitas.Visible = false;
         }
 
 
@@ -116,6 +119,7 @@ namespace CLIGAR.GUI
             opcConsultaMedica.Visible = false;
             opcGestionDeUsuarios.Visible = false;
             opcGestionDeEmpleados.Visible = false;
+            opcCitas.Visible = false;
 
 
             //1-ADMIN
@@ -136,7 +140,15 @@ namespace CLIGAR.GUI
                         opcConsultaMedica.Visible = true;
                       
                     }
-                    break;                
+                    break;
+
+                case 3:
+                    {
+                        opcCitas.Visible = true;
+                      
+
+                    }
+                    break;
             }
         }
 
@@ -234,6 +246,21 @@ namespace CLIGAR.GUI
         private void btnVerPacientes_Click(object sender, EventArgs e)
         {
             this.abrirFormulario(new GestionPaciente());
+        }
+
+        private void btnHistorialConsultas_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new HistorialConsultas());
+        }
+
+        private void opcCitas_Click(object sender, EventArgs e)
+        {
+            this.panelGestionCitas.Visible = !this.panelGestionCitas.Visible;
+        }
+
+        private void btnRegistrarCitaView_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new AgregarCita());
         }
     }
 }

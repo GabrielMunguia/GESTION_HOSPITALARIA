@@ -18,8 +18,31 @@ namespace CLIGAR.Modelos
         {
         }
 
-        public int Id { get => id; set => id = value; }
-        public string Nombre1 { get => Nombre; set => Nombre = value; }
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public string Nombre1
+        {
+            get
+            {
+                return Nombre;
+            }
+
+            set
+            {
+                Nombre = value;
+            }
+        }
 
         public DataTable obtenerEspecialidadesDisponiblesMedico(int idMedico)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,122 @@ namespace CLIGAR.Modelos
         String _Presion;
         string _receta;
 
-        public int IdConsulta { get => _idConsulta; set => _idConsulta = value; }
-        public string Observacion { get => _Observacion; set => _Observacion = value; }
-        public string Fecha { get => _Fecha; set => _Fecha = value; }
-        public int IdMedico { get => _idMedico; set => _idMedico = value; }
-        public int IdPaciente { get => _idPaciente; set => _idPaciente = value; }
-        public string Peso { get => _Peso; set => _Peso = value; }
-        public string Altura { get => _Altura; set => _Altura = value; }
-        public string Presion { get => _Presion; set => _Presion = value; }
-        public string Receta { get => _receta; set => _receta = value; }
+        public int IdConsulta
+        {
+            get
+            {
+                return _idConsulta;
+            }
+
+            set
+            {
+                _idConsulta = value;
+            }
+        }
+
+        public string Observacion
+        {
+            get
+            {
+                return _Observacion;
+            }
+
+            set
+            {
+                _Observacion = value;
+            }
+        }
+
+        public string Fecha
+        {
+            get
+            {
+                return _Fecha;
+            }
+
+            set
+            {
+                _Fecha = value;
+            }
+        }
+
+        public int IdMedico
+        {
+            get
+            {
+                return _idMedico;
+            }
+
+            set
+            {
+                _idMedico = value;
+            }
+        }
+
+        public int IdPaciente
+        {
+            get
+            {
+                return _idPaciente;
+            }
+
+            set
+            {
+                _idPaciente = value;
+            }
+        }
+
+        public string Peso
+        {
+            get
+            {
+                return _Peso;
+            }
+
+            set
+            {
+                _Peso = value;
+            }
+        }
+
+        public string Altura
+        {
+            get
+            {
+                return _Altura;
+            }
+
+            set
+            {
+                _Altura = value;
+            }
+        }
+
+        public string Presion
+        {
+            get
+            {
+                return _Presion;
+            }
+
+            set
+            {
+                _Presion = value;
+            }
+        }
+
+        public string Receta
+        {
+            get
+            {
+                return _receta;
+            }
+
+            set
+            {
+                _receta = value;
+            }
+        }
 
         public Boolean Guardar()
         {
@@ -61,11 +169,52 @@ namespace CLIGAR.Modelos
             {
 
               
-
+            
                 resultado = false;
             }
 
             return resultado;
+        }
+
+        public DataTable obtenerHistorialConsultas(int idPaciente)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT idConsulta as Codigo,Fecha,Observacion FROM cligar.consultas where idPaciente="+idPaciente+";");
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public DataTable obtenerConsulta(int idConsulta)
+        {
+
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT * FROM cligar.consultas where idConsulta = " + idConsulta + ";");
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
         }
     }
 }

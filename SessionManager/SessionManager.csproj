@@ -43,12 +43,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataSource\DataSource.csproj">
-      <Project>{200adf30-6fe3-4add-a26a-1512962ffa21}</Project>
-      <Name>DataSource</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

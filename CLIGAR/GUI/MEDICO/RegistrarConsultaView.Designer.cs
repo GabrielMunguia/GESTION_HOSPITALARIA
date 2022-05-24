@@ -83,7 +83,7 @@ namespace CLIGAR.GUI.MEDICO
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 35);
+            this.panel1.Size = new System.Drawing.Size(1203, 35);
             this.panel1.TabIndex = 1;
             // 
             // btnCerrar
@@ -96,6 +96,7 @@ namespace CLIGAR.GUI.MEDICO
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(44, 31);
             this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // panel2
             // 
@@ -103,7 +104,7 @@ namespace CLIGAR.GUI.MEDICO
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 51);
+            this.panel2.Size = new System.Drawing.Size(1203, 51);
             this.panel2.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -119,7 +120,7 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(843, 51);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1203, 51);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -141,9 +142,9 @@ namespace CLIGAR.GUI.MEDICO
             this.btnSeleccionarPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSeleccionarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarPaciente.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSeleccionarPaciente.Location = new System.Drawing.Point(617, 3);
+            this.btnSeleccionarPaciente.Location = new System.Drawing.Point(879, 3);
             this.btnSeleccionarPaciente.Name = "btnSeleccionarPaciente";
-            this.btnSeleccionarPaciente.Size = new System.Drawing.Size(223, 45);
+            this.btnSeleccionarPaciente.Size = new System.Drawing.Size(321, 45);
             this.btnSeleccionarPaciente.TabIndex = 13;
             this.btnSeleccionarPaciente.Text = "SELECCIONAR PACIENTE";
             this.btnSeleccionarPaciente.UseVisualStyleBackColor = false;
@@ -158,12 +159,12 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel3, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 153);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 161);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.16822F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.83178F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(837, 214);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1197, 214);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -176,13 +177,13 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel8.Controls.Add(this.txtAltura, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtPresion, 1, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(421, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(601, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(413, 156);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(593, 156);
             this.tableLayoutPanel8.TabIndex = 1;
             this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
@@ -204,7 +205,7 @@ namespace CLIGAR.GUI.MEDICO
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 78);
+            this.label5.Size = new System.Drawing.Size(146, 78);
             this.label5.TabIndex = 4;
             this.label5.Text = "ALTURA ( CM ) :";
             // 
@@ -212,18 +213,18 @@ namespace CLIGAR.GUI.MEDICO
             // 
             this.txtAltura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAltura.Location = new System.Drawing.Point(109, 3);
+            this.txtAltura.Location = new System.Drawing.Point(156, 3);
             this.txtAltura.Name = "txtAltura";
-            this.txtAltura.Size = new System.Drawing.Size(301, 27);
+            this.txtAltura.Size = new System.Drawing.Size(434, 27);
             this.txtAltura.TabIndex = 6;
             // 
             // txtPresion
             // 
             this.txtPresion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPresion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresion.Location = new System.Drawing.Point(109, 81);
+            this.txtPresion.Location = new System.Drawing.Point(156, 81);
             this.txtPresion.Name = "txtPresion";
-            this.txtPresion.Size = new System.Drawing.Size(301, 27);
+            this.txtPresion.Size = new System.Drawing.Size(434, 27);
             this.txtPresion.TabIndex = 7;
             // 
             // tableLayoutPanel7
@@ -241,7 +242,7 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(412, 156);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(592, 156);
             this.tableLayoutPanel7.TabIndex = 0;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
@@ -252,7 +253,7 @@ namespace CLIGAR.GUI.MEDICO
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 78);
+            this.label4.Size = new System.Drawing.Size(133, 78);
             this.label4.TabIndex = 3;
             this.label4.Text = "PESO  ( KG ) : ";
             // 
@@ -271,27 +272,27 @@ namespace CLIGAR.GUI.MEDICO
             // 
             this.dtpFecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(138, 3);
+            this.dtpFecha.Location = new System.Drawing.Point(198, 3);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(271, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(391, 26);
             this.dtpFecha.TabIndex = 2;
             // 
             // txtPeso
             // 
             this.txtPeso.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeso.Location = new System.Drawing.Point(138, 81);
+            this.txtPeso.Location = new System.Drawing.Point(198, 81);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(271, 26);
+            this.txtPeso.Size = new System.Drawing.Size(391, 26);
             this.txtPeso.TabIndex = 4;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(421, 165);
+            this.panel3.Location = new System.Drawing.Point(601, 165);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(413, 46);
+            this.panel3.Size = new System.Drawing.Size(593, 46);
             this.panel3.TabIndex = 2;
             // 
             // tableLayoutPanel9
@@ -306,7 +307,7 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(413, 46);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(593, 46);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // btnGuardar
@@ -317,7 +318,7 @@ namespace CLIGAR.GUI.MEDICO
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGuardar.Location = new System.Drawing.Point(230, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(410, 3);
             this.btnGuardar.MaximumSize = new System.Drawing.Size(180, 40);
             this.btnGuardar.MinimumSize = new System.Drawing.Size(180, 40);
             this.btnGuardar.Name = "btnGuardar";
@@ -339,8 +340,8 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 144F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(837, 144);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1197, 152);
             this.tableLayoutPanel3.TabIndex = 0;
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
@@ -352,22 +353,22 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel4.Controls.Add(this.txtReceta, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.panel5, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(421, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(601, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.84058F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.15942F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(413, 138);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(593, 146);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // txtReceta
             // 
             this.txtReceta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceta.Location = new System.Drawing.Point(3, 29);
+            this.txtReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceta.Location = new System.Drawing.Point(3, 30);
             this.txtReceta.Multiline = true;
             this.txtReceta.Name = "txtReceta";
-            this.txtReceta.Size = new System.Drawing.Size(407, 106);
+            this.txtReceta.Size = new System.Drawing.Size(587, 113);
             this.txtReceta.TabIndex = 3;
             // 
             // panel5
@@ -376,7 +377,7 @@ namespace CLIGAR.GUI.MEDICO
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(407, 20);
+            this.panel5.Size = new System.Drawing.Size(587, 20);
             this.panel5.TabIndex = 1;
             // 
             // label2
@@ -404,17 +405,17 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.84058F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.15942F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(412, 138);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(592, 146);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // txtObservaciones
             // 
             this.txtObservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(3, 29);
+            this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Location = new System.Drawing.Point(3, 30);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(406, 106);
+            this.txtObservaciones.Size = new System.Drawing.Size(586, 113);
             this.txtObservaciones.TabIndex = 4;
             // 
             // label1
@@ -424,7 +425,7 @@ namespace CLIGAR.GUI.MEDICO
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 26);
+            this.label1.Size = new System.Drawing.Size(175, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "OBSERVACIONES :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -442,7 +443,7 @@ namespace CLIGAR.GUI.MEDICO
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.81081F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.18919F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(843, 370);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1203, 389);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // RegistrarConsultaView
@@ -450,12 +451,13 @@ namespace CLIGAR.GUI.MEDICO
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(843, 456);
+            this.ClientSize = new System.Drawing.Size(1203, 475);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrarConsultaView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarConsultaView";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

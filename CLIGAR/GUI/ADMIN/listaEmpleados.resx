@@ -248,4 +248,66 @@
         qm3nhI/5d7v/D6RJHBx0NuqMAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Nombres.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Apellidos.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Telefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Direccion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Genero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DUI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NIT.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Cargo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Eliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAHYAAAB2AU57JggAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABlElEQVQ4T3VSTS8DURSdDf6IlY9V9Q12+orY2fgHlmLnZ1Q0bSohlhKJWBDxEVqLEk0qiKoQDUu2
+        OjOknTe97n3z0Tedzk1OcnPPPadzX4/WW2Z6atzketbk7BlhesA+uWHMTYx5a9GCheEhK8UKuOwgIAbC
+        4sk8LI0OejK3SIxkKVicnQRrkYdAs4DnrBgyMdJsUyGhtZ2H3mpt5VQDsNIsJ8Xuzd3P/l1dhr+1lb4g
+        zt9DCGMmOap5DxYQHdPwfjNaxKm7ZoqtowGrq8PO9xfY58fgvNRA3JZBVK7BqT/JGXHqLhrUNIszQx06
+        jTdoH+yBqFbALp5JUE8z5/01bMBZk76gqQ7Fw12sgbivqmLCT+QEUb6KNbDLJVXsnkAJU4f26VG8wclh
+        2ICzjEbxxEb4w/b+rvtwnw0QtUcJ5wP7yo3k/D3SGFwfkVmgePpEa6fg/WnRIq5roGelmIpiifdcSmJ+
+        OhJjH8R54gtIJAY8uVtkQvHEheCcPkBOz0bEalE8KWH0wpQRmRPsUZwJbg5K0/4Bb/FdX5LdEZUAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="Editar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Editar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAHYAAAB2AU57JggAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAB30lEQVQ4T2NAB2K5Bw6L5xz4LVl26YBCwXkBqDBhIJp3xEsie99jsfTt/4EG/Aca8F+q/NIJibKL
+        8VAl2IFC98MZsq3X/klVn/sP0oxsAAjLNN79rzjt80/FaZ8WMjT8Z4JqQwCQZtnmK/+l6y9hN6DlIcgA
+        MFae/tkJqg0BQJphGGQIyCUyjdf+y3W/+C/f8/K/4tRPcAOAOBSqDQGQDYBhuc57yJqQMW4D7j549Pve
+        vXv/Qfjly5f/kcCf0HXfrhM0ABkTcsHrHQySbzZxmaIYcOHWo6+37j/+AcaPXr778uv/NRgOXPvtJlDz
+        G6Upn9Teb+Wwe7Sa7ff9lWz/v2/niIEbYDPl1h+f2bd+grDvgofvw9Z/vQbCweu+3VCZ/vml4owv+u+2
+        cVqDNN9bwfb/43a2//8Psr+CG7DzwqMPJ64//gTCh6+/eP7g479jIHzl1Z+d5gu/6GHRDMQcS+EGxC+9
+        +7V4/b1PIFy0+dmzxiM/j7Uf+7Hz+ov/um+3cVpgambf8n8bAzs8ISFjaCD+U5j20QKvZhCQ734wTbYF
+        1RCoATdA8k/XsH28BwywTzDNB9jX/z/DwArWTAj8X8XAdh9oM1wzss3EgI+b2VU/bWP7BtR4FmhzH6bN
+        DAwAEgHfBeU7EwMAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

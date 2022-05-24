@@ -148,6 +148,58 @@ namespace CLIGAR.Modelos
             return id;
         }
 
+        public DataTable busqueda(string q)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  m.idMedico as Codigo,e.Nombres,e.Apellidos,e.DUI,e.NIT,e.CodigoRegistroMedico FROM medicos as m , empleados as e where m.idEmpleado=e.idEmpleado  and ");
+                Sentencia.Append(" ( Nombres LIKE '%" + q + "%' or ");
+                Sentencia.Append("  Apellidos LIKE '%" + q + "%' or ");
+                Sentencia.Append("  Apellidos LIKE '%" + q + "%' or ");
+                Sentencia.Append("  CodigoRegistroMedico LIKE '%" + q + "%' or ");
+                Sentencia.Append(" concat(Nombres,' ',Apellidos) LIKE '%" + q + "%' or ");
+                Sentencia.Append("  DUI LIKE '%" + q + "%') ; ");
+
+
+
+                Clipboard.SetText(Sentencia.ToString());
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error");
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public DataTable obtenerHorarios()
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT * FROM cligar.horarios where idMedico= "+this.idMedico);
+              
+
+
+             
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error");
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
 
 
     }

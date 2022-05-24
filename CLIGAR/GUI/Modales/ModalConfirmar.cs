@@ -18,6 +18,7 @@ namespace CLIGAR.GUI.Confirmaciones
         public ModalConfirmar()
         {
             InitializeComponent();
+  
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

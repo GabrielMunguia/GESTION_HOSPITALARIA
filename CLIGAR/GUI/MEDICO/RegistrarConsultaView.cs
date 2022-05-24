@@ -16,10 +16,39 @@ namespace CLIGAR.GUI.MEDICO
     {
         SessionManager.Sesion session = SessionManager.Sesion.Instance;
         int idPaciente;
+        bool verDetalles = false;
         public RegistrarConsultaView()
         {
             InitializeComponent();
             this.desactivarCampos();
+
+
+        }
+
+        public RegistrarConsultaView(int idConsulta,string nomPaciente)
+        {
+            InitializeComponent();
+            this.desactivarCampos();
+            this.lblPaciente.Text = "NOMBRE PACIENTE : " + nomPaciente;
+                this.btnSeleccionarPaciente.Visible = false;
+                this.verDetalles = true;
+                this.btnGuardar.Text = "Cerrar";
+                ConsultaMedica cm = new ConsultaMedica();
+                DataTable datosConsulta = cm.obtenerConsulta(idConsulta);
+            this.btnGuardar.Enabled = true;
+                if (datosConsulta.Rows.Count > 0)
+                {
+               
+                    this.txtAltura.Text = datosConsulta.Rows[0]["Altura"].ToString();
+                    this.txtObservaciones.Text= datosConsulta.Rows[0]["Observacion"].ToString();
+                    this.txtPeso.Text = datosConsulta.Rows[0]["Peso"].ToString();
+                    this.txtPresion.Text= datosConsulta.Rows[0]["Presion"].ToString();
+                    this.txtReceta.Text= datosConsulta.Rows[0]["Receta"].ToString();
+                    this.dtpFecha.Text= datosConsulta.Rows[0]["Fecha"].ToString();
+                   
+            }
+
+            
 
 
         }
@@ -45,11 +74,11 @@ namespace CLIGAR.GUI.MEDICO
 
         private void desactivarCampos()
         {
-            txtAltura.Enabled = false;
-            txtObservaciones.Enabled = false;
-            txtPeso.Enabled = false;
-            txtPresion.Enabled = false;
-            txtReceta.Enabled = false;
+            txtAltura.ReadOnly = true;
+            txtObservaciones.ReadOnly = true;
+            txtPeso.ReadOnly = true;
+            txtPresion.ReadOnly = true;
+            txtReceta.ReadOnly = true;
             dtpFecha.Enabled = false;
             btnGuardar.Enabled = false;
         }
@@ -122,6 +151,11 @@ namespace CLIGAR.GUI.MEDICO
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (this.verDetalles==true)
+            {
+                Close();
+                return;
+            }
             ModalInformacion info = new ModalInformacion();
             bool esValido = this.validarCampos();
             if (!esValido)
@@ -165,6 +199,11 @@ namespace CLIGAR.GUI.MEDICO
 
             
 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

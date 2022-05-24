@@ -42,7 +42,7 @@ namespace CLIGAR.GUI.ADMIN
             this.dgvEspecialidadesDoctor = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
@@ -199,7 +199,9 @@ namespace CLIGAR.GUI.ADMIN
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
             this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // GestionEspecialidadesMedico
             // 
@@ -239,6 +241,6 @@ namespace CLIGAR.GUI.ADMIN
         private System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

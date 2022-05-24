@@ -34,20 +34,7 @@ namespace CLIGAR.GUI.ADMIN
                    
                     dgvEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     dgvEmpleados.Columns[dgvEmpleados.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                     DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
-                    DataGridViewButtonColumn btnEditar = new DataGridViewButtonColumn();
-
-
-                    btnEliminar.Name = "Eliminar";
-                    btnEliminar.Text = "X";
-                    btnEditar.Text = "*";
-                    btnEditar.Name = "Editar";
-
-                    dgvEmpleados.Columns.Add(btnEliminar);
-                    dgvEmpleados.Columns.Add(btnEditar);
-               
-                    var Amarillo = System.Drawing.Color.Red;
-                    dgvEmpleados.Columns["Editar"].InheritedStyle.ForeColor = Amarillo;
+                   
                 }
 
 

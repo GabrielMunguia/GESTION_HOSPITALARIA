@@ -17,6 +17,7 @@ namespace CLIGAR.GUI.Modales
 
         public int idPaciente=0;
         public string nombreCompleto = "";
+        public    Boolean seSelecciono = false;
         public IdPacienteModal()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace CLIGAR.GUI.Modales
            if (dgv.SelectedRows.Count>0)
             {
                 ModalConfirmar mc = new ModalConfirmar();
-                mc.titulo.Text = "Estas seguro de seleccionar este paciente? ";
+                mc.titulo.Text = "Estas seguro de seleccionar este doctor? ";
                 mc.btnConfirmar.Text = "CONFIRMAR";
                 mc.btnConfirmar.BackColor = Color.DodgerBlue;
                 mc.btnCancelar.BackColor = Color.Red;
@@ -56,6 +57,7 @@ namespace CLIGAR.GUI.Modales
                 {
                     this.idPaciente = Int32.Parse(dgv.CurrentRow.Cells["Codigo"].Value.ToString());
                     this.nombreCompleto = dgv.CurrentRow.Cells["Nombres"].Value.ToString() + " " + dgv.CurrentRow.Cells["Apellidos"].Value.ToString();
+                    this.seSelecciono = true;
                     Close();
                 }
             }

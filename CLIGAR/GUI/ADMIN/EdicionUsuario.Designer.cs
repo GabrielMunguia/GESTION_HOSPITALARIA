@@ -54,11 +54,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblEmpleado = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblEmpleado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
@@ -401,6 +401,16 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEmpleado.Location = new System.Drawing.Point(289, 0);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(150, 36);
+            this.lblEmpleado.TabIndex = 7;
+            this.lblEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -445,16 +455,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(870, 111);
             this.panel2.TabIndex = 7;
-            // 
-            // lblEmpleado
-            // 
-            this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEmpleado.Location = new System.Drawing.Point(289, 0);
-            this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(150, 36);
-            this.lblEmpleado.TabIndex = 7;
-            this.lblEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // EdicionUsuario
             // 

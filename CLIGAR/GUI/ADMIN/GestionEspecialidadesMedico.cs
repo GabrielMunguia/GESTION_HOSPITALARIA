@@ -86,9 +86,11 @@ namespace CLIGAR.GUI.ADMIN
             {
               
                 int id = idMedicoModal.IdMedico;
+            
                 this.idMedico = id;
                
                 this.lblDoctor.Text = "Doctor : " + idMedicoModal.nombreMedico;
+
                 DataTable especialidadesMedico = em.obtenerEspecialidadesMedico(id);
                 this.dgvEspecialidadesDoctor.DataSource = especialidadesMedico;
              

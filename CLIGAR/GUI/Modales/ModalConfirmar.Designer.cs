@@ -38,14 +38,15 @@ namespace CLIGAR.GUI.Confirmaciones
             // 
             // titulo
             // 
-            this.titulo.AutoSize = true;
+            this.titulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.White;
-            this.titulo.Location = new System.Drawing.Point(66, 9);
+            this.titulo.Location = new System.Drawing.Point(0, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(328, 20);
+            this.titulo.Size = new System.Drawing.Size(450, 42);
             this.titulo.TabIndex = 1;
             this.titulo.Text = "Estas seguro de  eliminar este registro?";
+            this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -99,7 +100,6 @@ namespace CLIGAR.GUI.Confirmaciones
             this.Text = "Modal";
             this.Load += new System.EventHandler(this.Modal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

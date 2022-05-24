@@ -117,7 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Observacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Detalles.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Detalles.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAHYAAAB2AU57JggAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAACKElEQVQ4T5WS3UtTYRzHD/QfBEEXXXYj3QYFYd2ErIIQSghfa2mpG7q2klaWS7EapEvbdszNMz3r
+        uO1svmy2iaOoMHuxBR41i1pYdJkkQkQQ49vzPDvtHIIZfeFz8Zxzvh+e3/McjsZdKbV4qqQcAf+kWppl
+        JX2IQKAv5zwRrM3GkOoKsY/F8/cZQsskRttnILYl6fMfak3LH8H3TAy5t2P4Mh1lAl9jDEPmiQJ0valg
+        aZDHxlwQT508E/hN4whY4gWGyLqoIHrWhY2eMsa3W4cQOOlj26dbD7TGMWIj42w2wmOrvSCgJEw3MWxN
+        IGhPFRixTRUXiMYBUMn8xVY8tFyGv04AXxuC+1QEfadl8HUhti4qoDPrcZFCbccT7PcsYh+/BEPva1wx
+        xYsL/M3jbF4Kbwzj+I1nqAlnIcx/hbywDmt8FQcGFuFonvyp1rToBQFLApfMCRiEFcSUdQQza+hMfsLt
+        9Gc0yR9Q7nyRU2taqOCuMcLuerAhCnNbGsboR0ik3J3KlykdU2QXbqWIoF5md01/lgvnkigX3+Garkyx
+        TWRR6lWyak2LfoSgfRr95LQNrgzORN7Dlc5LOpOrKPO9wV6vUq/WtLir7vX/fQvdDWM40vMKB33LOEzO
+        o5Rf/rW796VY4phRdl5PbVOr+fgr5K13qkePeSulCj19NeETTfYHV486nzfu8Sk7OFneUuJIE0l6ZZfj
+        0Xa1/p/JS4bJTto5juN+A2ei54/w6FOXAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnCerrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -126,29 +154,6 @@
         EeMOr8gSciUS3oPOXyBME0NYgVdiw8IAPgfraCgHaIFKZraQziygfFCupDas8kqOsDOeG1Z5JSnZsEpK
         NmDDVcv9kRTY1xZOkC7WlbewlGyJF5Yfy15HStrwJS+sC5Mzu9gzlCW5sCpbMouGMgdv21VXDM/EqAqr
         bMkDQh8KGMI/31lKxkAm9N43FnKmK/O4mwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Nombre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Eliminar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Eliminar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAHYAAAB2AU57JggAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABlElEQVQ4T3VSTS8DURSdDf6IlY9V9Q12+orY2fgHlmLnZ1Q0bSohlhKJWBDxEVqLEk0qiKoQDUu2
-        OjOknTe97n3z0Tedzk1OcnPPPadzX4/WW2Z6atzketbk7BlhesA+uWHMTYx5a9GCheEhK8UKuOwgIAbC
-        4sk8LI0OejK3SIxkKVicnQRrkYdAs4DnrBgyMdJsUyGhtZ2H3mpt5VQDsNIsJ8Xuzd3P/l1dhr+1lb4g
-        zt9DCGMmOap5DxYQHdPwfjNaxKm7ZoqtowGrq8PO9xfY58fgvNRA3JZBVK7BqT/JGXHqLhrUNIszQx06
-        jTdoH+yBqFbALp5JUE8z5/01bMBZk76gqQ7Fw12sgbivqmLCT+QEUb6KNbDLJVXsnkAJU4f26VG8wclh
-        2ICzjEbxxEb4w/b+rvtwnw0QtUcJ5wP7yo3k/D3SGFwfkVmgePpEa6fg/WnRIq5roGelmIpiifdcSmJ+
-        OhJjH8R54gtIJAY8uVtkQvHEheCcPkBOz0bEalE8KWH0wpQRmRPsUZwJbg5K0/4Bb/FdX5LdEZUAAAAA
-        SUVORK5CYII=
 </value>
   </data>
 </root>

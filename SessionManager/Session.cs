@@ -164,7 +164,18 @@ namespace SessionManager
             }
         }
 
-        public string IdMedico { get => _idMedico; set => _idMedico = value; }
+        public string IdMedico
+        {
+            get
+            {
+                return _idMedico;
+            }
+
+            set
+            {
+                _idMedico = value;
+            }
+        }
 
         private Sesion()
         { }

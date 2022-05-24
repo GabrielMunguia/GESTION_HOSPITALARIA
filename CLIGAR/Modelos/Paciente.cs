@@ -277,7 +277,7 @@ namespace CLIGAR.Modelos
              
 
 
-                Clipboard.SetText(Sentencia.ToString());
+           
                 Resultado = operacion.Consultar(Sentencia.ToString());
 
             }
