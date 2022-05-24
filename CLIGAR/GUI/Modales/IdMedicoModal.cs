@@ -1,4 +1,5 @@
-﻿using CLIGAR.Modelos;
+﻿using CLIGAR.GUI.Confirmaciones;
+using CLIGAR.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,70 +24,46 @@ namespace CLIGAR.GUI.Modales
             InitializeComponent();
         }
 
+        private void btnBuscarMedico_Click_1(object sender, EventArgs e)
+        {
+            DataTable resultadoBusqueda= medico.obtenerMedicoPorNombre(txtBusqueda.Text);
+            if (resultadoBusqueda.Rows.Count > 0)
+            {
+                dgv.DataSource = resultadoBusqueda;
+                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgv.Columns[dgv.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count > 0)
+            {
+                ModalConfirmar mc = new ModalConfirmar();
+                mc.titulo.Text = "Estas seguro de seleccionar este paciente? ";
+                mc.btnConfirmar.Text = "CONFIRMAR";
+                mc.btnConfirmar.BackColor = Color.DodgerBlue;
+                mc.btnCancelar.BackColor = Color.Red;
+                mc.ShowDialog();
+                if (mc.seConfirmo)
+                {
+                    this.IdMedico = Int32.Parse(dgv.CurrentRow.Cells["idMedico"].Value.ToString());
+                 
+                    this.nombreMedico = dgv.CurrentRow.Cells["Nombres"].Value.ToString() + " " + dgv.CurrentRow.Cells["Apellidos"].Value.ToString();
+                    this.seSelecciono = true;
+                    Close();
+                }
+            }
+        }
+
         private void btnCerrar_Paint(object sender, PaintEventArgs e)
         {
-            
+          
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnBuscarMedico_Click(object sender, EventArgs e)
-        {
-            string jvm = this.txtJVM.Text;
-            DataTable medico = this.medico.obtenerMedicoPorJVM(jvm);
-           
-            if (medico.Rows.Count == 0)
-            {
-                 lblError.Visible = true;
-
-                this.desactivarLbls();
-                this.IdMedico = 0;
-                return;
-            }
-            lblError.Visible = false;
-            this.txtNombre.Text = medico.Rows[0][3].ToString() +" "+ medico.Rows[0][4].ToString();
-       
-            this.txtDui.Text = medico.Rows[0][10].ToString();
-            this.txtNit.Text = medico.Rows[0][11].ToString();
-            this.IdMedico = Int32.Parse(medico.Rows[0][0].ToString());
-            this.activarLbls();
-            this.nombreMedico = medico.Rows[0][3].ToString() + " " + medico.Rows[0][4].ToString();
-       
-
-
-        }
-
-        private void activarLbls()
-        {
-            this.lblNombre.Visible = true;
-            this.lblNIT.Visible = true;
-            this.lblDUI.Visible = true;
-            this.txtDui.Visible = true;
-            this.txtNombre.Visible = true;
-            this.txtNit.Visible = true;
-        }
-
-        private void desactivarLbls()
-        {
-            this.lblNombre.Visible = false;
-            this.lblNIT.Visible = false;
-            this.lblDUI.Visible = false;
-            this.txtDui.Visible = false;
-            this.txtNombre.Visible = false;
-         
-            this.txtNit.Visible = false;
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            if (IdMedico != 0)
-            {
-                this.seSelecciono = true;
-                Close();
-            }
         }
     }
 }

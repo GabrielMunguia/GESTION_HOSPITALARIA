@@ -10,13 +10,48 @@ namespace CLIGAR.Modelos
 {
     class Especialidades_Medico
     {
-        int id;
-        int idMedico;
-        int idEspecialidad;
+        int _id;
+        int _idMedico;
+        int _idEspecialidad;
 
-        public int Id { get => id; set => id = value; }
-        public int IdMedico { get => idMedico; set => idMedico = value; }
-        public int IdEspecialidad { get => idEspecialidad; set => idEspecialidad = value; }
+        public int Id
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public int IdMedico
+        {
+            get
+            {
+                return _idMedico;
+            }
+
+            set
+            {
+                _idMedico = value;
+            }
+        }
+
+        public int IdEspecialidad
+        {
+            get
+            {
+                return _idEspecialidad;
+            }
+
+            set
+            {
+                _idEspecialidad = value;
+            }
+        }
 
         public Boolean Guardar()
         {
@@ -26,8 +61,8 @@ namespace CLIGAR.Modelos
             try
             {
                 Sentencia.Append("SELECT * FROM cligar.especialidades_medicos;INSERT INTO `cligar`.`especialidades_medicos`(`idEspecialidades_Medico`,`idMedico`,`idEspecialidad`)VALUES(null,");
-                Sentencia.Append("'" + this.idMedico + "',");
-                Sentencia.Append("'" + this.idEspecialidad + "');");
+                Sentencia.Append("'" + this._idMedico + "',");
+                Sentencia.Append("'" + this._idEspecialidad + "');");
 
 
                 if (operacion.Insertar(Sentencia.ToString()) > 0)

@@ -126,5 +126,26 @@ namespace CLIGAR.Modelos
             }
             return id;
         }
+
+        public DataTable busqueda(string q)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  idEspecialidad, Nombre FROM cligar.especialidades where");
+                Sentencia.Append(" Nombre LIKE '%" + q + "%'");
+
+                
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace SessionManager
         String _IDUsuario;
         String _Usuario;
         String _IDEmpleado;
-        string _idMedico ;
+        string _IdMedico ;
         String _IDRol;
         String _Cargo;
         String _Nombres;
@@ -164,7 +164,18 @@ namespace SessionManager
             }
         }
 
-        public string IdMedico { get => _idMedico; set => _idMedico = value; }
+        public string IdMedico
+        {
+            get
+            {
+                return _IdMedico;
+            }
+
+            set
+            {
+                _IdMedico = value;
+            }
+        }
 
         private Sesion()
         { }

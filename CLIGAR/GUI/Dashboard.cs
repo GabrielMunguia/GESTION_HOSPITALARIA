@@ -235,5 +235,10 @@ namespace CLIGAR.GUI
         {
             this.abrirFormulario(new GestionPaciente());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new GestionHorario());
+        }
     }
 }
