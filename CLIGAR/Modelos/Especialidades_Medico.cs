@@ -10,20 +10,20 @@ namespace CLIGAR.Modelos
 {
     class Especialidades_Medico
     {
-        int id;
-        int idMedico;
-        int idEspecialidad;
+        int _id;
+        int _idMedico;
+        int _idEspecialidad;
 
         public int Id
         {
             get
             {
-                return id;
+                return _id;
             }
 
             set
             {
-                id = value;
+                _id = value;
             }
         }
 
@@ -31,12 +31,12 @@ namespace CLIGAR.Modelos
         {
             get
             {
-                return idMedico;
+                return _idMedico;
             }
 
             set
             {
-                idMedico = value;
+                _idMedico = value;
             }
         }
 
@@ -44,12 +44,12 @@ namespace CLIGAR.Modelos
         {
             get
             {
-                return idEspecialidad;
+                return _idEspecialidad;
             }
 
             set
             {
-                idEspecialidad = value;
+                _idEspecialidad = value;
             }
         }
 

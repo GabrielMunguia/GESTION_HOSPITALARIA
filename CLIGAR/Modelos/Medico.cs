@@ -121,6 +121,26 @@ namespace CLIGAR.Modelos
             return Resultado;
         }
 
+        public DataTable obtenerMedicoPorNombre(string nombre)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT m.idMedico,e.Nombres, e.Apellidos, e.Estado FROM medicos as m , empleados as e where m.idEmpleado=e.idEmpleado and e.Nombres LIKE '%" + nombre + "%' or e.Apellidos LIKE '%" + nombre + "%' and e.Estado=1;");
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
         public int obtenerIdMedicoPorIdEmpleado(int idEmpleado)
         {
             StringBuilder Sentencia = new StringBuilder();

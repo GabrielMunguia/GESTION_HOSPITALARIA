@@ -16,7 +16,7 @@ namespace SessionManager
         String _IDUsuario;
         String _Usuario;
         String _IDEmpleado;
-        string _idMedico ;
+        String _idMedico;
         String _IDRol;
         String _Cargo;
         String _Nombres;

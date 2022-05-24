@@ -98,5 +98,15 @@ namespace CLIGAR.GUI
         {
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }        
+
+        private void btnCerrar_MouseClick(object sender, MouseEventArgs e)
+        {
+            Close();
+        }
     }
 }

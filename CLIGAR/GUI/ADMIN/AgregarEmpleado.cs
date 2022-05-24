@@ -161,9 +161,6 @@ namespace CLIGAR.GUI
                 }
 
                 //valido si es tipo doctor para asignarle el jvm
-
-
-
                 if (this.cbxCargo.SelectedIndex == 1)
                 {
                     empleado.CodigoRegistroMedico = txtJVM.Text;
@@ -181,7 +178,7 @@ namespace CLIGAR.GUI
                 }
 
                 if (seGuardo && cbxCargo.SelectedIndex == 1)
-                {
+                {                                                       
                     Medico medico = new Medico();
                     medico.IdEmpleado = empleado.obtenerUltimoIDInsertador();
                     if (medico.Guardar())
@@ -196,7 +193,27 @@ namespace CLIGAR.GUI
                         {
                             exito = true;
                         }
-                       
+
+                        //Agregar horarios
+                        
+                        
+                        for(int i = 1; i < 8; i++)
+                        {
+                            Horario horario = new Horario();
+                            horario.IdMedico = medico.obtenerUltimoIDInsertado().ToString();
+                            horario.Inicio = "00:00";
+                            horario.Final = "00:00";
+                            horario.Dia = i.ToString();
+                            if (horario.Guardar())
+                            {
+                                exito = true;
+                            }
+                            else
+                            {
+                                exito = false;
+                            }
+                        }
+
 
                         this.reinciarFormulario();
                     }

@@ -9,15 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataManager;
 using CLIGAR.Modelos;
+using CLIGAR.GUI.Confirmaciones;
+using CLIGAR.GUI.Modales;
 
 namespace CLIGAR.GUI.ADMIN
 {
     public partial class GestionEspecialidad : Form
     {
-        
+        Especialidad especialidad = new Especialidad();
+
         public GestionEspecialidad()
         {
-            InitializeComponent();               
+            InitializeComponent();
+            ActualizarTabla();
+            if (tablaEspecialidades != null)
+            {
+                if (tablaEspecialidades.Rows.Count != 0)
+                {
+                    tablaEspecialidades.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    tablaEspecialidades.Columns[tablaEspecialidades.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+              
+                    ajustarTabla();
+                }
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -25,20 +39,22 @@ namespace CLIGAR.GUI.ADMIN
             Close();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            
+        private void ajustarTabla()
+        {            
+            tablaEspecialidades.Columns["Editar"].DisplayIndex = 2;
+            tablaEspecialidades.Columns["Eliminar"].DisplayIndex = 3;
         }
 
         private void GestionUsuario_Load(object sender, EventArgs e)
         {
             ActualizarTabla();
+            ajustarTabla();          
         }
 
         private void ActualizarTabla()
         {
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            tablaEspecialidades.DataSource = operacion.Consultar("SELECT * FROM cligar.especialidades;");
+            tablaEspecialidades.DataSource = operacion.Consultar("SELECT * FROM cligar.especialidades;");            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -50,13 +66,14 @@ namespace CLIGAR.GUI.ADMIN
                     AgregarEspecialidad f = new AgregarEspecialidad();  
                     f.txtIdEspecialidad.Text = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
                     f.txtEspcialidad.Text = tablaEspecialidades.CurrentRow.Cells["Nombre"].Value.ToString();                    
-
                     f.ShowDialog();
                 }
                 ActualizarTabla();
             }
-            catch { }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -65,9 +82,8 @@ namespace CLIGAR.GUI.ADMIN
             {
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    Especialidad especialidad = new Especialidad();
-                    
-                    especialidad.IdEspecialidad = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();                    
+                    Especialidad especialidad = new Especialidad();                    
+                    especialidad.IdEspecialidad = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();                      
                     if (especialidad.Eliminar())
                     {
                         MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -77,12 +93,82 @@ namespace CLIGAR.GUI.ADMIN
                     {
                         MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            DataTable resultado = especialidad.busqueda(this.txtBuscar.Text);
+            tablaEspecialidades.DataSource = resultado;
+            ajustarTabla();
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            AgregarEspecialidad f = new AgregarEspecialidad();
+            f.ShowDialog();
+            ActualizarTabla();
+            ajustarTabla();
+        }
+
+        private void tablaEspecialidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombreColumna = tablaEspecialidades.Columns[e.ColumnIndex].Name;
+            if (nombreColumna == "Eliminar")
+            {
+                ModalConfirmar pm = new ModalConfirmar();
+                pm.ShowDialog();
+                if (pm.seConfirmo)
+                {
+                    try
+                    {                        
+                        Especialidad especialidad = new Especialidad();
+
+                        especialidad.IdEspecialidad = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
+                        if (especialidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ActualizarTabla();
+                            ajustarTabla();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }                        
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            if (nombreColumna == "Editar")
+            {
+                ModalConfirmar pm = new ModalConfirmar();
+                pm.titulo.Text = "Estas seguro de editar este registro?";
+                pm.btnConfirmar.Text = "EDITAR";
+                pm.ShowDialog();
+                if (pm.seConfirmo)
+                {
+                    try
+                    {                        
+                        AgregarEspecialidad f = new AgregarEspecialidad();
+                        f.txtIdEspecialidad.Text = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
+                        f.txtEspcialidad.Text = tablaEspecialidades.CurrentRow.Cells["Nombre"].Value.ToString();
+                        f.ShowDialog();                    
+                        ActualizarTabla();
+                        ajustarTabla();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }

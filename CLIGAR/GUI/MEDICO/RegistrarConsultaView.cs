@@ -99,11 +99,11 @@ namespace CLIGAR.GUI.MEDICO
         private void ActivarCampos()
         {
           
-                txtAltura.Enabled = true;
-                txtObservaciones.Enabled = true;
-                txtPeso.Enabled = true;
-                txtPresion.Enabled = true;
-                txtReceta.Enabled = true;
+                txtAltura.ReadOnly = false;
+                txtObservaciones.ReadOnly = false;
+                txtPeso.ReadOnly = false;
+                txtPresion.ReadOnly = false;
+                txtReceta.ReadOnly = false;
                 dtpFecha.Enabled = true;
                 btnGuardar.Enabled = true;
             

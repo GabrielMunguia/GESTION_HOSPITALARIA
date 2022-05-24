@@ -114,6 +114,12 @@
     <Compile Include="GUI\ADMIN\tx.Designer.cs">
       <DependentUpon>tx.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MEDICO\GestionHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MEDICO\GestionHorario.Designer.cs">
+      <DependentUpon>GestionHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MEDICO\HistorialConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,7 @@
     <Compile Include="Modelos\Especialidad.cs" />
     <Compile Include="Modelos\Especialidades_2.cs" />
     <Compile Include="Modelos\Especialidades_Medico.cs" />
+    <Compile Include="Modelos\Horario.cs" />
     <Compile Include="Modelos\Medico.cs" />
     <Compile Include="Modelos\Paciente.cs" />
     <Compile Include="Modelos\Usuario.cs" />
@@ -237,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ADMIN\tx.resx">
       <DependentUpon>tx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MEDICO\GestionHorario.resx">
+      <DependentUpon>GestionHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MEDICO\HistorialConsultas.resx">
       <DependentUpon>HistorialConsultas.cs</DependentUpon>

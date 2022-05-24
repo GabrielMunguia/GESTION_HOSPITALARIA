@@ -11,8 +11,8 @@ namespace CLIGAR.Modelos
    public  class Especialidades_2
     {
 
-        int id;
-        string Nombre;
+        int _id;
+        string _Nombre;
 
         public Especialidades_2()
         {
@@ -22,25 +22,25 @@ namespace CLIGAR.Modelos
         {
             get
             {
-                return id;
+                return _id;
             }
 
             set
             {
-                id = value;
+                _id = value;
             }
         }
 
-        public string Nombre1
+        public string Nombre
         {
             get
             {
-                return Nombre;
+                return _Nombre;
             }
 
             set
             {
-                Nombre = value;
+                _Nombre = value;
             }
         }
 

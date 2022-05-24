@@ -112,7 +112,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1074, 15);
+            this.panel2.Size = new System.Drawing.Size(1074, 54);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -125,7 +125,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 89);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -288,7 +288,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 134);
+            this.panel3.Location = new System.Drawing.Point(0, 173);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1074, 28);
             this.panel3.TabIndex = 3;
@@ -303,7 +303,7 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 162);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 201);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -371,12 +371,12 @@
             // 
             // tableLayoutPanel9
             // 
+            this.tableLayoutPanel9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.34652F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.65348F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.46328F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.53672F));
             this.tableLayoutPanel9.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.dateTimePicker1, 1, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(540, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
@@ -393,7 +393,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 36);
+            this.label7.Size = new System.Drawing.Size(176, 36);
             this.label7.TabIndex = 2;
             this.label7.Text = "Fecha nacimiento:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,12 +401,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.AllowDrop = true;
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 3);
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(185, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(332, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(293, 26);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // tableLayoutPanel10
@@ -450,7 +449,7 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 246);
+            this.panel4.Location = new System.Drawing.Point(0, 285);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1074, 28);
             this.panel4.TabIndex = 5;
@@ -524,7 +523,7 @@
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel14, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel15, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(0, 274);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(0, 313);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));

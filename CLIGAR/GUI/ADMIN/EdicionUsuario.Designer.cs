@@ -169,7 +169,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Size = new System.Drawing.Size(1058, 525);
-            this.splitContainer1.SplitterDistance = 184;
+            this.splitContainer1.SplitterDistance = 204;
             this.splitContainer1.TabIndex = 9;
             // 
             // tableLayoutPanel5
@@ -188,7 +188,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.4F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(870, 126);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(850, 126);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // lblClave
@@ -197,9 +197,9 @@
             this.lblClave.BackColor = System.Drawing.SystemColors.Control;
             this.lblClave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblClave.Location = new System.Drawing.Point(612, 82);
+            this.lblClave.Location = new System.Drawing.Point(598, 82);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(255, 44);
+            this.lblClave.Size = new System.Drawing.Size(249, 44);
             this.lblClave.TabIndex = 10;
             this.lblClave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -319,7 +319,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 195);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(870, 28);
+            this.panel3.Size = new System.Drawing.Size(850, 28);
             this.panel3.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -336,7 +336,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(870, 84);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 84);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // lblempleadosinfo
@@ -345,9 +345,9 @@
             this.lblempleadosinfo.BackColor = System.Drawing.SystemColors.Control;
             this.lblempleadosinfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblempleadosinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblempleadosinfo.Location = new System.Drawing.Point(612, 42);
+            this.lblempleadosinfo.Location = new System.Drawing.Point(598, 42);
             this.lblempleadosinfo.Name = "lblempleadosinfo";
-            this.lblempleadosinfo.Size = new System.Drawing.Size(255, 42);
+            this.lblempleadosinfo.Size = new System.Drawing.Size(249, 42);
             this.lblempleadosinfo.TabIndex = 6;
             this.lblempleadosinfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -453,7 +453,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(870, 111);
+            this.panel2.Size = new System.Drawing.Size(850, 111);
             this.panel2.TabIndex = 7;
             // 
             // EdicionUsuario

@@ -12,7 +12,7 @@ namespace DataSource
         public static DataTable INICIO_SESION(String usuario, String password)
         {
             DataTable Resultado = new DataTable();
-            String Consulta = @"select *   from usuarios as u,empleados as e where u.Usuario = '" + usuario + "' and u.contrasena=MD5(SHA1('" + password + "')) and u.idEmpleado=e.idEmpleado;";
+            String Consulta = @"select *   from usuarios as u,empleados as e where u.Usuario = '" + usuario + "' and u.contrasena=MD5(SHA1('" + password + "')) and u.idEmpleado=e.idEmpleado and e.Estado=1;";
            
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
