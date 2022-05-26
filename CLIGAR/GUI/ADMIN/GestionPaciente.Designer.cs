@@ -31,12 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionPaciente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.tablaPacientes = new System.Windows.Forms.DataGridView();
+            this.idPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,50 +69,105 @@
             this.btnCerrar.TabIndex = 1;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnEliminar,
-            this.btnEditar});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1074, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(70, 22);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(57, 22);
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // tablaPacientes
             // 
+            this.tablaPacientes.AllowUserToAddRows = false;
+            this.tablaPacientes.AllowUserToDeleteRows = false;
             this.tablaPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaPacientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tablaPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idPaciente,
+            this.Nombres,
+            this.Apellidos,
+            this.Telefono,
+            this.Direccion,
+            this.Fecha_nac,
+            this.DUI,
+            this.Genero,
+            this.Editar,
+            this.Eliminar});
             this.tablaPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablaPacientes.Location = new System.Drawing.Point(0, 60);
+            this.tablaPacientes.Location = new System.Drawing.Point(0, 35);
             this.tablaPacientes.MultiSelect = false;
             this.tablaPacientes.Name = "tablaPacientes";
             this.tablaPacientes.ReadOnly = true;
             this.tablaPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaPacientes.Size = new System.Drawing.Size(1074, 597);
+            this.tablaPacientes.Size = new System.Drawing.Size(1074, 622);
             this.tablaPacientes.TabIndex = 3;
+            this.tablaPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPacientes_CellContentClick);
+            // 
+            // idPaciente
+            // 
+            this.idPaciente.DataPropertyName = "idPaciente";
+            this.idPaciente.HeaderText = "idPaciente";
+            this.idPaciente.Name = "idPaciente";
+            this.idPaciente.ReadOnly = true;
+            // 
+            // Nombres
+            // 
+            this.Nombres.DataPropertyName = "Nombres";
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.DataPropertyName = "Apellidos";
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            // 
+            // Fecha_nac
+            // 
+            this.Fecha_nac.DataPropertyName = "Fecha_nac";
+            this.Fecha_nac.HeaderText = "Fecha_nac";
+            this.Fecha_nac.Name = "Fecha_nac";
+            this.Fecha_nac.ReadOnly = true;
+            // 
+            // DUI
+            // 
+            this.DUI.DataPropertyName = "DUI";
+            this.DUI.HeaderText = "DUI";
+            this.DUI.Name = "DUI";
+            this.DUI.ReadOnly = true;
+            // 
+            // Genero
+            // 
+            this.Genero.DataPropertyName = "Genero";
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            this.Editar.DataPropertyName = "Editar";
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.DataPropertyName = "Eliminar";
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
             // 
             // GestionPaciente
             // 
@@ -114,7 +175,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 657);
             this.Controls.Add(this.tablaPacientes);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionPaciente";
@@ -122,11 +182,8 @@
             this.Text = "GestionUsuario";
             this.Load += new System.EventHandler(this.GestionUsuario_Load);
             this.panel1.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPacientes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -134,9 +191,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel btnCerrar;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnEditar;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.DataGridView tablaPacientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DUI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

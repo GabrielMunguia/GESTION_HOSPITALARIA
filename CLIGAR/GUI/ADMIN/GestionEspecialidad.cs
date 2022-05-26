@@ -53,8 +53,8 @@ namespace CLIGAR.GUI.ADMIN
 
         private void ActualizarTabla()
         {
-            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            tablaEspecialidades.DataSource = operacion.Consultar("SELECT * FROM cligar.especialidades;");            
+            Especialidad esp = new Especialidad();
+            tablaEspecialidades.DataSource=esp.TablaDatos();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

@@ -102,6 +102,12 @@
     <Compile Include="GUI\ADMIN\GestionPaciente.Designer.cs">
       <DependentUpon>GestionPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ADMIN\VerMedicoPorEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMIN\VerMedicoPorEspecialidad.Designer.cs">
+      <DependentUpon>VerMedicoPorEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ADMIN\ListaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     </Compile>
     <Compile Include="GUI\Modales\IdMedicoModal.Designer.cs">
       <DependentUpon>IdMedicoModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Modales\IdEmpleadoModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Modales\IdEmpleadoModal.Designer.cs">
+      <DependentUpon>IdEmpleadoModal.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Modales\IdPacienteModal.cs">
       <SubType>Form</SubType>
@@ -239,6 +251,9 @@
     <EmbeddedResource Include="GUI\ADMIN\GestionPaciente.resx">
       <DependentUpon>GestionPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ADMIN\VerMedicoPorEspecialidad.resx">
+      <DependentUpon>VerMedicoPorEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ADMIN\ListaEmpleados.resx">
       <DependentUpon>ListaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Modales\IdMedicoModal.resx">
       <DependentUpon>IdMedicoModal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Modales\IdEmpleadoModal.resx">
+      <DependentUpon>IdEmpleadoModal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Modales\IdPacienteModal.resx">
       <DependentUpon>IdPacienteModal.cs</DependentUpon>

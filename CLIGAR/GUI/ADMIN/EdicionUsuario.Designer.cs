@@ -51,10 +51,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblempleadosinfo = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.lblEmpleado = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -182,7 +182,7 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 223);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 229);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.3F));
@@ -317,7 +317,7 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 195);
+            this.panel3.Location = new System.Drawing.Point(0, 201);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 28);
             this.panel3.TabIndex = 9;
@@ -331,12 +331,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 111);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 95);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 84);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.52381F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.47619F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(850, 106);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // lblempleadosinfo
@@ -345,9 +345,9 @@
             this.lblempleadosinfo.BackColor = System.Drawing.SystemColors.Control;
             this.lblempleadosinfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblempleadosinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblempleadosinfo.Location = new System.Drawing.Point(598, 42);
+            this.lblempleadosinfo.Location = new System.Drawing.Point(598, 63);
             this.lblempleadosinfo.Name = "lblempleadosinfo";
-            this.lblempleadosinfo.Size = new System.Drawing.Size(249, 42);
+            this.lblempleadosinfo.Size = new System.Drawing.Size(249, 43);
             this.lblempleadosinfo.TabIndex = 6;
             this.lblempleadosinfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -355,61 +355,61 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.10899F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.54684F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtIdEmpleado, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnBuscar, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtIdUsuario, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblEmpleado, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnBuscar, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtIdEmpleado, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(523, 36);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(523, 45);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // label1
+            // txtIdUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 36);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ID Empleado:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtIdEmpleado
-            // 
-            this.txtIdEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtIdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEmpleado.Location = new System.Drawing.Point(133, 3);
-            this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(150, 29);
-            this.txtIdEmpleado.TabIndex = 2;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(445, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 29);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.txtIdUsuario.Location = new System.Drawing.Point(3, 3);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(74, 20);
+            this.txtIdUsuario.TabIndex = 9;
+            this.txtIdUsuario.Visible = false;
             // 
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEmpleado.Location = new System.Drawing.Point(289, 0);
+            this.lblEmpleado.Location = new System.Drawing.Point(349, 0);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(150, 36);
+            this.lblEmpleado.Size = new System.Drawing.Size(91, 45);
             this.lblEmpleado.TabIndex = 7;
             this.lblEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(253)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscar.Location = new System.Drawing.Point(134, 3);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(209, 39);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar Emplado";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtIdEmpleado
+            // 
+            this.txtIdEmpleado.Location = new System.Drawing.Point(446, 3);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(74, 20);
+            this.txtIdEmpleado.TabIndex = 8;
+            this.txtIdEmpleado.Visible = false;
             // 
             // tableLayoutPanel3
             // 
@@ -418,7 +418,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel3.Controls.Add(this.txtEmpleado, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 45);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 66);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -434,6 +434,7 @@
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.Size = new System.Drawing.Size(387, 29);
             this.txtEmpleado.TabIndex = 3;
+            this.txtEmpleado.TextChanged += new System.EventHandler(this.txtEmpleado_TextChanged);
             // 
             // label2
             // 
@@ -453,7 +454,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(850, 111);
+            this.panel2.Size = new System.Drawing.Size(850, 95);
             this.panel2.TabIndex = 7;
             // 
             // EdicionUsuario
@@ -503,25 +504,25 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox txtRepClave;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdEmpleado;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblempleadosinfo;
         private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblEmpleado;
+        public System.Windows.Forms.TextBox txtClave;
+        public System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.TextBox txtRepClave;
+        public System.Windows.Forms.TextBox txtEmpleado;
+        public System.Windows.Forms.TextBox txtIdEmpleado;
+        public System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TextBox txtIdUsuario;
     }
 }

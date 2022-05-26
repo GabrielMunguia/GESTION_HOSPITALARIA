@@ -76,7 +76,7 @@ namespace CLIGAR.GUI.Modales
 
                 return;
             }
-        
+            
             cbxEspecialidades.DisplayMember = "Nombre";
             cbxEspecialidades.ValueMember = "idEspecialidad";
             cbxEspecialidades.DataSource = lst;
