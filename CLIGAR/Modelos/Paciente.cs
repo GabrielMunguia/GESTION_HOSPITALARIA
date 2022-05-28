@@ -262,6 +262,29 @@ namespace CLIGAR.Modelos
             return Resultado;
         }
 
+        public DataTable obtenerPaciente()
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+            
+                Sentencia.Append("SELECT idPaciente as Codigo , Nombres,Apellidos,Direccion,Telefono,Fecha_nac,DUI,Genero FROM pacientes where idPaciente="+this.IdPaciente);
+                Clipboard.SetText(Sentencia.ToString());
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+
+
         public DataTable busqueda(string q)
         {
             DataTable Resultado = new DataTable();

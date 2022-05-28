@@ -393,7 +393,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 36);
+            this.label7.Size = new System.Drawing.Size(177, 36);
             this.label7.TabIndex = 2;
             this.label7.Text = "Fecha nacimiento:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +403,7 @@
             this.dateTimePicker1.AllowDrop = true;
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(185, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(186, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(293, 26);
             this.dateTimePicker1.TabIndex = 2;
@@ -611,6 +611,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarEmpleado";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -662,8 +663,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
@@ -677,6 +676,8 @@
         public System.Windows.Forms.ComboBox cbxGenero;
         public System.Windows.Forms.TextBox txtDui;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.TextBox txtIdPaciente;
     }
 }

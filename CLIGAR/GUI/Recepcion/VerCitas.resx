@@ -131,16 +131,10 @@
   <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Urgencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="nombrePaciente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Hora.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Detalle.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="CodigoPaciente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Urgencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -166,6 +160,21 @@
         Gv3ktA2uDM5E3sOVzks6k6so873BXq9Sr9a0uKvu9f99C90NYzjS8woHfcs4TM6jlF/+tbv3pVjimFF2
         Xk9tU6v5+CvkrXeqR495K6UKPX014RNN9gdXjzqfN+7xKTs4Wd5S4kgTSXpll+PRdrX+n8lLhslO2jmO
         434DZ6Lnj/DoU5cAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="Cancelar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Cancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAH0AAAB9AcdIDwAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABSklEQVQ4T51TS07DMBR0exiu0Sa2kyp278IRuEaXLLplg8ISJG4AhdCPQEr6EaxAQuqq6OFxm8Qp
+        ZtFYGuXFmRn7fcKIqIFVkpzlWl8stb4uhmoDIMYevh3z6xfGOrlS54VWWwP6B1twDLfbNIBYq9Qj8OIt
+        GdxDUxkcTvaSfchVQrNIXFoD5GU2q2t/jkb0NR5TMdS1yMTYw7dy70Xw3UKImKE4FdEARKzvNN2bGCDG
+        ssYH3jySNJMiZbbajoErwNON3Vu9DmLKOF8z2yrXAHBMsI7FwCKO6DEMdq0NplLQJOj9tE7hKQzomYfv
+        rYqI/B/6PXTi9uQ2YgYmQd8azDmXJw0SxBkPrdh04AracpS7GE8QfEIA1y5PNrl/QFMb7E06GE9MGIYE
+        ArQK1UbBIKxO/vMzOcB4TqW8wZCgz2gVqp0Jfoecm3xiv6SpkUw333KGAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

@@ -43,19 +43,20 @@ namespace CLIGAR.GUI.Modales
             this.panelTitulo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(534, 42);
+            this.panelTitulo.Size = new System.Drawing.Size(508, 42);
             this.panelTitulo.TabIndex = 7;
             // 
             // titulo
             // 
-            this.titulo.AutoSize = true;
+            this.titulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo.ForeColor = System.Drawing.Color.White;
-            this.titulo.Location = new System.Drawing.Point(150, 9);
+            this.titulo.Location = new System.Drawing.Point(0, 0);
             this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(242, 20);
+            this.titulo.Size = new System.Drawing.Size(508, 42);
             this.titulo.TabIndex = 1;
             this.titulo.Text = "Se realizo la accion con exito";
+            this.titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titulo.Click += new System.EventHandler(this.titulo_Click);
             // 
             // button2
@@ -76,7 +77,7 @@ namespace CLIGAR.GUI.Modales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 129);
+            this.ClientSize = new System.Drawing.Size(508, 129);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -84,7 +85,6 @@ namespace CLIGAR.GUI.Modales
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informacion";
             this.panelTitulo.ResumeLayout(false);
-            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }

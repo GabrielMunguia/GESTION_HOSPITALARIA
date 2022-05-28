@@ -152,7 +152,7 @@ namespace CLIGAR.Modelos
             {
 
                
-                Sentencia.Append("SELECT idCita as Codigo , Urgencia,  DATE_FORMAT(Fecha, '%H:%I:%S' )as HORA  FROM cligar.citas where idMedico = " + this.idMedico + " and year(Fecha)=" + anio+ " and month(Fecha)=" + mes+ " and day(Fecha)=" + dia+";");
+                Sentencia.Append("SELECT idCita as Codigo , Urgencia,  DATE_FORMAT(Fecha, '%H:%I:%S' )as HORA  FROM cligar.citas where idMedico = " + this.idMedico + " and year(Fecha)=" + anio+ " and month(Fecha)=" + mes+ " and day(Fecha)=" + dia+ " and Estado=1 ;");
 
                 Clipboard.SetText(Sentencia.ToString());
 
@@ -171,6 +171,69 @@ namespace CLIGAR.Modelos
             }
             return Resultado;
         }
+        public DataTable obtenerCitasAgendadasDetalle(string dia, string mes, string anio)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+
+
+                Sentencia.Append("SELECT idCita as Codigo , concat(Nombres,' ',Apellidos)as nombrePaciente,p.idPaciente as CodigoPaciente , Urgencia,  DATE_FORMAT(Fecha, '%H:%I:%S' )as HORA  FROM citas as c ,pacientes as p    where c.idPaciente=p.idPaciente and idMedico = " + this.idMedico + " and year(Fecha)=" + anio + " and month(Fecha)=" + mes + " and day(Fecha)=" + dia + " and Estado=1 ;");
+
+                Clipboard.SetText(Sentencia.ToString());
+
+
+
+
+
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+
+        public Boolean eliminar(int id)
+        {
+            Boolean resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("UPDATE `cligar`.`citas`SET`Estado` = 0  WHERE `idCita` =  "+id);
+                Clipboard.SetText(Sentencia.ToString());
+      
+
+
+
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    resultado = true;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+
+
 
 
 

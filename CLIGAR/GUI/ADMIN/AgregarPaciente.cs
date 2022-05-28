@@ -17,6 +17,43 @@ namespace CLIGAR.GUI
         {
             InitializeComponent();
         }
+        public AgregarPaciente(int id )
+        {
+            InitializeComponent();
+
+            Paciente pa = new Paciente();
+            pa.IdPaciente = id.ToString();
+            DataTable paciente = pa.obtenerPaciente();
+
+       
+            this.txtIdPaciente.Text = paciente.Rows[0]["Codigo"].ToString();
+
+           
+            this.txtNombres.Text = paciente.Rows[0]["Nombres"].ToString();
+            this.txtApellidos.Text = paciente.Rows[0]["Apellidos"].ToString();
+            this.txtDireccion.Text = paciente.Rows[0]["Direccion"].ToString();
+            this.txtDui.Text = paciente.Rows[0]["DUI"].ToString();
+            this.txtTelefono.Text = paciente.Rows[0]["Telefono"].ToString();
+            this.dateTimePicker1.Text= paciente.Rows[0]["Fecha_nac"].ToString();
+            if (paciente.Rows[0]["Genero"].ToString() == "M")
+            {
+                this.cbxGenero.SelectedIndex = 0;
+            }
+            else
+            {
+                this.cbxGenero.SelectedIndex = 1;
+            }
+            this.txtNombres.ReadOnly = true;
+            this.txtApellidos.ReadOnly = true;
+            this.txtDireccion.ReadOnly = true;
+            this.txtDui.ReadOnly = true;
+            this.txtTelefono.ReadOnly = true;
+            this.dateTimePicker1.Enabled = false;
+            this.cbxGenero.Enabled = false;
+
+
+        }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

@@ -295,5 +295,10 @@ namespace CLIGAR.GUI
         {
             this.panelExtra2.Visible = !this.panelExtra2.Visible;
         }
+
+        private void btnVerCita_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new VerCitas());
+        }
     }
 }
