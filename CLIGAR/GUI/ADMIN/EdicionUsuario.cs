@@ -1,4 +1,5 @@
-﻿using CLIGAR.Modelos;
+﻿using CLIGAR.GUI.Modales;
+using CLIGAR.Modelos;
 using DataManager;
 using System;
 using System.Collections.Generic;
@@ -24,17 +25,17 @@ namespace CLIGAR.GUI.ADMIN
 
         private void reinciarFormulario()
         {
-            this.txtEmpleado.Text = "";
-            this.txtIdEmpleado.Text = "";
+            this.txtEmpleado.Text = "";            
             this.txtRepClave.Text = "";
             this.txtUsuario.Text = "";
             this.txtClave.Text = "";
+            this.txtIdEmpleado.Text = "";
         }
 
         private Boolean validarCampos()
         {
             Boolean esValidoElFormulario = false;
-            if (this.txtRepClave.Text.Length > 0 && this.txtEmpleado.Text.Length > 0 && this.txtIdEmpleado.Text.Length > 0 &&
+            if (this.txtRepClave.Text.Length > 0 && this.txtEmpleado.Text.Length > 0  &&
                 this.txtUsuario.Text.Length > 0 && this.txtClave.Text.Length > 0)
             {
                 if (txtClave.Text == txtRepClave.Text)
@@ -62,28 +63,42 @@ namespace CLIGAR.GUI.ADMIN
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
+        {            
+            Boolean esValidoElFormulario = this.validarCampos();
+            if (esValidoElFormulario)
+            {
+                Usuario usuario = new Usuario();
+                usuario.IdUsuario = txtIdUsuario.Text;
+                usuario.NombreUsuario = txtIdUsuario.Text;
+                usuario.Contrasena = txtClave.Text;
 
-            try
-            {
-                Boolean valido = validarCampos();
-                if (valido)
+                if (txtIdUsuario.TextLength > 0)
                 {
-                    Usuario usuario = new Usuario();
-                    usuario.IdUsuario = usuario.obtenerUltimoIDInsertador() + 1;
-                    usuario.NombreUsuario = txtUsuario.Text;
-                    usuario.Contrasena = txtClave.Text;
-                    usuario.IdEmpleado = txtIdEmpleado.Text;
-                    usuario.Guardar();
-                    MessageBox.Show("El usuario se agregó con extito", "Usuario agreado", MessageBoxButtons.OK);
-                    reinciarFormulario();
+
+                    if (usuario.Actualizar())
+                    {
+                        MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
+                else
+                {
+                    if (usuario.Guardar())
+                    {
+                        MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
                 reinciarFormulario();
-                MessageBox.Show(ex.Message);
-            }           
+            }
         }
 
         private void txtClave_TextChanged(object sender, EventArgs e)
@@ -98,38 +113,40 @@ namespace CLIGAR.GUI.ADMIN
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                int idE = int.Parse(txtIdEmpleado.Text);
-                DBOperacion op = new DBOperacion();
-                Empleado emp = new Empleado();
-                if (idE <= emp.obtenerUltimoIDInsertador()) {
-                    _DATOS = op.Consultar("select concat(Nombres, ' ', Apellidos ) Nombre from empleados where idEmpleado=" + idE);
-                    txtEmpleado.Text = _DATOS.Rows[0][0].ToString();
-                    if (txtEmpleado.Text != "")
-                    {
-                        txtClave.Enabled = true;
-                        txtUsuario.Enabled = true;
-                        txtRepClave.Enabled = true;
-                        lblEmpleado.Text = "";
-                    }
-                }            
-                else
+                IdEmpleadoModal idModal = new IdEmpleadoModal();
+
+                idModal.ShowDialog();
+                if (idModal.seSelecciono)
                 {
-                    txtClave.Enabled = false;
-                    txtUsuario.Enabled = false;
-                    txtRepClave.Enabled = false;
-                    txtEmpleado.Text = "";
-                    lblEmpleado.Text = "No se encontró el empleado";
+                    txtIdEmpleado.Text = idModal.idEmpleado;
+                    txtEmpleado.Text = idModal.nombreCompleto;                    
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                
+                MessageBox.Show(ex.Message);
             }
-           
+
+        }
+
+        private void txtEmpleado_TextChanged(object sender, EventArgs e)
+        {
+            if(txtEmpleado.Text.Length > 0)
+            {
+                txtUsuario.Enabled = true;
+                txtClave.Enabled = true;
+                txtRepClave.Enabled = true;
+            }
+            else
+            {
+                txtUsuario.Enabled = false;
+                txtClave.Enabled = false;
+                txtRepClave.Enabled = false;
+            }
+            
         }
     }
 }

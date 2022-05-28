@@ -36,12 +36,7 @@
             this.lblDoctor = new System.Windows.Forms.Label();
             this.btnSeleccionarDoctor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,12 +44,17 @@
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalle = new System.Windows.Forms.DataGridViewImageColumn();
             this.Cancelar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
@@ -144,15 +144,6 @@
             this.panel3.Size = new System.Drawing.Size(962, 385);
             this.panel3.TabIndex = 5;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.tableLayoutPanel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(962, 47);
-            this.panel4.TabIndex = 0;
-            // 
             // dgvCitas
             // 
             this.dgvCitas.AllowUserToAddRows = false;
@@ -176,6 +167,57 @@
             this.dgvCitas.Size = new System.Drawing.Size(962, 338);
             this.dgvCitas.TabIndex = 5;
             this.dgvCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellContentClick);
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "Codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // nombrePaciente
+            // 
+            this.nombrePaciente.DataPropertyName = "nombrePaciente";
+            this.nombrePaciente.HeaderText = "Nombre Paciente";
+            this.nombrePaciente.Name = "nombrePaciente";
+            // 
+            // CodigoPaciente
+            // 
+            this.CodigoPaciente.DataPropertyName = "CodigoPaciente";
+            this.CodigoPaciente.HeaderText = "CodigoPaciente";
+            this.CodigoPaciente.Name = "CodigoPaciente";
+            // 
+            // Urgencia
+            // 
+            this.Urgencia.DataPropertyName = "Urgencia";
+            this.Urgencia.HeaderText = "Urgencia";
+            this.Urgencia.Name = "Urgencia";
+            // 
+            // Hora
+            // 
+            this.Hora.DataPropertyName = "Hora";
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle Paciente";
+            this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
+            this.Detalle.Name = "Detalle";
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.HeaderText = "Cancelar cita";
+            this.Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Cancelar.Image")));
+            this.Cancelar.Name = "Cancelar";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.tableLayoutPanel2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(962, 47);
+            this.panel4.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
@@ -229,48 +271,6 @@
             this.dtpFechaCita.TabIndex = 17;
             this.dtpFechaCita.ValueChanged += new System.EventHandler(this.dtpFechaCita_ValueChanged);
             // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "Codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // nombrePaciente
-            // 
-            this.nombrePaciente.DataPropertyName = "nombrePaciente";
-            this.nombrePaciente.HeaderText = "Nombre Paciente";
-            this.nombrePaciente.Name = "nombrePaciente";
-            // 
-            // CodigoPaciente
-            // 
-            this.CodigoPaciente.DataPropertyName = "CodigoPaciente";
-            this.CodigoPaciente.HeaderText = "CodigoPaciente";
-            this.CodigoPaciente.Name = "CodigoPaciente";
-            // 
-            // Urgencia
-            // 
-            this.Urgencia.DataPropertyName = "Urgencia";
-            this.Urgencia.HeaderText = "Urgencia";
-            this.Urgencia.Name = "Urgencia";
-            // 
-            // Hora
-            // 
-            this.Hora.DataPropertyName = "Hora";
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle Paciente";
-            this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
-            this.Detalle.Name = "Detalle";
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.HeaderText = "Cancelar cita";
-            this.Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("Cancelar.Image")));
-            this.Cancelar.Name = "Cancelar";
-            // 
             // VerCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,8 +287,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataManager;
 using CLIGAR.Modelos;
+using CLIGAR.GUI.Confirmaciones;
+using CLIGAR.GUI.Modales;
 
 namespace CLIGAR.GUI.ADMIN
 {
@@ -98,6 +100,78 @@ namespace CLIGAR.GUI.ADMIN
             {
                 MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tablaPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombreColumna = tablaPacientes.Columns[e.ColumnIndex].Name;
+            if (nombreColumna == "Eliminar")
+            {
+                ModalConfirmar pm = new ModalConfirmar();
+                pm.ShowDialog();
+                if (pm.seConfirmo)
+                {
+                    try
+                    {
+                        Paciente paciente = new Paciente();
+
+                        paciente.IdPaciente = tablaPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
+                        ModalInformacion modal = new ModalInformacion();
+                        if (paciente.Eliminar())
+                        {
+                            
+                            modal.ShowDialog();
+                            ActualizarTabla();
+                        }
+                        else
+                        {
+                            modal.titulo.Text = "No se pudo realizar la accion";
+                            modal.ShowDialog();
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            if (nombreColumna == "Editar")
+            {
+                ModalConfirmar pm = new ModalConfirmar();
+                pm.titulo.Text = "Estas seguro de editar este registro?";
+                pm.btnConfirmar.Text = "EDITAR";
+                pm.ShowDialog();
+                if (pm.seConfirmo)
+                {
+                    try
+                    {
+                        AgregarPaciente f = new AgregarPaciente();
+                        f.txtIdPaciente.Text = tablaPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
+                        f.txtNombres.Text = tablaPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+                        f.txtApellidos.Text = tablaPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+                        f.txtDireccion.Text = tablaPacientes.CurrentRow.Cells["Direccion"].Value.ToString();
+                        f.txtDui.Text = tablaPacientes.CurrentRow.Cells["DUI"].Value.ToString();
+                        f.txtTelefono.Text = tablaPacientes.CurrentRow.Cells["Telefono"].Value.ToString();
+                        f.dateTimePicker1.Text = tablaPacientes.CurrentRow.Cells["Fecha_nac"].Value.ToString();
+                        if (tablaPacientes.CurrentRow.Cells["Genero"].Value.ToString() == "M")
+                        {
+                            f.cbxGenero.SelectedIndex = 0;
+                        }
+                        else
+                        {
+                            f.cbxGenero.SelectedIndex = 1;
+                        }
+                        f.ShowDialog();
+                        ActualizarTabla();
+                    }
+                        
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            
         }
     }
 }

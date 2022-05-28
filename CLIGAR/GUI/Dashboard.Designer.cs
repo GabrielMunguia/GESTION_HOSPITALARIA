@@ -48,13 +48,13 @@
             this.button8 = new System.Windows.Forms.Button();
             this.opcReportes = new System.Windows.Forms.Button();
             this.panelGestionCitas = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+        
             this.button3 = new System.Windows.Forms.Button();
             this.btnVerCita = new System.Windows.Forms.Button();
             this.btnRegistrarCitaView = new System.Windows.Forms.Button();
             this.opcCitas = new System.Windows.Forms.Button();
             this.panelOpcGestionDeEmpleados = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+           
             this.AgregarEspecialidad = new System.Windows.Forms.Button();
             this.btnAgregarEspecialidadMedico = new System.Windows.Forms.Button();
             this.btnVerEmpleadosView = new System.Windows.Forms.Button();
@@ -390,7 +390,7 @@
             // panelGestionCitas
             // 
             this.panelGestionCitas.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelGestionCitas.Controls.Add(this.button2);
+            this.panelGestionCitas.Controls.Add(this.ImprimirCita);
             this.panelGestionCitas.Controls.Add(this.button3);
             this.panelGestionCitas.Controls.Add(this.btnVerCita);
             this.panelGestionCitas.Controls.Add(this.btnRegistrarCitaView);
@@ -402,18 +402,7 @@
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(0, 120);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(210, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+       
             // 
             // button3
             // 
@@ -487,7 +476,7 @@
             // panelOpcGestionDeEmpleados
             // 
             this.panelOpcGestionDeEmpleados.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelOpcGestionDeEmpleados.Controls.Add(this.button6);
+            this.panelOpcGestionDeEmpleados.Controls.Add(this.btnDocEsp);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.AgregarEspecialidad);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnAgregarEspecialidadMedico);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnVerEmpleadosView);
@@ -500,18 +489,7 @@
             // 
             // button6
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button6.Location = new System.Drawing.Point(0, 160);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(210, 40);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "EXTRA1";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+          
             // 
             // AgregarEspecialidad
             // 
@@ -923,10 +901,10 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ImprimirCita;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnVerCita;
         private System.Windows.Forms.Button btnRegistrarCitaView;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDocEsp;
     }
 }

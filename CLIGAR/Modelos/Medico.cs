@@ -220,7 +220,28 @@ namespace CLIGAR.Modelos
             return Resultado;
         }
 
+        public DataTable obtenerMedicoPorEspecialidad(string id)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT m.idMedico,e.Nombres, e.Apellidos, e.Telefono, e.direccion, e.Genero, e.CodigoRegistroMedico");
+                Sentencia.Append(" FROM  medicos as m, empleados as e, especialidades esp, especialidades_medicos em");
+                Sentencia.Append(" where m.idEmpleado = e.idEmpleado and m.idMedico = em.idMedico and em.idEspecialidad = esp.idEspecialidad");
+                Sentencia.Append(" and e.Estado = 1 and esp.idEspecialidad ="+ id);
 
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
 
     }
 }

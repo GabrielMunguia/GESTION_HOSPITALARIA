@@ -4,17 +4,18 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CLIGAR.Modelos
 {
     class Usuario
     {
-        int idUsuario;
+        string idUsuario;
         string nombreUsuario;
         string contrasena;
         string idEmpleado;
 
-        public int IdUsuario
+        public string IdUsuario
         {
             get
             {
@@ -97,20 +98,22 @@ namespace CLIGAR.Modelos
             Boolean resultado = false;
             StringBuilder Sentencia = new StringBuilder();
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            MessageBox.Show("Hola");
             try
             {
                 Sentencia.Append("Update usuarios set ");
-                Sentencia.Append("Usuario='" + this.nombreUsuario + "',");
-                Sentencia.Append("Contrasena=MD5(SHA1('" + this.contrasena + "')),");
-                Sentencia.Append("idEmpleado='" + this.idEmpleado + "',");
+                Sentencia.Append("Contrasena=MD5(sha1('" + this.contrasena + "')) where idUsuario =" + this.idUsuario);
 
                 if (operacion.Actualizar(Sentencia.ToString()) > 0)
                 {
                     resultado = true;
+
                 }
             }
             catch (Exception)
             {
+                Clipboard.SetText(Sentencia.ToString());
+                MessageBox.Show(Sentencia.ToString());
                 resultado = false;
             }
             return resultado;
@@ -124,7 +127,7 @@ namespace CLIGAR.Modelos
             try
             {
                 Sentencia.Append("Delete from usuarios where ");
-                Sentencia.Append("idUsuario='" + this.idUsuario + "',");
+                Sentencia.Append("idUsuario='" + this.idUsuario + "'");
                 if (operacion.Eliminar(Sentencia.ToString()) > 0)
                 {
                     resultado = true;
@@ -157,6 +160,20 @@ namespace CLIGAR.Modelos
                 id = -1;
             }
             return id;
+        }
+
+        public DataTable TablaDatos()
+        {
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            DataTable tabla = new DataTable();
+            try
+            {
+                tabla = operacion.Consultar("SELECT u.idUsuario,u.Usuario,e.Nombres,e.Apellidos,c.Nombre as Cargo, e.Estado FROM cligar.usuarios u, cligar.empleados e, cligar.cargos c where u.idEmpleado=e.idEmpleado and e.idCargo=c.idCargo;");                
+            }
+            catch (Exception)
+            {                
+            }
+            return tabla;
         }
     }
 }

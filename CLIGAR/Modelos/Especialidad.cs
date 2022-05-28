@@ -147,5 +147,19 @@ namespace CLIGAR.Modelos
             }
             return Resultado;
         }
+
+        public DataTable TablaDatos()
+        {
+            DataTable resultado = new DataTable();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                resultado = operacion.Consultar("SELECT * FROM cligar.especialidades;");
+            }
+            catch (Exception)
+            {
+            }            
+            return resultado;
+        }
     }
 }

@@ -24,8 +24,7 @@ namespace DataSource
                 Resultado = new DataTable();
             }
             return Resultado;
-        }
-
+        }       
 
         public static DataTable PERMISOS(String pIDRol)
         {
@@ -36,6 +35,27 @@ namespace DataSource
             DataManager.DBOperacion op = new DataManager.DBOperacion();
             try
             {
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public static DataTable ReporteCitas()
+        {
+            DataTable Resultado = new DataTable();
+            try
+            {
+                
+                String Consulta = @"SELECT concat(p.Nombres,' ',p.Apellidos) Paciente,
+                concat(e.Nombres,' ', e.Apellidos) Doctor, c.Responsable, c.Fecha
+                FROM citas c, pacientes p, medicos m, empleados e where c.idPaciente = p.idPaciente
+                and c.idMedico = m.idMedico and m.idEmpleado = e.idEmpleado
+                and c.idCita = (select max(ci.idCita) from citas ci)";
+                DataManager.DBOperacion op = new DataManager.DBOperacion();
                 Resultado = op.Consultar(Consulta);
             }
             catch (Exception)
