@@ -341,6 +341,10 @@
       <Project>{200adf30-6fe3-4add-a26a-1512962ffa21}</Project>
       <Name>DataSource</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Informes\Informes.csproj">
+      <Project>{b8c94afe-b514-4c24-97e5-e3d8b88e9d1e}</Project>
+      <Name>Informes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{726f26ff-01f4-42b5-aa3a-1c73d1e430fa}</Project>
       <Name>SessionManager</Name>

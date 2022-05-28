@@ -300,5 +300,10 @@ namespace CLIGAR.GUI
         {
             this.abrirFormulario(new VerMedicoPorEspecialidad());
         }
+
+        private void ImprimirCita_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new Informes.GUI.VisorCita());
+        }
     }
 }

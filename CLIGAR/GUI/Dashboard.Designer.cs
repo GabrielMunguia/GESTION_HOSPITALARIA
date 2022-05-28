@@ -48,7 +48,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.opcReportes = new System.Windows.Forms.Button();
             this.panelGestionCitas = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ImprimirCita = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnRegistrarCitaView = new System.Windows.Forms.Button();
@@ -390,7 +390,7 @@
             // panelGestionCitas
             // 
             this.panelGestionCitas.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelGestionCitas.Controls.Add(this.button2);
+            this.panelGestionCitas.Controls.Add(this.ImprimirCita);
             this.panelGestionCitas.Controls.Add(this.button3);
             this.panelGestionCitas.Controls.Add(this.button7);
             this.panelGestionCitas.Controls.Add(this.btnRegistrarCitaView);
@@ -400,20 +400,21 @@
             this.panelGestionCitas.Size = new System.Drawing.Size(210, 155);
             this.panelGestionCitas.TabIndex = 12;
             // 
-            // button2
+            // ImprimirCita
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(0, 120);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(210, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.ImprimirCita.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ImprimirCita.FlatAppearance.BorderSize = 0;
+            this.ImprimirCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImprimirCita.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ImprimirCita.Location = new System.Drawing.Point(0, 120);
+            this.ImprimirCita.Name = "ImprimirCita";
+            this.ImprimirCita.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.ImprimirCita.Size = new System.Drawing.Size(210, 40);
+            this.ImprimirCita.TabIndex = 3;
+            this.ImprimirCita.Text = "IMPRIMIR CITA";
+            this.ImprimirCita.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ImprimirCita.UseVisualStyleBackColor = true;
+            this.ImprimirCita.Click += new System.EventHandler(this.ImprimirCita_Click);
             // 
             // button3
             // 
@@ -923,7 +924,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ImprimirCita;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnRegistrarCitaView;

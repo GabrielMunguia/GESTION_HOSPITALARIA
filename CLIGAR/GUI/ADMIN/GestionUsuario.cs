@@ -85,7 +85,7 @@ namespace CLIGAR.GUI.ADMIN
                         EdicionUsuario f = new EdicionUsuario();
                         f.btnBuscar.Enabled = false;
                         f.txtEmpleado.Enabled = false;
-                        f.txtIdEmpleado .Text = tablaUsuarios.CurrentRow.Cells["idUsuario"].Value.ToString();
+                        f.txtIdUsuario .Text = tablaUsuarios.CurrentRow.Cells["idUsuario"].Value.ToString();
                         f.txtEmpleado.Text = tablaUsuarios.CurrentRow.Cells["Nombres"].Value.ToString() + " " + tablaUsuarios.CurrentRow.Cells["Apellidos"].Value.ToString();                        
                         f.txtUsuario.Text = tablaUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
                         f.txtUsuario.Enabled = false;
