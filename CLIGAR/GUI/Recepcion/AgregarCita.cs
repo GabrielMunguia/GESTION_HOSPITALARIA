@@ -190,8 +190,9 @@ namespace CLIGAR.GUI.Recepcion
                         mf.titulo.Text = "SE AGREGO CORRECTAMENTE";
                         mf.Show();
                     }
-                  
 
+                    Informes.GUI.VisorCita visor = new Informes.GUI.VisorCita();
+                    visor.ShowDialog();
                 }
             
               

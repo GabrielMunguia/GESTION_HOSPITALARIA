@@ -45,16 +45,14 @@
             this.panelReportes = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.ConsultaMensual = new System.Windows.Forms.Button();
             this.opcReportes = new System.Windows.Forms.Button();
             this.panelGestionCitas = new System.Windows.Forms.Panel();
-        
             this.button3 = new System.Windows.Forms.Button();
             this.btnVerCita = new System.Windows.Forms.Button();
             this.btnRegistrarCitaView = new System.Windows.Forms.Button();
             this.opcCitas = new System.Windows.Forms.Button();
             this.panelOpcGestionDeEmpleados = new System.Windows.Forms.Panel();
-           
             this.AgregarEspecialidad = new System.Windows.Forms.Button();
             this.btnAgregarEspecialidadMedico = new System.Windows.Forms.Button();
             this.btnVerEmpleadosView = new System.Windows.Forms.Button();
@@ -315,7 +313,7 @@
             this.panelReportes.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panelReportes.Controls.Add(this.button10);
             this.panelReportes.Controls.Add(this.button9);
-            this.panelReportes.Controls.Add(this.button8);
+            this.panelReportes.Controls.Add(this.ConsultaMensual);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelReportes.Location = new System.Drawing.Point(0, 1061);
             this.panelReportes.Name = "panelReportes";
@@ -352,20 +350,21 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // ConsultaMensual
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(210, 40);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "REGISTRAR CITA";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.ConsultaMensual.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ConsultaMensual.FlatAppearance.BorderSize = 0;
+            this.ConsultaMensual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ConsultaMensual.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ConsultaMensual.Location = new System.Drawing.Point(0, 0);
+            this.ConsultaMensual.Name = "ConsultaMensual";
+            this.ConsultaMensual.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.ConsultaMensual.Size = new System.Drawing.Size(210, 40);
+            this.ConsultaMensual.TabIndex = 1;
+            this.ConsultaMensual.Text = "CONSULTAS MENSUALES";
+            this.ConsultaMensual.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConsultaMensual.UseVisualStyleBackColor = true;
+            this.ConsultaMensual.Click += new System.EventHandler(this.button8_Click);
             // 
             // opcReportes
             // 
@@ -390,7 +389,6 @@
             // panelGestionCitas
             // 
             this.panelGestionCitas.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelGestionCitas.Controls.Add(this.ImprimirCita);
             this.panelGestionCitas.Controls.Add(this.button3);
             this.panelGestionCitas.Controls.Add(this.btnVerCita);
             this.panelGestionCitas.Controls.Add(this.btnRegistrarCitaView);
@@ -399,10 +397,6 @@
             this.panelGestionCitas.Name = "panelGestionCitas";
             this.panelGestionCitas.Size = new System.Drawing.Size(210, 155);
             this.panelGestionCitas.TabIndex = 12;
-            // 
-            // button2
-            // 
-       
             // 
             // button3
             // 
@@ -476,7 +470,6 @@
             // panelOpcGestionDeEmpleados
             // 
             this.panelOpcGestionDeEmpleados.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelOpcGestionDeEmpleados.Controls.Add(this.btnDocEsp);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.AgregarEspecialidad);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnAgregarEspecialidadMedico);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnVerEmpleadosView);
@@ -486,10 +479,6 @@
             this.panelOpcGestionDeEmpleados.Name = "panelOpcGestionDeEmpleados";
             this.panelOpcGestionDeEmpleados.Size = new System.Drawing.Size(210, 204);
             this.panelOpcGestionDeEmpleados.TabIndex = 10;
-            // 
-            // button6
-            // 
-          
             // 
             // AgregarEspecialidad
             // 
@@ -900,7 +889,7 @@
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button ConsultaMensual;
         private System.Windows.Forms.Button ImprimirCita;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnVerCita;
