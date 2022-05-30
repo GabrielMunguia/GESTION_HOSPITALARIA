@@ -49,8 +49,7 @@ namespace DataSource
         {
             DataTable Resultado = new DataTable();
             try
-            {
-                
+            {                
                 String Consulta = @"SELECT concat(p.Nombres,' ',p.Apellidos) Paciente,
                 concat(e.Nombres,' ', e.Apellidos) Doctor, c.Responsable, c.Fecha
                 FROM citas c, pacientes p, medicos m, empleados e where c.idPaciente = p.idPaciente
@@ -106,5 +105,28 @@ namespace DataSource
             }
             return Resultado;
         }
+
+
+        public static DataTable ReporteConsultaMensual()
+        {
+            DataTable Resultado = new DataTable();
+            try
+            {
+                String Consulta = @"SELECT count(c.idConsulta) Cantidad, monthname(c.Fecha) Mes, year(c.Fecha) anio
+                FROM consultas c, medicos m, pacientes p, empleados e 
+                where c.idMedico=m.idMedico and m.idEmpleado=e.idEmpleado
+                and c.idPaciente=p.idPaciente 
+                group by date_format(c.Fecha,'%Y%m');";
+                DataManager.DBOperacion op = new DataManager.DBOperacion();
+                Resultado = op.Consultar(Consulta);
+            }
+            catch (Exception)
+            {
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+
     }
 }

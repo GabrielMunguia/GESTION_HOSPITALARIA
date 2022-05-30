@@ -23,14 +23,13 @@ namespace Informes.GUI
                 DateTime fechaActual = DateTime.Today;
                 DateTimeFormatInfo mfi = new DateTimeFormatInfo();
                 string sMonth = DateTime.Now.ToString("MM");
-           
-
                 int mes = Int32.Parse(sMonth);
-             
                 int anio = fechaActual.Year;
-                REP.Consultas oReporte = new REP.Consultas();
+                REP.Especialidades oReporte = new REP.Especialidades();
                 oReporte.SetDataSource(DataSource.Consultas.reportConsultasMedicos(anio,mes));
                 crvConsultas.ReportSource = oReporte;
+
+               
             }
             catch (Exception ex)
             {

@@ -99,6 +99,7 @@ namespace CLIGAR.GUI.Confirmaciones
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modal";
             this.Load += new System.EventHandler(this.Modal_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ModalConfirmar_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -82,7 +82,7 @@ namespace CLIGAR.GUI.Recepcion
                             var idCita = Int32.Parse(dgvCitas["Codigo", indexColumna].Value.ToString());
                             this.citas.IdCita = idCita;
                             ModalInformacion mf = new ModalInformacion();
-                            MessageBox.Show(idCita + "");
+                      
                             if (this.citas.eliminar(idCita))
                             {
                                 mf.titulo.Text = "SE ELIMINO CORRECTAMENTE!";

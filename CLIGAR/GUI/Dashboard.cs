@@ -32,17 +32,16 @@ namespace CLIGAR.GUI
         {
             this.panelOpcConsultaMedica.Visible = false;
             this.panelOpcGestionPacientes.Visible = false;
-            this.opcReportes.Visible = false;
-            this.opcExtra2.Visible = false;
-            this.extra1.Visible = false;
+          
+  
             panelOpcConsultaMedica.Visible = false;
             panelOpcGestionPacientes.Visible = false;
             panelOpcGestionDeUsuarios.Visible = false;
             panelOpcGestionDeEmpleados.Visible = false;
             panelGestionCitas.Visible = false;
             panelReportes.Visible = false;
-            panelExtra1.Visible = false;
-            panelExtra2.Visible = false;
+            
+        
         }
 
 
@@ -140,15 +139,14 @@ namespace CLIGAR.GUI
                         opcGestionDeUsuarios.Visible = true;
                         opcGestionDeEmpleados.Visible = true;
                         opcReportes.Visible = true;
+                       
                     }
                     break;
 
                 case 2:
                     {
                         opcGestionPaciente.Visible = true;
-                        opcConsultaMedica.Visible = true;
-                        opcGestionPaciente.Visible = true;
-                      
+                        opcConsultaMedica.Visible = true;                                              
                     }
                     break;
 
@@ -224,10 +222,7 @@ namespace CLIGAR.GUI
             this.abrirFormulario(new GestionEspecialidadesMedico());
         }
 
-        private void btnRegistrarConsulta_Click(object sender, EventArgs e)
-        {
-            this.abrirFormulario(new RegistrarConsultaView());
-        }
+ 
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
@@ -249,10 +244,6 @@ namespace CLIGAR.GUI
             this.abrirFormulario(new AgregarEspecialidad());
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            this.abrirFormulario(new GestionEspecialidad());
-        }
 
         private void btnVerPacientes_Click(object sender, EventArgs e)
         {
@@ -278,40 +269,57 @@ namespace CLIGAR.GUI
             this.abrirFormulario(new GestionHorario());
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void opcReportes_Click(object sender, EventArgs e)
         {
+            this.panelReport.Visible = !this.panelReport.Visible;
             this.panelReportes.Visible = !this.panelReportes.Visible;
+            
         }
 
-        private void extra1_Click(object sender, EventArgs e)
-        {
-            this.panelExtra1.Visible = !this.panelExtra1.Visible;
-        }
-
-        private void opcExtra2_Click(object sender, EventArgs e)
-        {
-            this.panelExtra2.Visible = !this.panelExtra2.Visible;
-        }
+      
 
         private void btnVerCita_Click(object sender, EventArgs e)
         {
             this.abrirFormulario(new VerCitas());
         }
 
-        private void btnReporteConsultasDoctor_Click(object sender, EventArgs e)
+
+
+
+
+        private void panelReportes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new VisorConsultaMensual());
+            this.ocultarMenus();
+        }
+
+        private void btnReporteConsultasDoctor_Click_1(object sender, EventArgs e)
         {
             this.abrirFormulario(new VisorConsultasMedicos());
             this.ocultarMenus();
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button10_Click_1(object sender, EventArgs e)
         {
             this.abrirFormulario(new VisorEspecialidades());
+            this.ocultarMenus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new VerMedicoPorEspecialidad());
+            this.ocultarMenus();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new GestionEspecialidad());
             this.ocultarMenus();
         }
     }

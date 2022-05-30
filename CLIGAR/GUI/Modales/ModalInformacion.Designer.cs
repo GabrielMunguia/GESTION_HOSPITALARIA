@@ -84,6 +84,8 @@ namespace CLIGAR.GUI.Modales
             this.Name = "ModalInformacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informacion";
+            this.Load += new System.EventHandler(this.ModalInformacion_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ModalInformacion_Paint);
             this.panelTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
 

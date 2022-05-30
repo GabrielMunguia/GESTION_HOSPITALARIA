@@ -37,6 +37,7 @@ namespace CLIGAR.GUI.Recepcion
 
             this.desactivarOpciones();
             this.btnSeleccionarPaciente.Enabled = false;
+            this.cbxUrgencia.SelectedIndex = 0;
         }
 
         public AgregarCita(int idCita,int idPaciente)
@@ -171,8 +172,9 @@ namespace CLIGAR.GUI.Recepcion
 
                         MessageBox.Show("error " + ex.Message);
                     }
-                  
 
+                    Informes.GUI.VisorCita visor = new Informes.GUI.VisorCita();
+                    visor.ShowDialog();
                 }
             
               

@@ -63,38 +63,50 @@ namespace CLIGAR.GUI.ADMIN
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {            
+        {
+          
             Boolean esValidoElFormulario = this.validarCampos();
             if (esValidoElFormulario)
             {
                 Usuario usuario = new Usuario();
                 usuario.IdUsuario = txtIdUsuario.Text;
-                usuario.NombreUsuario = txtIdUsuario.Text;
+                usuario.NombreUsuario = txtUsuario.Text;
                 usuario.Contrasena = txtClave.Text;
-
+                usuario.IdEmpleado = txtIdEmpleado.Text;
                 if (txtIdUsuario.TextLength > 0)
                 {
 
                     if (usuario.Actualizar())
                     {
-                        MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro fue actualizado correctamente";
+                        mi.ShowDialog();
+
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ModalInformacion mi = new ModalInformacion();
+
+                        mi.titulo.Text = "El registro no fue actualizado";
+                        mi.Show();
                     }
                 }
                 else
                 {
                     if (usuario.Guardar())
                     {
-                        MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Close();
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro fue agregado correctamente";
+                        mi.Show();
+                     
                     }
                     else
                     {
-                        MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro no fue agregado";
+                        mi.Show();
                     }
                 }
                 reinciarFormulario();
@@ -116,7 +128,7 @@ namespace CLIGAR.GUI.ADMIN
 
             try
             {
-                IdEmpleadoModal idModal = new IdEmpleadoModal();
+                IdEmpleadoModal idModal = new IdEmpleadoModal(true);
 
                 idModal.ShowDialog();
                 if (idModal.seSelecciono)

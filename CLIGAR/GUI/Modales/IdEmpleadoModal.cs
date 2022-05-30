@@ -17,10 +17,19 @@ namespace CLIGAR.GUI.Modales
 
         public string idEmpleado;
         public string nombreCompleto = "";
+        Boolean busquedaEmpleadosSinUsuario = false;
         public Boolean seSelecciono = false;
         public IdEmpleadoModal()
         {
             InitializeComponent();
+        }
+        public IdEmpleadoModal(Boolean busquedaSinUsuario)
+        {
+            InitializeComponent();
+            if (busquedaSinUsuario)
+            {
+                busquedaEmpleadosSinUsuario = true;
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -31,7 +40,16 @@ namespace CLIGAR.GUI.Modales
         private void btnBuscarMedico_Click(object sender, EventArgs e)
         {
             Empleado p = new Empleado();
-            DataTable listaEmpleados = p.busqueda(txtBusqueda.Text);
+            DataTable listaEmpleados = new DataTable();
+            if (busquedaEmpleadosSinUsuario)
+            {
+                listaEmpleados = p.busquedaEmpleadosSinUsuario(txtBusqueda.Text);
+            }
+            else
+            {
+                listaEmpleados = p.busqueda(txtBusqueda.Text);
+            }
+        
             this.dgv.DataSource = listaEmpleados;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.Columns[dgv.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -61,6 +79,11 @@ namespace CLIGAR.GUI.Modales
                     Close();
                 }
             }
+        }
+
+        private void IdEmpleadoModal_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

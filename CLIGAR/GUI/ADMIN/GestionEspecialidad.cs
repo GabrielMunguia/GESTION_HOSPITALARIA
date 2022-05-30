@@ -61,18 +61,25 @@ namespace CLIGAR.GUI.ADMIN
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                ModalConfirmar mc = new ModalConfirmar();
+                mc.titulo.Text = "¿Realmente desea EDITAR el registro seleccionado?";
+                mc.ShowDialog();
+                if (mc.seConfirmo)
                 {
                     AgregarEspecialidad f = new AgregarEspecialidad();  
                     f.txtIdEspecialidad.Text = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
                     f.txtEspcialidad.Text = tablaEspecialidades.CurrentRow.Cells["Nombre"].Value.ToString();                    
-                    f.ShowDialog();
+                    f.Show();
                 }
                 ActualizarTabla();
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+                ModalInformacion mi = new ModalInformacion();
+                mi.titulo.Text = "Error al procesar el comando";
+                mi.Show();
             }
         }
 
@@ -80,24 +87,38 @@ namespace CLIGAR.GUI.ADMIN
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                ModalConfirmar mc = new ModalConfirmar();
+                mc.titulo.Text = "¿Realmente desea ELIMINAR el registro seleccionado?";
+                mc.ShowDialog();
+                if (mc.seConfirmo)
                 {
                     Especialidad especialidad = new Especialidad();                    
                     especialidad.IdEspecialidad = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();                      
                     if (especialidad.Eliminar())
                     {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "Registro eliminado correctamente";
+                        mi.Show();
                         ActualizarTabla();
                     }
                     else
                     {
-                        MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                     
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro no fue eliminado";
+                        mi.Show();
                     }
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
+
+                ModalInformacion mi = new ModalInformacion();
+                mi.titulo.Text = "Error al procesar el comando";
+                mi.Show();
             }
         }
 
@@ -132,18 +153,29 @@ namespace CLIGAR.GUI.ADMIN
                         especialidad.IdEspecialidad = tablaEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
                         if (especialidad.Eliminar())
                         {
-                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+
+                            ModalInformacion mi = new ModalInformacion();
+                            mi.titulo.Text = "Registro eliminado correctamente";
+                            mi.Show();
                             ActualizarTabla();
                             ajustarTabla();
                         }
                         else
                         {
-                            MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                       
+                            ModalInformacion mi = new ModalInformacion();
+                            mi.titulo.Text = "El registro no fue eliminado";
+                            mi.Show();
                         }                        
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     
+
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "Error al procesar el comando";
+                        mi.Show();
                     }
                 }
             }
@@ -166,7 +198,10 @@ namespace CLIGAR.GUI.ADMIN
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "Error al procesar el comando";
+                        mi.Show();
                     }
                 }
             }

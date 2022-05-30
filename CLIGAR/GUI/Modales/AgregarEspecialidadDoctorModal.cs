@@ -93,5 +93,10 @@ namespace CLIGAR.GUI.Modales
         {
 
         }
+
+        private void AgregarEspecialidadDoctorModal_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

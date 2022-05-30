@@ -34,11 +34,11 @@ namespace CLIGAR.GUI.Modales
             this.btnCerrar = new System.Windows.Forms.Panel();
             this.titulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscarMedico = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,21 +104,6 @@ namespace CLIGAR.GUI.Modales
             this.tableLayoutPanel1.TabIndex = 11;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSeleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSeleccionar.Location = new System.Drawing.Point(780, 497);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(139, 44);
-            this.btnSeleccionar.TabIndex = 39;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -164,6 +149,21 @@ namespace CLIGAR.GUI.Modales
             this.txtBusqueda.Size = new System.Drawing.Size(256, 29);
             this.txtBusqueda.TabIndex = 42;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSeleccionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSeleccionar.Location = new System.Drawing.Point(780, 497);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(139, 44);
+            this.btnSeleccionar.TabIndex = 39;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // dgv
             // 
             this.dgv.AllowUserToAddRows = false;
@@ -193,6 +193,7 @@ namespace CLIGAR.GUI.Modales
             this.Name = "IdPacienteModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IdPacienteModal";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.IdPacienteModal_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

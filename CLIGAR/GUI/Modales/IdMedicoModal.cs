@@ -48,7 +48,7 @@ namespace CLIGAR.GUI.Modales
             if (dgv.SelectedRows.Count > 0)
             {
                 ModalConfirmar mc = new ModalConfirmar();
-                mc.titulo.Text = "Estas seguro de seleccionar este paciente? ";
+                mc.titulo.Text = "Estas seguro de seleccionar este doctor? ";
                 mc.btnConfirmar.Text = "CONFIRMAR";
                 mc.btnConfirmar.BackColor = Color.DodgerBlue;
                 mc.btnCancelar.BackColor = Color.Red;
@@ -72,6 +72,11 @@ namespace CLIGAR.GUI.Modales
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void IdMedicoModal_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
 }

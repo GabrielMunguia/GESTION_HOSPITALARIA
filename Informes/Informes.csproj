@@ -57,6 +57,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Cita.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DAT\ConsultaMensual.cs">
+      <DependentUpon>ConsultaMensual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\ConsultaMensual.Designer.cs">
+      <DependentUpon>ConsultaMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\ConsultaMensual1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMensual.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAT\ConsultasPorDoctor.cs">
       <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
     </Compile>
@@ -76,6 +87,12 @@
     <Compile Include="GUI\VisorCita.Designer.cs">
       <DependentUpon>VisorCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VisorConsultaMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VisorConsultaMensual.Designer.cs">
+      <DependentUpon>VisorConsultaMensual.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VisorConsultasMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +106,12 @@
       <DependentUpon>VisorEspecialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REP\ConsultaMensualReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaMensualReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="REP\Especialidades.cs">
       <DependentUpon>Especialidades.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -132,6 +155,17 @@
     <None Include="DAT\Cita.xss">
       <DependentUpon>Cita.xsd</DependentUpon>
     </None>
+    <None Include="DAT\ConsultaMensual.xsc">
+      <DependentUpon>ConsultaMensual.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\ConsultaMensual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultaMensual1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAT\ConsultaMensual.xss">
+      <DependentUpon>ConsultaMensual.xsd</DependentUpon>
+    </None>
     <None Include="DAT\ConsultasPorDoctor.xsc">
       <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
     </None>
@@ -159,11 +193,18 @@
     <EmbeddedResource Include="GUI\VisorCita.resx">
       <DependentUpon>VisorCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VisorConsultaMensual.resx">
+      <DependentUpon>VisorConsultaMensual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\VisorConsultasMedicos.resx">
       <DependentUpon>VisorConsultasMedicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VisorEspecialidades.resx">
       <DependentUpon>VisorEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ConsultaMensualReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultaMensualReporte.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REP\Especialidades.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

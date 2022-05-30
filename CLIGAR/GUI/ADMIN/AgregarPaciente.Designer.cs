@@ -156,6 +156,8 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.MaximumSize = new System.Drawing.Size(170, 36);
+            this.label4.MinimumSize = new System.Drawing.Size(170, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 36);
             this.label4.TabIndex = 0;
@@ -232,6 +234,8 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.MaximumSize = new System.Drawing.Size(170, 36);
+            this.label2.MinimumSize = new System.Drawing.Size(170, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 36);
             this.label2.TabIndex = 0;
@@ -392,6 +396,8 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.MaximumSize = new System.Drawing.Size(170, 36);
+            this.label7.MinimumSize = new System.Drawing.Size(170, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 36);
             this.label7.TabIndex = 2;

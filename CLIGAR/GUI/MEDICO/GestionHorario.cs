@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DataManager;
 using CLIGAR.Modelos;
 using CLIGAR.GUI.Modales;
+using CLIGAR.GUI.Confirmaciones;
 
 namespace CLIGAR.GUI.ADMIN
 {
@@ -68,7 +69,13 @@ namespace CLIGAR.GUI.ADMIN
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+
+                ModalConfirmar mc = new ModalConfirmar();
+                mc.titulo.Text = "¿Realmente desea EDITAR el registro seleccionado?";
+                mc.btnConfirmar.Text = "ACEPTAR";
+                mc.ShowDialog();
+                if (mc.seConfirmo)
                 {
                     Horario horario = new Horario();
 

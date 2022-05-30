@@ -1,4 +1,5 @@
-﻿using CLIGAR.Modelos;
+﻿using CLIGAR.GUI.Modales;
+using CLIGAR.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -117,34 +118,53 @@ namespace CLIGAR.GUI
                     
                     if (paciente.Actualizar())
                     {
-                        MessageBox.Show("El registro fue actualizado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro fue actualizado correctamente";
+                        mi.Show();
+
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("El registro no fue actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro no fue actualizado";
+                        mi.Show();
+
                     }
                 }
                 else
                 {
                     if (paciente.Guardar())
                     {
-                        MessageBox.Show("El registro fue agregado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Close();
+                      
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro fue agregado correctamente";
+                        mi.Show();
+
                     }
                     else
                     {
-                        MessageBox.Show("El registro no fue agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "El registro no fue agregado";
+                        mi.Show();
                     }
                 }
                 reinciarFormulario();
+            }
+            else
+            {
+                ModalInformacion mi = new ModalInformacion();
+                mi.titulo.Text = "Todos los campos son obligatorios";
+                mi.Show();
             }
 
         }
 
         private Boolean validarCampos()
         {
-            Boolean esValidoElFormulario = true;
+            Boolean esValidoElFormulario = false;
             if (this.txtNombres.Text.Length>0&& this.txtApellidos.Text.Length > 0 && this.txtDireccion.Text.Length > 0 &&
                 this.txtDui.Text.Length > 0  && this.txtTelefono.Text.Length > 0 && this.cbxGenero.SelectedIndex>-1
                )
@@ -153,7 +173,7 @@ namespace CLIGAR.GUI
             }
             else
             {
-                esValidoElFormulario = true;
+                esValidoElFormulario = false;
             }
             return esValidoElFormulario;
         }

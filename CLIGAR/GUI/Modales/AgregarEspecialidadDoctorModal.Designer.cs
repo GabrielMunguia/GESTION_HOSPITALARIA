@@ -111,6 +111,7 @@ namespace CLIGAR.GUI.Modales
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarEspecialidadDoctor";
             this.Load += new System.EventHandler(this.AgregarEspecialidadDoctor_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AgregarEspecialidadDoctorModal_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

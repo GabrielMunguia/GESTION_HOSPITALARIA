@@ -38,5 +38,15 @@ namespace CLIGAR.GUI.Modales
         {
 
         }
+
+        private void ModalInformacion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModalInformacion_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

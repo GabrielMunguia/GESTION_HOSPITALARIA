@@ -96,6 +96,7 @@ namespace CLIGAR.GUI.Confirmaciones
             this.Controls.Add(this.btnAceptar);
             this.Name = "PreguntaModal";
             this.Size = new System.Drawing.Size(485, 157);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PreguntaModal_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

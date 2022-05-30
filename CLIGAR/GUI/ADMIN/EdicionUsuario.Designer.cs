@@ -399,7 +399,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(209, 39);
             this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar Emplado";
+            this.btnBuscar.Text = "Buscar Empleado";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -467,6 +467,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EdicionUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EdicionUsuario";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);

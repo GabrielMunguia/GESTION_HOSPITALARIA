@@ -38,5 +38,10 @@ namespace CLIGAR.GUI.Confirmaciones
         {
 
         }
+
+        private void ModalConfirmar_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

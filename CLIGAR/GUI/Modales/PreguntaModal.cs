@@ -21,5 +21,10 @@ namespace CLIGAR.GUI.Confirmaciones
         {
 
         }
+
+        private void PreguntaModal_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+        }
     }
 }

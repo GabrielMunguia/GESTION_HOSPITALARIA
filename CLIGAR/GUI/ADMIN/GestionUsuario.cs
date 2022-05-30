@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DataManager;
 using CLIGAR.GUI.Confirmaciones;
 using CLIGAR.Modelos;
+using CLIGAR.GUI.Modales;
 
 namespace CLIGAR.GUI.ADMIN
 {
@@ -44,10 +45,12 @@ namespace CLIGAR.GUI.ADMIN
 
         private void tablaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            ModalInformacion mi = new ModalInformacion();
             string nombreColumna = tablaUsuarios.Columns[e.ColumnIndex].Name;
             if (nombreColumna == "Eliminar")
             {
                 ModalConfirmar pm = new ModalConfirmar();
+             
                 pm.ShowDialog();
                 if (pm.seConfirmo)
                 {
@@ -58,17 +61,25 @@ namespace CLIGAR.GUI.ADMIN
                         usuario.IdUsuario = tablaUsuarios.CurrentRow.Cells["idUsuario"].Value.ToString();
                         if (usuario.Eliminar())
                         {
-                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            mi.titulo.Text = "Registro eliminado correctamente";
+                            mi.Show();
+
+                        
                             ActualizarTabla();                            
                         }
                         else
                         {
-                            MessageBox.Show("El registro no fue eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            mi.titulo.Text = "El registro no fue eliminado";
+                            mi.Show();
+                         
                         }
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        mi.titulo.Text = "Error al procesar el comando";
+                        mi.Show();
                     }
                 }
             }
@@ -94,7 +105,9 @@ namespace CLIGAR.GUI.ADMIN
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error al procesar el comando", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     
+                        mi.titulo.Text = "Error al procesar el comando";
+                        mi.Show();
                     }
                 }
             }

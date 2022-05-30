@@ -193,6 +193,7 @@ namespace CLIGAR.GUI.Modales
             this.Name = "IdEmpleadoModal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IdPacienteModal";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.IdEmpleadoModal_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

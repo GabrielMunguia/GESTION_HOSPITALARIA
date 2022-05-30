@@ -70,16 +70,17 @@ namespace CLIGAR.Modelos
 
         public Boolean Guardar()
         {
+        
             Boolean resultado = false;
             StringBuilder Sentencia = new StringBuilder();
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
             try
             {
-                Sentencia.Append("INSERT INTO usuarios(idUsuario,Usuario,Contrasena,idEmpleado)VALUES("+ this.idUsuario);              
+                Sentencia.Append("INSERT INTO usuarios(idUsuario,Usuario,Contrasena,idEmpleado)VALUES(null");              
                 Sentencia.Append(",'" + this.nombreUsuario + "',");
                 Sentencia.Append("MD5(SHA1('" + this.contrasena + "')),");
                 Sentencia.Append("'" + this.idEmpleado + "')");
-
+             
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {
                     resultado = true;
@@ -87,6 +88,7 @@ namespace CLIGAR.Modelos
             }
             catch (Exception)
             {
+           
                 resultado = false;
             }
 
@@ -97,8 +99,9 @@ namespace CLIGAR.Modelos
         {
             Boolean resultado = false;
             StringBuilder Sentencia = new StringBuilder();
+      
             DataManager.DBOperacion operacion = new DataManager.DBOperacion();
-            MessageBox.Show("Hola");
+           
             try
             {
                 Sentencia.Append("Update usuarios set ");
@@ -112,8 +115,7 @@ namespace CLIGAR.Modelos
             }
             catch (Exception)
             {
-                Clipboard.SetText(Sentencia.ToString());
-                MessageBox.Show(Sentencia.ToString());
+         
                 resultado = false;
             }
             return resultado;

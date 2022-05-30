@@ -1,4 +1,5 @@
-﻿using CLIGAR.Modelos;
+﻿using CLIGAR.GUI.Modales;
+using CLIGAR.Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace CLIGAR.GUI
     public partial class AgregarEmpleado : Form
     {
         SessionManager.Sesion session = SessionManager.Sesion.Instance;
+      
         public int id = -1;
         public AgregarEmpleado()
         {
@@ -110,7 +112,7 @@ namespace CLIGAR.GUI
 
         private void cbxCargo_SelectedValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(cbxCargo.SelectedText);
+            
         }
 
         private void cbxCargo_SelectedIndexChanged(object sender, EventArgs e)
@@ -133,127 +135,151 @@ namespace CLIGAR.GUI
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-          
-          Boolean esValidoElFormulario = this.validarCampos();
-            
-            if (esValidoElFormulario)
+        
+            try
             {
-                Empleado empleado = new Empleado();
-                empleado.Nombres = this.txtNombres.Text;
-                empleado.Apellidos = this.txtApellidos.Text;
-                empleado.Direccion = this.txtDireccion.Text;
-                empleado.Dui = this.txtDui.Text;
-                empleado.Nit = this.txtNIT.Text;
-                empleado.Telefono = this.txtTelefono.Text;
+              
+                Boolean esValidoElFormulario = this.validarCampos();
+             
+                if (esValidoElFormulario)
+                {
+                    Empleado empleado = new Empleado();
+                    empleado.Nombres = this.txtNombres.Text;
+                    empleado.Apellidos = this.txtApellidos.Text;
+                    empleado.Direccion = this.txtDireccion.Text;
+                    empleado.Dui = this.txtDui.Text;
+                    empleado.Nit = this.txtNIT.Text;
+                    empleado.Telefono = this.txtTelefono.Text;
 
-                if (this.id > 0)
-                {
-                    empleado.IdEmpleado = this.id;
-                }
-                //Valido el genero
-                if (this.cbxGenero.SelectedIndex == 0)
-                {
-                    empleado.Genero = "M";
-                }
-                else
-                {
-                    empleado.Genero = "F";
-                }
-
-                //valido si es tipo doctor para asignarle el jvm
-                if (this.cbxCargo.SelectedIndex == 1)
-                {
-                    empleado.CodigoRegistroMedico = txtJVM.Text;
-                }
-                empleado.IdCargo = this.cbxCargo.SelectedIndex + 1;
-                Boolean exito = false;
-                Boolean seGuardo = false;
-                if (id > 0)
-                {
-                    seGuardo = empleado.Actualizar();
-                }
-                else
-                {
-                    seGuardo = empleado.Guardar();
-                }
-
-                if (seGuardo && cbxCargo.SelectedIndex == 1)
-                {                                                       
-                    Medico medico = new Medico();
-                    medico.IdEmpleado = empleado.obtenerUltimoIDInsertador();
-                    if (medico.Guardar())
+                    if (this.id > 0)
                     {
-
-                        int idMedico = medico.obtenerUltimoIDInsertado();
-                        Especialidades_Medico esp_m = new Especialidades_Medico();
-                        esp_m.IdMedico = idMedico;
-                        esp_m.IdEspecialidad = 1;
-                       bool seGuardoEspecialidad= esp_m.Guardar();
-                        if (seGuardoEspecialidad)
-                        {
-                            exito = true;
-                        }
-
-                        //Agregar horarios
-                        
-                        
-                        for(int i = 1; i < 8; i++)
-                        {
-                            Horario horario = new Horario();
-                            horario.IdMedico = medico.obtenerUltimoIDInsertado().ToString();
-                            horario.Inicio = "00:00";
-                            horario.Final = "00:00";
-                            horario.Dia = i.ToString();
-                            if (horario.Guardar())
-                            {
-                                exito = true;
-                            }
-                            else
-                            {
-                                exito = false;
-                            }
-                        }
-
-
-                        this.reinciarFormulario();
+                        empleado.IdEmpleado = this.id;
+                    }
+                    //Valido el genero
+                    if (this.cbxGenero.SelectedIndex == 0)
+                    {
+                        empleado.Genero = "M";
                     }
                     else
                     {
-                        exito = false;
+                        empleado.Genero = "F";
+                    }
+
+                    //valido si es tipo doctor para asignarle el jvm
+                    if (this.cbxCargo.SelectedIndex == 1)
+                    {
+                        empleado.CodigoRegistroMedico = txtJVM.Text;
+                    }
+                    empleado.IdCargo = this.cbxCargo.SelectedIndex + 1;
+                    Boolean exito = false;
+                    Boolean seGuardo = false;
+                    Boolean seActualizo = false;
+
+                    if (id > 0)
+                    {
+
+                        seGuardo = empleado.Actualizar();
+                        seActualizo = true;
+                    }
+                    else
+                    {
+                        seGuardo = empleado.Guardar();
+                    }
+
+                    if (seGuardo && cbxCargo.SelectedIndex == 1 && seActualizo == false)
+                    {
+
+                   
+                        Medico medico = new Medico();
+                        medico.IdEmpleado = empleado.obtenerUltimoIDInsertador();
+                        if (medico.Guardar())
+                        {
+
+                            int idMedico = medico.obtenerUltimoIDInsertado();
+                            Especialidades_Medico esp_m = new Especialidades_Medico();
+                            esp_m.IdMedico = idMedico;
+                            esp_m.IdEspecialidad = 1;
+                            MessageBox.Show("2");
+                            bool seGuardoEspecialidad = esp_m.Guardar();
+                            if (seGuardoEspecialidad)
+                            {
+                                exito = true;
+                            }
+
+                            //Agregar horarios
+
+                       
+                            for (int i = 1; i < 8; i++)
+                            {
+                                Horario horario = new Horario();
+                                horario.IdMedico = medico.obtenerUltimoIDInsertado().ToString();
+                                horario.Inicio = "00:00";
+                                horario.Final = "00:00";
+                                horario.Dia = i.ToString();
+                                if (horario.Guardar())
+                                {
+                                    exito = true;
+                                }
+                                else
+                                {
+                                    exito = false;
+                                }
+                            }
+
+                    
+
+
+                            this.reinciarFormulario();
+                        }
+                        else
+                        {
+                            exito = false;
+                        }
+
+
                     }
 
 
-                }
+                    if (seGuardo && cbxCargo.SelectedIndex != 1 || seActualizo)
+                    {
 
-
-                if (seGuardo && cbxCargo.SelectedIndex != 1)
-                {
-
-                    exito = true;
-                    this.reinciarFormulario();
-                }
+                        exito = true;
+                        this.reinciarFormulario();
+                    }
 
 
 
-                if (exito)
-                {
-                    MessageBox.Show("Se realizo el registro correctamente");
+                    if (exito)
+                    {
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "Se realizo el registro correctamente";
+                        mi.Show();
+                    }
+                    else
+                    {
+                        ModalInformacion mi = new ModalInformacion();
+                        mi.titulo.Text = "Ocurrio un error notifique al administrador";
+                        mi.Show();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ocurrio un error notifique al administrador");
+                    ModalInformacion mi = new ModalInformacion();
+                    mi.titulo.Text = "Error! Todos los campos son obligatorios!";
+                    mi.Show();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Error! Todos los campos son obligatorios");
-            }
 
-            if (this.id > 0)
-            {
-                Close();
+                if (this.id > 0)
+                {
+                    Close();
+                }
+
             }
-            
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
 
 

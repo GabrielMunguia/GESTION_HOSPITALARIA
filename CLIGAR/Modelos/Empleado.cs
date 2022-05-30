@@ -182,7 +182,7 @@ namespace CLIGAR.Modelos
                 Sentencia.Append("'" + this.dui + "',");
                 Sentencia.Append("'" + this.nit + "',");
                 Sentencia.Append("1);");
-             
+                Clipboard.SetText(Sentencia.ToString());
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {
                     resultado = true;
@@ -215,8 +215,8 @@ namespace CLIGAR.Modelos
                 Sentencia.Append("`CodigoRegistroMedico` ='" + this.codigoRegistroMedico + "',");
                 Sentencia.Append("`DUI` ='" + this.dui + "',");
                 Sentencia.Append("`NIT` ='" + this.nit + "' where idEmpleado="+idEmpleado+";");
-               
 
+                Clipboard.SetText(Sentencia.ToString());
                 if (operacion.Insertar(Sentencia.ToString()) > 0)
                 {
                     resultado = true;
@@ -224,9 +224,10 @@ namespace CLIGAR.Modelos
 
 
             }
-            catch (Exception)
+            catch (Exception ex )
             {
                 resultado = false;
+                MessageBox.Show(ex.Message);
             }
 
             return resultado;
@@ -307,7 +308,7 @@ namespace CLIGAR.Modelos
             try
             {
                 Sentencia.Append("UPDATE `cligar`.`empleados`SET`Estado` = false  WHERE `idEmpleado` =  ");
-              
+                Clipboard.SetText(Sentencia.ToString());
                 Sentencia.Append(id);
            
 
@@ -346,6 +347,37 @@ namespace CLIGAR.Modelos
           
          
                 Clipboard.SetText(Sentencia.ToString());
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error");
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+        public DataTable busquedaEmpleadosSinUsuario(string q)
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT  e.idEmpleado as Codigo  , Nombres,Apellidos,Telefono ,Direccion,Genero,DUI,NIT FROM empleados as e LEFT JOIN usuarios as u ON e.idEmpleado=u.idEmpleado  where");
+                Sentencia.Append(" ( Nombres LIKE '%" + q + "%' or ");
+                Sentencia.Append("  Apellidos LIKE '%" + q + "%' or ");
+                Sentencia.Append("  e.idEmpleado LIKE '%" + q + "%' or ");
+                Sentencia.Append("  e.idEmpleado LIKE '%" + q + "%' or ");
+
+                Sentencia.Append("  DUI LIKE '%" + q + "%' or ");
+                Sentencia.Append("  NIT LIKE '%" + q + "%') and estado=1 and u.idEmpleado is null; ");
+
+
+                Clipboard.SetText(Sentencia.ToString());
+
                 Resultado = operacion.Consultar(Sentencia.ToString());
 
             }
