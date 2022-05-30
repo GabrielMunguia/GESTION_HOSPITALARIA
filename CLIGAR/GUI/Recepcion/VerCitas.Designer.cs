@@ -43,6 +43,7 @@
             this.Urgencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detalle = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Cancelar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -159,6 +160,7 @@
             this.Urgencia,
             this.Hora,
             this.Detalle,
+            this.Editar,
             this.Cancelar});
             this.dgvCitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCitas.Location = new System.Drawing.Point(0, 47);
@@ -203,6 +205,12 @@
             this.Detalle.HeaderText = "Detalle Paciente";
             this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
             this.Detalle.Name = "Detalle";
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
             // 
             // Cancelar
             // 
@@ -317,6 +325,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Urgencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewImageColumn Detalle;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Cancelar;
     }
 }

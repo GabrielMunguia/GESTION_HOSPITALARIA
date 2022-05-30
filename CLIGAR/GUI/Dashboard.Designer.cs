@@ -43,18 +43,17 @@
             this.button11 = new System.Windows.Forms.Button();
             this.extra1 = new System.Windows.Forms.Button();
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnReporteConsultasDoctor = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.opcReportes = new System.Windows.Forms.Button();
             this.panelGestionCitas = new System.Windows.Forms.Panel();
-        
             this.button3 = new System.Windows.Forms.Button();
             this.btnVerCita = new System.Windows.Forms.Button();
             this.btnRegistrarCitaView = new System.Windows.Forms.Button();
             this.opcCitas = new System.Windows.Forms.Button();
             this.panelOpcGestionDeEmpleados = new System.Windows.Forms.Panel();
-           
             this.AgregarEspecialidad = new System.Windows.Forms.Button();
             this.btnAgregarEspecialidadMedico = new System.Windows.Forms.Button();
             this.btnVerEmpleadosView = new System.Windows.Forms.Button();
@@ -193,7 +192,7 @@
             this.panelExtra2.Controls.Add(this.button14);
             this.panelExtra2.Controls.Add(this.button13);
             this.panelExtra2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelExtra2.Location = new System.Drawing.Point(0, 1404);
+            this.panelExtra2.Location = new System.Drawing.Point(0, 1414);
             this.panelExtra2.MaximumSize = new System.Drawing.Size(0, 100);
             this.panelExtra2.Name = "panelExtra2";
             this.panelExtra2.Size = new System.Drawing.Size(210, 80);
@@ -239,7 +238,7 @@
             this.opcExtra2.ForeColor = System.Drawing.Color.AliceBlue;
             this.opcExtra2.Image = ((System.Drawing.Image)(resources.GetObject("opcExtra2.Image")));
             this.opcExtra2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.opcExtra2.Location = new System.Drawing.Point(0, 1359);
+            this.opcExtra2.Location = new System.Drawing.Point(0, 1369);
             this.opcExtra2.Name = "opcExtra2";
             this.opcExtra2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.opcExtra2.Size = new System.Drawing.Size(210, 45);
@@ -255,7 +254,7 @@
             this.panelExtra1.Controls.Add(this.button12);
             this.panelExtra1.Controls.Add(this.button11);
             this.panelExtra1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelExtra1.Location = new System.Drawing.Point(0, 1259);
+            this.panelExtra1.Location = new System.Drawing.Point(0, 1269);
             this.panelExtra1.Name = "panelExtra1";
             this.panelExtra1.Size = new System.Drawing.Size(210, 100);
             this.panelExtra1.TabIndex = 16;
@@ -300,7 +299,7 @@
             this.extra1.ForeColor = System.Drawing.Color.AliceBlue;
             this.extra1.Image = ((System.Drawing.Image)(resources.GetObject("extra1.Image")));
             this.extra1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.extra1.Location = new System.Drawing.Point(0, 1214);
+            this.extra1.Location = new System.Drawing.Point(0, 1224);
             this.extra1.Name = "extra1";
             this.extra1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.extra1.Size = new System.Drawing.Size(210, 45);
@@ -313,14 +312,30 @@
             // panelReportes
             // 
             this.panelReportes.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelReportes.Controls.Add(this.button1);
             this.panelReportes.Controls.Add(this.button10);
-            this.panelReportes.Controls.Add(this.button9);
+            this.panelReportes.Controls.Add(this.btnReporteConsultasDoctor);
             this.panelReportes.Controls.Add(this.button8);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportes.Location = new System.Drawing.Point(0, 1061);
+            this.panelReportes.Location = new System.Drawing.Point(0, 1071);
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(210, 153);
             this.panelReportes.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(0, 120);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(210, 40);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "REGISTRAR CITA";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -333,24 +348,26 @@
             this.button10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.button10.Size = new System.Drawing.Size(210, 40);
             this.button10.TabIndex = 3;
-            this.button10.Text = "REGISTRAR CITA";
+            this.button10.Text = "R.DOCTORES POR ESPECIALIDAD";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button9
+            // btnReporteConsultasDoctor
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button9.Location = new System.Drawing.Point(0, 40);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(210, 40);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "REGISTRAR CITA";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnReporteConsultasDoctor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporteConsultasDoctor.FlatAppearance.BorderSize = 0;
+            this.btnReporteConsultasDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteConsultasDoctor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnReporteConsultasDoctor.Location = new System.Drawing.Point(0, 40);
+            this.btnReporteConsultasDoctor.Name = "btnReporteConsultasDoctor";
+            this.btnReporteConsultasDoctor.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnReporteConsultasDoctor.Size = new System.Drawing.Size(210, 40);
+            this.btnReporteConsultasDoctor.TabIndex = 2;
+            this.btnReporteConsultasDoctor.Text = "R.CONSULTAS POR DOCTOR";
+            this.btnReporteConsultasDoctor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteConsultasDoctor.UseVisualStyleBackColor = true;
+            this.btnReporteConsultasDoctor.Click += new System.EventHandler(this.btnReporteConsultasDoctor_Click);
             // 
             // button8
             // 
@@ -380,7 +397,7 @@
             this.opcReportes.Location = new System.Drawing.Point(0, 1016);
             this.opcReportes.Name = "opcReportes";
             this.opcReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.opcReportes.Size = new System.Drawing.Size(210, 45);
+            this.opcReportes.Size = new System.Drawing.Size(210, 55);
             this.opcReportes.TabIndex = 13;
             this.opcReportes.Text = "REPORTES";
             this.opcReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,7 +407,6 @@
             // panelGestionCitas
             // 
             this.panelGestionCitas.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelGestionCitas.Controls.Add(this.ImprimirCita);
             this.panelGestionCitas.Controls.Add(this.button3);
             this.panelGestionCitas.Controls.Add(this.btnVerCita);
             this.panelGestionCitas.Controls.Add(this.btnRegistrarCitaView);
@@ -399,10 +415,6 @@
             this.panelGestionCitas.Name = "panelGestionCitas";
             this.panelGestionCitas.Size = new System.Drawing.Size(210, 155);
             this.panelGestionCitas.TabIndex = 12;
-            // 
-            // button2
-            // 
-       
             // 
             // button3
             // 
@@ -476,7 +488,6 @@
             // panelOpcGestionDeEmpleados
             // 
             this.panelOpcGestionDeEmpleados.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panelOpcGestionDeEmpleados.Controls.Add(this.btnDocEsp);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.AgregarEspecialidad);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnAgregarEspecialidadMedico);
             this.panelOpcGestionDeEmpleados.Controls.Add(this.btnVerEmpleadosView);
@@ -486,10 +497,6 @@
             this.panelOpcGestionDeEmpleados.Name = "panelOpcGestionDeEmpleados";
             this.panelOpcGestionDeEmpleados.Size = new System.Drawing.Size(210, 204);
             this.panelOpcGestionDeEmpleados.TabIndex = 10;
-            // 
-            // button6
-            // 
-          
             // 
             // AgregarEspecialidad
             // 
@@ -584,7 +591,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(0, 1484);
+            this.btnSalir.Location = new System.Drawing.Point(0, 1494);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(210, 45);
@@ -888,7 +895,6 @@
         private System.Windows.Forms.Button btnAgregarEspecialidadMedico;
         private System.Windows.Forms.Button opcGestionDeEmpleados;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button opcReportes;
         private System.Windows.Forms.Panel panelExtra2;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
@@ -899,12 +905,14 @@
         private System.Windows.Forms.Button extra1;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnReporteConsultasDoctor;
         private System.Windows.Forms.Button ImprimirCita;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnVerCita;
         private System.Windows.Forms.Button btnRegistrarCitaView;
         private System.Windows.Forms.Button btnDocEsp;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button opcReportes;
     }
 }

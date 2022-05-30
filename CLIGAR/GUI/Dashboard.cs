@@ -1,6 +1,7 @@
 ﻿using CLIGAR.GUI.ADMIN;
 using CLIGAR.GUI.MEDICO;
 using CLIGAR.GUI.Recepcion;
+using Informes.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -138,6 +139,7 @@ namespace CLIGAR.GUI
                     {
                         opcGestionDeUsuarios.Visible = true;
                         opcGestionDeEmpleados.Visible = true;
+                        opcReportes.Visible = true;
                     }
                     break;
 
@@ -299,6 +301,18 @@ namespace CLIGAR.GUI
         private void btnVerCita_Click(object sender, EventArgs e)
         {
             this.abrirFormulario(new VerCitas());
+        }
+
+        private void btnReporteConsultasDoctor_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new VisorConsultasMedicos());
+            this.ocultarMenus();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.abrirFormulario(new VisorEspecialidades());
+            this.ocultarMenus();
         }
     }
 }

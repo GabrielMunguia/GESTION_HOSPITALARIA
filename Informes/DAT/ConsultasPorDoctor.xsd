@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConsultasPorDoctor" targetNamespace="http://tempuri.org/ConsultasPorDoctor.xsd" xmlns:mstns="http://tempuri.org/ConsultasPorDoctor.xsd" xmlns="http://tempuri.org/ConsultasPorDoctor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ConsultasPorDoctor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ConsultasPorDoctor" msprop:Generator_UserDSName="ConsultasPorDoctor">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConsultasPorDoctor" msprop:Generator_TableClassName="ConsultasPorDoctorDataTable" msprop:Generator_TableVarName="tableConsultasPorDoctor" msprop:Generator_RowChangedName="ConsultasPorDoctorRowChanged" msprop:Generator_TablePropName="_ConsultasPorDoctor" msprop:Generator_RowDeletingName="ConsultasPorDoctorRowDeleting" msprop:Generator_RowChangingName="ConsultasPorDoctorRowChanging" msprop:Generator_RowEvHandlerName="ConsultasPorDoctorRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultasPorDoctorRowDeleted" msprop:Generator_RowClassName="ConsultasPorDoctorRow" msprop:Generator_UserTableName="ConsultasPorDoctor" msprop:Generator_RowEvArgName="ConsultasPorDoctorRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Medico" msprop:Generator_ColumnVarNameInTable="columnMedico" msprop:Generator_ColumnPropNameInRow="Medico" msprop:Generator_ColumnPropNameInTable="MedicoColumn" msprop:Generator_UserColumnName="Medico" type="xs:string" minOccurs="0" />
+              <xs:element name="Consultas" msprop:Generator_ColumnVarNameInTable="columnConsultas" msprop:Generator_ColumnPropNameInRow="Consultas" msprop:Generator_ColumnPropNameInTable="ConsultasColumn" msprop:Generator_UserColumnName="Consultas" type="xs:int" minOccurs="0" />
+              <xs:element name="JVM" msprop:Generator_ColumnVarNameInTable="columnJVM" msprop:Generator_ColumnPropNameInRow="JVM" msprop:Generator_ColumnPropNameInTable="JVMColumn" msprop:Generator_UserColumnName="JVM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

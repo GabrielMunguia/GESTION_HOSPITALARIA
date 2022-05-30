@@ -75,6 +75,7 @@
             // 
             resources.ApplyResources(this.inputUsuario, "inputUsuario");
             this.inputUsuario.Name = "inputUsuario";
+            this.inputUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputUsuario_KeyPress);
             // 
             // inputPassword
             // 

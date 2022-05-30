@@ -49,59 +49,91 @@ namespace CLIGAR.GUI.Recepcion
         private void dgvCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string nombreColumna = dgvCitas.Columns[e.ColumnIndex].Name;
+        
 
 
 
-            if (nombreColumna == "Detalle")
-            {
-                int indexColumna = dgvCitas.CurrentRow.Index;
-                var idPaciente = Int32.Parse(dgvCitas[3, indexColumna].Value.ToString());
-           
-                AgregarPaciente f = new AgregarPaciente(idPaciente);
-                f.btnCancelar.Visible = false;
-                f.btnGuardar.Visible = false;
-
-
-
-               f.ShowDialog();
-            }
-            if(nombreColumna == "Cancelar")
-            {
-
-                ModalConfirmar mc = new ModalConfirmar();
-                mc.titulo.Text = "ESTAS SEGURO DE ELIMINAR LA CITA?";
-                mc.ShowDialog();
-
-                if (mc.seConfirmo) {
-                    int indexColumna = dgvCitas.CurrentRow.Index;
-
-                    var idCita = Int32.Parse(dgvCitas[2, indexColumna].Value.ToString());
-                    this.citas.IdCita = idCita;
-                    ModalInformacion mf = new ModalInformacion();
-                    MessageBox.Show(idCita + "");
-                    if (this.citas.eliminar(idCita))
+            switch (nombreColumna) {
+                case "Detalle":
                     {
-                        mf.titulo.Text = "SE ELIMINO CORRECTAMENTE!";
+                        int indexColumna = dgvCitas.CurrentRow.Index;
+                        var idPaciente = Int32.Parse(dgvCitas["CodigoPaciente", indexColumna].Value.ToString());
 
-                     
+                        AgregarPaciente f = new AgregarPaciente(idPaciente);
+                        f.btnCancelar.Visible = false;
+                        f.btnGuardar.Visible = false;
+
+
+
+                        f.ShowDialog();
                     }
-                    else
+                    break;
+                case "Cancelar":
                     {
-                        mf.titulo.Text = "NO SE  ELIMINO !";
+                        ModalConfirmar mc = new ModalConfirmar();
+                        mc.titulo.Text = "ESTAS SEGURO DE ELIMINAR LA CITA?";
+                        mc.ShowDialog();
 
+                        if (mc.seConfirmo)
+                        {
+
+
+                            int indexColumna = dgvCitas.CurrentRow.Index;
+                            var idCita = Int32.Parse(dgvCitas["Codigo", indexColumna].Value.ToString());
+                            this.citas.IdCita = idCita;
+                            ModalInformacion mf = new ModalInformacion();
+                            MessageBox.Show(idCita + "");
+                            if (this.citas.eliminar(idCita))
+                            {
+                                mf.titulo.Text = "SE ELIMINO CORRECTAMENTE!";
+
+
+                            }
+                            else
+                            {
+                                mf.titulo.Text = "NO SE  ELIMINO !";
+
+                            }
+                            mf.Show();
+                            string dia = dtpFechaCita.Value.Day.ToString();
+                            string mes = dtpFechaCita.Value.Month.ToString();
+                            string anio = dtpFechaCita.Value.Year.ToString();
+
+                            DataTable resultado = citas.obtenerCitasAgendadasDetalle(dia, mes, anio);
+                            this.dgvCitas.DataSource = resultado;
+                        }
                     }
-                    mf.Show();
-                    string dia = dtpFechaCita.Value.Day.ToString();
-                    string mes = dtpFechaCita.Value.Month.ToString();
-                    string anio = dtpFechaCita.Value.Year.ToString();
+                        break;
+                case "Editar":
+                    {
+                        int indexColumna = dgvCitas.CurrentRow.Index;
+                        var idPaciente = Int32.Parse(dgvCitas["CodigoPaciente", indexColumna].Value.ToString());
+                        var idCita = Int32.Parse(dgvCitas["Codigo", indexColumna].Value.ToString());
+                        AgregarCita ac = new AgregarCita(idCita,idPaciente);
+                        ac.ShowDialog();
+                        if (ac.exitoEdicion) {
+                            ModalInformacion mf = new ModalInformacion();
+                            mf.titulo.Text = "SE ACTUALIZO CON EXITO";
+                            mf.Show();
+                            string dia = dtpFechaCita.Value.Day.ToString();
+                            string mes = dtpFechaCita.Value.Month.ToString();
+                            string anio = dtpFechaCita.Value.Year.ToString();
 
-                    DataTable resultado = citas.obtenerCitasAgendadasDetalle(dia, mes, anio);
-                    this.dgvCitas.DataSource = resultado;
-                }
-              
+                            DataTable resultado = citas.obtenerCitasAgendadasDetalle(dia, mes, anio);
+                            this.dgvCitas.DataSource = resultado;
+                        }
+
+                    } break;
+                default:
+                    {
+                        Clipboard.SetText(nombreColumna);
+                    }
+                    break;
 
 
             }
+
+
         }
 
         private void dtpFechaCita_ValueChanged(object sender, EventArgs e)

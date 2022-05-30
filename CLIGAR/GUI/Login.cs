@@ -102,5 +102,14 @@ namespace CLIGAR.GUI
                 logeo();
             }      
         }
+
+        private void inputUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+               this.inputPassword.Focus();
+            }
+        }
+    
     }
 }

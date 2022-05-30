@@ -16,6 +16,10 @@ namespace CLIGAR.GUI.Recepcion
     public partial class AgregarCita : Form
 
     {
+
+        Boolean esEdicion = false;
+
+        public Boolean exitoEdicion = false;
         IdMedicoModal idm = new IdMedicoModal();
         IdPacienteModal ipm = new IdPacienteModal();
          int IdMedico = 0;
@@ -35,6 +39,54 @@ namespace CLIGAR.GUI.Recepcion
             this.btnSeleccionarPaciente.Enabled = false;
         }
 
+        public AgregarCita(int idCita,int idPaciente)
+        {
+            InitializeComponent();
+            this.cita.IdCita = idCita;
+            Medico m = new Medico();
+            DataTable medico ;
+            this.cita.IdPaciente = idPaciente;
+            DataTable resultado = cita.obtenerCita();
+            this.IdMedico=Int32.Parse(resultado.Rows[0]["idMedico"].ToString());
+            m.IdMedico = this.IdMedico;
+            medico = m.obtenerMedicoPorIdMedico();
+            this.IdPaciente = Int32.Parse(resultado.Rows[0]["idPaciente"].ToString());
+            this.idm.IdMedico= Int32.Parse(resultado.Rows[0]["idMedico"].ToString());
+            this.idm.nombreMedico = medico.Rows[0]["Nombres"].ToString() + " " + medico.Rows[0]["Apellidos"].ToString();
+            this.btnSeleccionarPaciente.Visible = false; 
+
+            this.obtenerHorarios();
+      
+
+            this.nombrePaciente = resultado.Rows[0]["Nombres"].ToString()+" "+ resultado.Rows[0]["Apellidos"].ToString();
+            this.lblPaciente.Text = "NOMBRE PACIENTE : " + this.nombrePaciente;
+            this.txtContacto.Text = resultado.Rows[0]["Contacto_Responsable"].ToString();
+            this.txtResonsable.Text = resultado.Rows[0]["Responsable"].ToString();
+            string urgencia = resultado.Rows[0]["Urgencia"].ToString();
+            switch (urgencia) {
+
+                case "Leve": {
+                        cbxUrgencia.SelectedIndex = 0;
+                } break;
+                case "Grave":
+                    {
+                        cbxUrgencia.SelectedIndex = 1;
+                    }
+                    break;
+                case "Muy grave":
+                    {
+                        cbxUrgencia.SelectedIndex = 2;
+                    }
+                    break;
+
+                 
+            }
+
+            this.esEdicion = true;
+
+
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
@@ -45,93 +97,7 @@ namespace CLIGAR.GUI.Recepcion
             this.idm.ShowDialog();
             if (idm.seSelecciono)
             {
-                this.IdMedico = idm.IdMedico;
-                this.nombreMedico = idm.nombreMedico;
-                this.btnSeleccionarPaciente.Enabled = true;
-            
-                lblDoctor.Text ="NOMBRE DOCTOR : "+ this.nombreMedico;
-                this.cita.IdMedico = this.IdMedico;
-                medico.IdMedico = this.IdMedico;
-                this.obtenerCitasAgendadas();
-                this.lblHorarioLunes.Text = "LUNES : ";
-                this.lblHorarioMartes.Text = "MARTES : ";
-                this.lblHorarioMiercoles.Text = "MIERCOLES : ";
-                this.lblHorarioJueves.Text = "JUEVES : ";
-                this.lblHorarioViernes.Text = "VIERNES : ";
-                this.lblHorarioSabado.Text = "SABADO : ";
-                this.lblHorarioDomingo.Text = "DOMINGO : ";
-                DataTable horarios = medico.obtenerHorarios();
-                this.lblHorarioLunes.ForeColor = Color.Black;
-                this.lblHorarioMartes.ForeColor = Color.Black;
-                this.lblHorarioMiercoles.ForeColor = Color.Black;
-                this.lblHorarioJueves.ForeColor = Color.Black;
-                this.lblHorarioViernes.ForeColor = Color.Black;
-                this.lblHorarioSabado.ForeColor = Color.Black;
-                this.lblHorarioDomingo.ForeColor = Color.Black;
-                foreach (DataRow row in horarios.Rows)
-                {
-
-                    string dia = row["Dia"].ToString();
-                    string hInicio = row["Hora_inicio"].ToString();
-                    string hFinal = row["Hora_final"].ToString();
-
-                    DateTime TestTime = DateTime.Parse(hFinal);
-                    // Add 30 minutes
-                    TestTime = TestTime + TimeSpan.Parse("00:30:00");
-                   
-                    var x = TestTime.ToString("HH:mm");
-
-                  
-
-
-                    switch (dia)
-                    {
-                        case "L":
-                            {
-                                this.lblHorarioLunes.Text = "LUNES : " + hInicio + " - " +x;
-                                this.lblHorarioLunes.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "M":
-                            {
-                                this.lblHorarioMartes.Text = "MARTES : " + hInicio + " - " + hFinal;
-                                this.lblHorarioMartes.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "X":
-                            {
-                                this.lblHorarioMiercoles.Text = "MIERCOLES : " + hInicio + " - " + hFinal;
-                               this.lblHorarioMiercoles.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "J":
-                            {
-                                this.lblHorarioJueves.Text = "JUEVES : " + hInicio + " - " + hFinal;
-                                this.lblHorarioJueves.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "V":
-                            {
-                                this.lblHorarioViernes.Text = "VIERNES : " + hInicio + " - " + hFinal;
-                                this.lblHorarioViernes.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "S":
-                            {
-                                this.lblHorarioSabado.Text = "SABADO : " + hInicio + " - " + hFinal;
-                                this.lblHorarioSabado.ForeColor = Color.Green;
-                            }
-                            break;
-                        case "D":
-                            {
-                                this.lblHorarioDomingo.Text = "DOMINGO : " + hInicio + " - " + hFinal;
-                                this.lblHorarioDomingo.ForeColor = Color.Green;
-                            }
-                            break;
-                    }
-                  
-                }
-
+                this.obtenerHorarios();
             }
         }
 
@@ -167,28 +133,43 @@ namespace CLIGAR.GUI.Recepcion
                 if (esValido)
                 {
 
-                    mc.titulo.Text = "Estas seguro de registrar esta cita?";
-                    mc.btnConfirmar.Text = "CONFIRMAR";
-                    mc.ShowDialog();
-               
-                    if (mc.seConfirmo)
+                    try
                     {
-                        string urgencia = cbxUrgencia.SelectedItem.ToString();
-                        string conctacto = txtContacto.Text;
-                        string responsable = txtResonsable.Text;
+                        mc.titulo.Text = "Estas seguro de registrar esta cita?";
+                        mc.btnConfirmar.Text = "CONFIRMAR";
+                        mc.ShowDialog();
 
-                        cita.IdMedico = this.IdMedico;
-                        cita.IdPaciente = this.IdPaciente;
-                        cita.Urgencia1 = urgencia;
-                        cita.Responsable1 = responsable;
-                        cita.ContactoResponsable1 = txtContacto.Text;
-                        cita.Fecha1 = DateTime.Parse(dtpFechaCita.Text).ToString("yyyy-MM-dd H:mm:ss");
-                        cita.Guardar();
-                        this.obtenerCitasAgendadas();
-                        this.ReinciarFormulario();
+                        if (mc.seConfirmo)
+                        {
+                            string urgencia = cbxUrgencia.SelectedItem.ToString();
+                            string conctacto = txtContacto.Text;
+                            string responsable = txtResonsable.Text;
 
-                        mf.titulo.Text = "SE AGREGO CORRECTAMENTE";
-                        mf.Show();
+                            cita.IdMedico = this.IdMedico;
+                            cita.IdPaciente = this.IdPaciente;
+                            cita.Urgencia1 = urgencia;
+                            cita.Responsable1 = responsable;
+                            cita.ContactoResponsable1 = txtContacto.Text;
+                            cita.Fecha1 = DateTime.Parse(dtpFechaCita.Text).ToString("yyyy-MM-dd H:mm:ss");
+                            if (this.esEdicion)
+                            {
+                                cita.Actualizar();
+                                this.exitoEdicion = true;
+
+                                Close();
+                            }
+                            else { cita.Guardar(); }
+                            this.obtenerCitasAgendadas();
+                            this.ReinciarFormulario();
+
+                            mf.titulo.Text = "SE AGREGO CORRECTAMENTE";
+                            mf.Show();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("error " + ex.Message);
                     }
                   
 
@@ -265,5 +246,102 @@ namespace CLIGAR.GUI.Recepcion
             this.btnGuardar.Enabled = Enabled;
             this.cbxUrgencia.Enabled = Enabled;
         }
+
+        private void obtenerHorarios() {
+         
+            this.IdMedico = idm.IdMedico;
+            this.nombreMedico = idm.nombreMedico;
+            this.btnSeleccionarPaciente.Enabled = true;
+
+            lblDoctor.Text = "NOMBRE DOCTOR : " + this.nombreMedico;
+            this.cita.IdMedico = this.IdMedico;
+            medico.IdMedico = this.IdMedico;
+            this.obtenerCitasAgendadas();
+            this.lblHorarioLunes.Text = "LUNES : ";
+            this.lblHorarioMartes.Text = "MARTES : ";
+            this.lblHorarioMiercoles.Text = "MIERCOLES : ";
+            this.lblHorarioJueves.Text = "JUEVES : ";
+            this.lblHorarioViernes.Text = "VIERNES : ";
+            this.lblHorarioSabado.Text = "SABADO : ";
+            this.lblHorarioDomingo.Text = "DOMINGO : ";
+            DataTable horarios = medico.obtenerHorarios();
+            this.lblHorarioLunes.ForeColor = Color.Black;
+            this.lblHorarioMartes.ForeColor = Color.Black;
+            this.lblHorarioMiercoles.ForeColor = Color.Black;
+            this.lblHorarioJueves.ForeColor = Color.Black;
+            this.lblHorarioViernes.ForeColor = Color.Black;
+            this.lblHorarioSabado.ForeColor = Color.Black;
+            this.lblHorarioDomingo.ForeColor = Color.Black;
+            foreach (DataRow row in horarios.Rows)
+            {
+
+                string dia = row["Dia"].ToString();
+                string hInicio = row["Hora_inicio"].ToString();
+                string hFinal = row["Hora_final"].ToString();
+
+                DateTime TestTime = DateTime.Parse(hFinal);
+                // Add 30 minutes
+                TestTime = TestTime + TimeSpan.Parse("00:30:00");
+
+                var x = TestTime.ToString("HH:mm");
+
+
+
+
+                switch (dia)
+                {
+                    case "L":
+                        {
+                            this.lblHorarioLunes.Text = "LUNES : " + hInicio + " - " + x;
+                            this.lblHorarioLunes.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "M":
+                        {
+                            this.lblHorarioMartes.Text = "MARTES : " + hInicio + " - " + hFinal;
+                            this.lblHorarioMartes.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "X":
+                        {
+                            this.lblHorarioMiercoles.Text = "MIERCOLES : " + hInicio + " - " + hFinal;
+                            this.lblHorarioMiercoles.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "J":
+                        {
+                            this.lblHorarioJueves.Text = "JUEVES : " + hInicio + " - " + hFinal;
+                            this.lblHorarioJueves.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "V":
+                        {
+                            this.lblHorarioViernes.Text = "VIERNES : " + hInicio + " - " + hFinal;
+                            this.lblHorarioViernes.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "S":
+                        {
+                            this.lblHorarioSabado.Text = "SABADO : " + hInicio + " - " + hFinal;
+                            this.lblHorarioSabado.ForeColor = Color.Green;
+                        }
+                        break;
+                    case "D":
+                        {
+                            this.lblHorarioDomingo.Text = "DOMINGO : " + hInicio + " - " + hFinal;
+                            this.lblHorarioDomingo.ForeColor = Color.Green;
+                        }
+                        break;
+                }
+
+            }
+
+
+        }
+
+        private void dgvCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+            }
     }
 }

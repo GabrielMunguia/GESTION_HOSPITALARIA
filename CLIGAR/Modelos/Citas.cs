@@ -143,6 +143,43 @@ namespace CLIGAR.Modelos
         }
 
 
+
+        public Boolean Actualizar()
+        {
+            Boolean resultado = false;
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("UPDATE `cligar`.`citas`SET ");
+                Sentencia.Append("`Urgencia`='" + this.Urgencia + "',");
+                Sentencia.Append("`Fecha`='" + this.Fecha + "',");
+                Sentencia.Append("`idPaciente` ='" + this.IdPaciente + "',");
+                Sentencia.Append("`Responsable` ='" + this.Responsable + "',");
+                Sentencia.Append("`Contacto_Responsable` ='" + this.ContactoResponsable + "',");
+                Sentencia.Append("`idMedico` ='" + this.IdMedico + "' WHERE `idCita` =" + this.IdCita + ";");
+
+                Clipboard.SetText(Sentencia.ToString());
+
+
+                if (operacion.Insertar(Sentencia.ToString()) > 0)
+                {
+                    resultado = true;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+
+
+
         public DataTable obtenerCitasAgendadas(string dia,string mes,string anio)
         {
             DataTable Resultado = new DataTable();
@@ -199,6 +236,39 @@ namespace CLIGAR.Modelos
             }
             return Resultado;
         }
+
+
+        public DataTable obtenerCita()
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+
+
+                Sentencia.Append("SELECT * FROM citas as c ,  pacientes as p  where c.idPaciente="+this.IdPaciente + " and  idCita="+this.IdCita + " ; ");
+
+                Clipboard.SetText(Sentencia.ToString());
+
+
+
+
+
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
+
+
+
 
 
         public Boolean eliminar(int id)

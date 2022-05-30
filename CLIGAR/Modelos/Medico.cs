@@ -220,6 +220,28 @@ namespace CLIGAR.Modelos
             return Resultado;
         }
 
+        public DataTable obtenerMedicoPorIdMedico()
+        {
+            DataTable Resultado = new DataTable();
+            StringBuilder Sentencia = new StringBuilder();
+            DataManager.DBOperacion operacion = new DataManager.DBOperacion();
+            try
+            {
+                Sentencia.Append("SELECT * FROM medicos as m , empleados as e where m.idEmpleado=e.idEmpleado and idMedico="+this.IdMedico);
+
+
+
+
+                Resultado = operacion.Consultar(Sentencia.ToString());
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error");
+                Resultado = new DataTable();
+            }
+            return Resultado;
+        }
         public DataTable obtenerMedicoPorEspecialidad(string id)
         {
             DataTable Resultado = new DataTable();

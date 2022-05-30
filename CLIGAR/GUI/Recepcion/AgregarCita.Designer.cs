@@ -33,8 +33,8 @@
             this.btnCerrar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDoctor = new System.Windows.Forms.Label();
             this.btnSeleccionarDoctor = new System.Windows.Forms.Button();
+            this.lblDoctor = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblHorarioLunes = new System.Windows.Forms.Label();
@@ -68,7 +68,6 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Urgencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detalle = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -123,8 +122,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.83511F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.16489F));
-            this.tableLayoutPanel1.Controls.Add(this.lblDoctor, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSeleccionarDoctor, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblDoctor, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -133,16 +132,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1091, 50);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // lblDoctor
-            // 
-            this.lblDoctor.AutoSize = true;
-            this.lblDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoctor.Location = new System.Drawing.Point(3, 0);
-            this.lblDoctor.Name = "lblDoctor";
-            this.lblDoctor.Size = new System.Drawing.Size(177, 22);
-            this.lblDoctor.TabIndex = 15;
-            this.lblDoctor.Text = "NOMBRE DOCTOR:";
             // 
             // btnSeleccionarDoctor
             // 
@@ -161,6 +150,16 @@
             this.btnSeleccionarDoctor.UseVisualStyleBackColor = false;
             this.btnSeleccionarDoctor.Click += new System.EventHandler(this.btnSeleccionarDoctor_Click);
             // 
+            // lblDoctor
+            // 
+            this.lblDoctor.AutoSize = true;
+            this.lblDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctor.Location = new System.Drawing.Point(3, 0);
+            this.lblDoctor.Name = "lblDoctor";
+            this.lblDoctor.Size = new System.Drawing.Size(177, 22);
+            this.lblDoctor.TabIndex = 15;
+            this.lblDoctor.Text = "NOMBRE DOCTOR:";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -173,7 +172,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1091, 452);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1091, 525);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // tableLayoutPanel3
@@ -202,16 +201,16 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(214, 446);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(214, 519);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // lblHorarioLunes
             // 
             this.lblHorarioLunes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioLunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioLunes.Location = new System.Drawing.Point(3, 55);
+            this.lblHorarioLunes.Location = new System.Drawing.Point(3, 64);
             this.lblHorarioLunes.Name = "lblHorarioLunes";
-            this.lblHorarioLunes.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioLunes.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioLunes.TabIndex = 28;
             this.lblHorarioLunes.Text = "LUNES :";
             this.lblHorarioLunes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +219,9 @@
             // 
             this.lblHorarioMartes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioMartes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioMartes.Location = new System.Drawing.Point(3, 110);
+            this.lblHorarioMartes.Location = new System.Drawing.Point(3, 128);
             this.lblHorarioMartes.Name = "lblHorarioMartes";
-            this.lblHorarioMartes.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioMartes.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioMartes.TabIndex = 27;
             this.lblHorarioMartes.Text = "MARTES :";
             this.lblHorarioMartes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,9 +230,9 @@
             // 
             this.lblHorarioMiercoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioMiercoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioMiercoles.Location = new System.Drawing.Point(3, 165);
+            this.lblHorarioMiercoles.Location = new System.Drawing.Point(3, 192);
             this.lblHorarioMiercoles.Name = "lblHorarioMiercoles";
-            this.lblHorarioMiercoles.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioMiercoles.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioMiercoles.TabIndex = 26;
             this.lblHorarioMiercoles.Text = "MIERCOLES : ";
             this.lblHorarioMiercoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,9 +241,9 @@
             // 
             this.lblHorarioJueves.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioJueves.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioJueves.Location = new System.Drawing.Point(3, 220);
+            this.lblHorarioJueves.Location = new System.Drawing.Point(3, 256);
             this.lblHorarioJueves.Name = "lblHorarioJueves";
-            this.lblHorarioJueves.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioJueves.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioJueves.TabIndex = 25;
             this.lblHorarioJueves.Text = "JUEVES :";
             this.lblHorarioJueves.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,9 +252,9 @@
             // 
             this.lblHorarioViernes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioViernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioViernes.Location = new System.Drawing.Point(3, 275);
+            this.lblHorarioViernes.Location = new System.Drawing.Point(3, 320);
             this.lblHorarioViernes.Name = "lblHorarioViernes";
-            this.lblHorarioViernes.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioViernes.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioViernes.TabIndex = 24;
             this.lblHorarioViernes.Text = "VIERNES :";
             this.lblHorarioViernes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,9 +263,9 @@
             // 
             this.lblHorarioSabado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioSabado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioSabado.Location = new System.Drawing.Point(3, 330);
+            this.lblHorarioSabado.Location = new System.Drawing.Point(3, 384);
             this.lblHorarioSabado.Name = "lblHorarioSabado";
-            this.lblHorarioSabado.Size = new System.Drawing.Size(208, 55);
+            this.lblHorarioSabado.Size = new System.Drawing.Size(208, 64);
             this.lblHorarioSabado.TabIndex = 23;
             this.lblHorarioSabado.Text = "SABADO :";
             this.lblHorarioSabado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,9 +274,9 @@
             // 
             this.lblHorarioDomingo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHorarioDomingo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioDomingo.Location = new System.Drawing.Point(3, 385);
+            this.lblHorarioDomingo.Location = new System.Drawing.Point(3, 448);
             this.lblHorarioDomingo.Name = "lblHorarioDomingo";
-            this.lblHorarioDomingo.Size = new System.Drawing.Size(208, 61);
+            this.lblHorarioDomingo.Size = new System.Drawing.Size(208, 71);
             this.lblHorarioDomingo.TabIndex = 17;
             this.lblHorarioDomingo.Text = "DOMINGO :";
             this.lblHorarioDomingo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,7 +287,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 55);
+            this.label1.Size = new System.Drawing.Size(208, 64);
             this.label1.TabIndex = 16;
             this.label1.Text = "HORARIOS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,7 +305,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.43498F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.56503F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(865, 446);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(865, 519);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -321,7 +320,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(859, 45);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(859, 53);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // lblPaciente
@@ -361,12 +360,12 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel9, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.dgvCitas, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 54);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 62);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.46154F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.53846F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(859, 389);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(859, 454);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // tableLayoutPanel7
@@ -384,14 +383,14 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(434, 104);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(434, 123);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Location = new System.Drawing.Point(3, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 22);
             this.label4.TabIndex = 18;
@@ -423,7 +422,7 @@
             // 
             this.txtResonsable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtResonsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResonsable.Location = new System.Drawing.Point(164, 55);
+            this.txtResonsable.Location = new System.Drawing.Point(164, 64);
             this.txtResonsable.Name = "txtResonsable";
             this.txtResonsable.Size = new System.Drawing.Size(267, 27);
             this.txtResonsable.TabIndex = 19;
@@ -443,14 +442,14 @@
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(413, 104);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(413, 123);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 52);
+            this.label5.Location = new System.Drawing.Point(3, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 22);
             this.label5.TabIndex = 20;
@@ -460,7 +459,7 @@
             // 
             this.txtContacto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContacto.Location = new System.Drawing.Point(133, 55);
+            this.txtContacto.Location = new System.Drawing.Point(133, 64);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(277, 27);
             this.txtContacto.TabIndex = 21;
@@ -497,12 +496,12 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.19855F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel14, 1, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(443, 113);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(443, 132);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(413, 273);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(413, 319);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // tableLayoutPanel14
@@ -512,7 +511,7 @@
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.17949F));
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel15, 1, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(59, 212);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(59, 258);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -560,14 +559,14 @@
             this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Urgencia,
-            this.Hora,
-            this.Detalle});
+            this.Hora});
             this.dgvCitas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCitas.Location = new System.Drawing.Point(3, 113);
+            this.dgvCitas.Location = new System.Drawing.Point(3, 132);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(434, 273);
+            this.dgvCitas.Size = new System.Drawing.Size(434, 319);
             this.dgvCitas.TabIndex = 3;
+            this.dgvCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellContentClick);
             // 
             // Codigo
             // 
@@ -587,18 +586,12 @@
             this.Hora.HeaderText = "Hora";
             this.Hora.Name = "Hora";
             // 
-            // Detalle
-            // 
-            this.Detalle.HeaderText = "Detalle";
-            this.Detalle.Image = ((System.Drawing.Image)(resources.GetObject("Detalle.Image")));
-            this.Detalle.Name = "Detalle";
-            // 
             // AgregarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1091, 537);
+            this.ClientSize = new System.Drawing.Size(1091, 610);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -634,7 +627,6 @@
         private System.Windows.Forms.Panel btnCerrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblDoctor;
         public System.Windows.Forms.Button btnSeleccionarDoctor;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -666,9 +658,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dgvCitas;
+        public System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Urgencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
-        private System.Windows.Forms.DataGridViewImageColumn Detalle;
     }
 }

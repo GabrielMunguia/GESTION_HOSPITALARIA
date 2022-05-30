@@ -57,17 +57,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Cita.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DAT\ConsultasPorDoctor.cs">
+      <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\ConsultasPorDoctor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAT\EspecialidadesMedico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EspecialidadesMedico.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUI\VisorCita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\VisorCita.Designer.cs">
       <DependentUpon>VisorCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\VisorConsultasMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VisorConsultasMedicos.Designer.cs">
+      <DependentUpon>VisorConsultasMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VisorEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\VisorEspecialidades.Designer.cs">
+      <DependentUpon>VisorEspecialidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REP\Especialidades.cs">
+      <DependentUpon>Especialidades.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="REP\ConsultasPorMedicoReporte.cs">
+      <DependentUpon>ConsultasPorMedicoReporte.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REP\CitasReporte.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CitasReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REP\Consultas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consultas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -89,14 +132,54 @@
     <None Include="DAT\Cita.xss">
       <DependentUpon>Cita.xsd</DependentUpon>
     </None>
+    <None Include="DAT\ConsultasPorDoctor.xsc">
+      <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\ConsultasPorDoctor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultasPorDoctor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\ConsultasPorDoctor.xss">
+      <DependentUpon>ConsultasPorDoctor.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\EspecialidadesMedico.xsc">
+      <DependentUpon>EspecialidadesMedico.xsd</DependentUpon>
+    </None>
+    <None Include="DAT\EspecialidadesMedico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EspecialidadesMedico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAT\EspecialidadesMedico.xss">
+      <DependentUpon>EspecialidadesMedico.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\VisorCita.resx">
       <DependentUpon>VisorCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VisorConsultasMedicos.resx">
+      <DependentUpon>VisorConsultasMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\VisorEspecialidades.resx">
+      <DependentUpon>VisorEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Especialidades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Especialidades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\ConsultasPorMedicoReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsultasPorMedicoReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REP\CitasReporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CitasReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP\Consultas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Consultas.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -586,7 +586,7 @@
     <value>3</value>
   </data>
   <data name="inputUsuario.Text" xml:space="preserve">
-    <value>recep</value>
+    <value>admin</value>
   </data>
   <data name="&gt;&gt;inputUsuario.Name" xml:space="preserve">
     <value>inputUsuario</value>
@@ -613,7 +613,7 @@
     <value>4</value>
   </data>
   <data name="inputPassword.Text" xml:space="preserve">
-    <value>recep</value>
+    <value>admin</value>
   </data>
   <data name="&gt;&gt;inputPassword.Name" xml:space="preserve">
     <value>inputPassword</value>
